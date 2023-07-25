@@ -12,37 +12,22 @@ This lab will take approximately **45** minutes to complete.
 
 > **Note**: You'll need a Microsoft Fabric license to complete this exercise. See [Getting started with Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) for details of how to enable a free Fabric trial license. You will need a Microsoft *school* or *work* account to do this. If you don't have one, you can [sign up for a trial of Microsoft Office 365 E3 or higher](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
 
-## Create a workspace
-
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
-
-1. Sign into [Microsoft Fabric](https://app.fabric.microsoft.com) at `https://app.fabric.microsoft.com` and select **Power BI**.
-2. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
-3. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
-4. When your new workspace opens, it should be empty, as shown here:
-
-    ![Screenshot of an empty workspace in Power BI.](./Images/new-workspace.png)
 
 ## Create a lakehouse and upload files
 
-Now that you have a workspace, it's time to switch to the *Data science* experience in the portal and create a data lakehouse for the data files you're going to analyze.
-
-1. At the bottom left of the Power BI portal, select the **Power BI** icon and switch to the **Data Engineering** experience.
-1. In the **Data engineering** home page, create a new **Lakehouse** with a name of your choice.
-
-    After a minute or so, a new lakehouse with no **Tables** or **Files** will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise you'll simply download and extract a folder of text files your local computer (or lab VM if applicable) and then upload them to your lakehouse.
+Using the same workspace, it's time to switch to the *Data science* experience in the portal.
 
 1. Download and save the `churn.csv` CSV file for this exercise from [https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/churn.csv](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/churn.csv).
 
 
-1. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** node in the **Lake view** pane, select **Upload** and **Upload files**, and then upload the **churn.csv** file from your local computer (or lab VM if applicable) to the lakehouse.
-6. After the files have been uploaded, expand **Files** and verify that the CSV file have been uploaded.
+2. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** node in the **Lake view** pane, select **Upload** and **Upload files**, and then upload the **churn.csv** file from your local computer (or lab VM if applicable) to the lakehouse.
+3. After the files have been uploaded, expand **Files** and verify that the CSV file have been uploaded.
 
 ## Create a notebook
 
 To train a model, you can create a *notebook*. Notebooks provide an interactive environment in which you can write and run code (in multiple languages) as *experiments*.
 
-1. At the bottom left of the Power BI portal, select the **Data engineering** icon and switch to the **Data science** experience.
+1. At the bottom left of the Power BI portal, switch to the **Data science** experience.
 
 1. In the **Data science** home page, create a new **Notebook**.
 

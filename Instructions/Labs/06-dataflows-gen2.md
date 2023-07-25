@@ -4,7 +4,7 @@ lab:
     module: 'Ingest Data with Dataflows Gen2 in Microsoft Fabric'
 ---
 
-# Create a Dataflow (Gen2) in Microsoft Fabric
+# (Optional) Create a Dataflow (Gen2) in Microsoft Fabric
 
 In Microsoft Fabric, Dataflows (Gen2) connect to various data sources and perform transformations in Power Query Online. They can then be used in Data Pipelines to ingest data into a lakehouse or other analytical store, or to define a dataset for a Power BI report.
 
@@ -12,28 +12,7 @@ This lab is designed to introduce the different elements of Dataflows (Gen2), an
 
 > **Note**: You'll need a Microsoft Fabric license to complete this exercise. See [Getting started with Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) for details of how to enable a free Fabric trial license. You will need a Microsoft *school* or *work* account to do this. If you don't have one, you can [sign up for a trial of Microsoft Office 365 E3 or higher](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
 
-## Create a workspace
 
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
-
-1. Sign into [Microsoft Fabric](https://app.fabric.microsoft.com) at `https://app.fabric.microsoft.com` and select **Power BI**.
-2. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
-3. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
-4. When your new workspace opens, it should be empty, as shown here:
-
-    ![Screenshot of an empty workspace in Power BI.](./Images/new-workspace.png)
-
-## Create a lakehouse
-
-Now that you have a workspace, it's time to switch to the **Data Engineering** experience in the portal and create a data lakehouse into which you'll ingest data.
-
-1. At the bottom left of the Power BI portal, select the **Power BI** icon and switch to the **Data Engineering** experience.
-
-2. In the **Data engineering** home page, create a new **Lakehouse** with a name of your choice.
-
-    After a minute or so, a new empty lakehouse will be created.
-
- ![New lakehouse.](./Images/new-lakehouse.png)
 
 ## Create a Dataflow (Gen2) to ingest data
 
