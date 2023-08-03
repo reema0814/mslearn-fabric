@@ -43,6 +43,8 @@ Now that you have a workspace, it's time to switch to the *Data engineering* exp
 
 3. On the **Lake view** tab in the pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**.
 
+![02](./Images/01/01.png)
+
 ## Explore shortcuts
 
 In many scenarios, the data you need to work with in your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a *shortcut*. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.
@@ -56,68 +58,95 @@ In many scenarios, the data you need to work with in your lakehouse may be store
 A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
 1. On the **Home** page for your lakehouse, select **New data pipeline**, and create a new data pipeline named **Ingest Sales Data**.
-2. If the **Copy Data** wizard doesn't open automatically, select **Copy Data** in the pipeline editor page.
-3. In the **Copy Data** wizard, on the **Choose a data source** page, in the **data sources** section, select the **Generic protocol** tab and then select **HTTP**.
+3. If the **Copy Data** wizard doesn't open automatically, select **Copy Data** in the pipeline editor page.
+
+   ![03](./Images/01/03.png)
+
+4. In the **Copy Data** wizard, on the **Choose a data source** page, in the **data sources** section, select the **Generic protocol** tab and then select **HTTP**.
 
     ![Screenshot of the Choose data source page.](./Images/choose-data-source.png)
 
-4. Select **Next** and then select **Create new connection** and enter the following settings for the connection to your data source:
+5. Select **Next** and then select **Create new connection** and enter the following settings for the connection to your data source:
     - **URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
     - **Connection**: Create new connection
     - **Connection name**: *Specify a unique name*
     - **Authentication kind**: Basic (*Leave the username and password blank*)
-5. Select **Next**. Then ensure the following settings are selected:
+  
+    ![04](./Images/01/04.png)
+    
+6. Select **Next**. Then ensure the following settings are selected:
     - **Relative URL**: *Leave blank*
     - **Request method**: GET
     - **Additional headers**: *Leave blank*
     - **Binary copy**: <u>Un</u>selected
     - **Request timeout**: *Leave blank*
     - **Max concurrent connections**: *Leave blank*
-6. Select **Next**, and wait for the data to be sampled and then ensure that the following settings are selected:
+  
+    ![05](./Images/01/05.png)
+   
+8. Select **Next**, and wait for the data to be sampled and then ensure that the following settings are selected:
     - **File format**: DelimitedText
     - **Column delimiter**: Comma (,)
     - **Row delimiter**: Line feed (\n)
     - **First row as header**: Selected
     - **Compression type**: None
-7. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
-8. On the **Choose data destination** page, select your existing lakehouse. Then select **Next**.
-9. Set the following data destination options, and then select **Next**:
+9. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
+
+     ![06](./Images/01/06.png)
+
+10. On the **Choose data destination** page, select your existing lakehouse. Then select **Next**.
+
+     ![07](./Images/01/07.png)
+
+11. Set the following data destination options, and then select **Next**:
     - **Root folder**: Files
     - **Folder path name**: new_data
     - **File name**: sales.csv
     - **Copy behavior**: None
-10. Set the following file format options and then select **Next**:
+   
+    ![08](./Images/01/08.png)
+
+12. Set the following file format options and then select **Next**:
     - **File format**: DelimitedText
     - **Column delimiter**: Comma (,)
     - **Row delimiter**: Line feed (\n)
     - **Add header to file**: Selected
     - **Compression type**: None
-11. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
+   
+    ![09](./Images/01/09.png)
+
+13. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
     A new pipeline containing a **Copy Data** activity is created, as shown here:
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
 
-12. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeeded.
+14. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeeded.
 
-13. In the menu bar on the left, select your lakehouse.
-14. On the **Home** page, in the **Lakehouse explorer** pane, expand **Files** and select the **new_data** folder to verify that the **sales.csv** file has been copied.
+15. In the menu bar on the left, select your lakehouse.
+16. On the **Home** page, in the **Lakehouse explorer** pane, expand **Files** and select the **new_data** folder to verify that the **sales.csv** file has been copied.
+
+    ![10](./Images/01/10.png)
 
 ## Create a notebook
 
 1. On the **Home** page for your lakehouse, in the **Open notebook** menu, select **New notebook**.
 
+      ![11](./Images/01/11.png)
+
     After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
-2. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
+3. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
 
     ```python
    table_name = "sales"
     ```
 
-3. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
+4. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
-4. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
+     ![12](./Images/01/12.png)
+
+6. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
 
     ```python
    from pyspark.sql.functions import *
@@ -141,13 +170,13 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a **managed table** - appending the data if the table already exists.
 
-5. Verify that your notebooks looks similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
+7. Verify that your notebooks looks similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
     ![Screenshot of a notebook with a parameters cell and code to transform data.](./Images/notebook.png)
 
     > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first cell can take a minute or so to complete.
 
-6. (Optional) You can also create **external tables** for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
+8. (Optional) You can also create **external tables** for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
 
     ```python
     df.write.format("delta").saveAsTable("external_sales", path="<abfs_path>/external_sales")
@@ -161,11 +190,11 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     > **Note**: To run the above code, you need to replace the <abfs_path> with your abfs path
 
 
-7. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
-8. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales** and close the settings pane.
+9. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
+10. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales** and close the settings pane.
 
-9. In the hub menu bar on the left, select your lakehouse.
-10. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
+11. In the hub menu bar on the left, select your lakehouse.
+12. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
 
 
 
@@ -247,12 +276,8 @@ The tables in your lakehouse are automatically added to a default dataset that d
     - A default dataset for the tables in your lakehouse.
     - The **Item Sales Report** report.
 
-## Clean up resources
+
+---
 
 In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default dataset to support data visualizations.
 
-If you've finished exploring your lakehouse, you can delete the workspace you created for this exercise.
-
-1. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-2. In the **...** menu on the toolbar, select **Workspace settings**.
-3. In the **Other** section, select **Remove this workspace**.
