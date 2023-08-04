@@ -1,26 +1,14 @@
----
-lab:
-    title: 'Train a classification model to predict customer churn'
-    module: 'Get started with data science in Microsoft Fabric'
----
-
 # Use notebooks to train a model in Microsoft Fabric
 
 In this lab, we will use Microsoft Fabric to create a notebook and train a machine learning model to predict customer churn. We will use Scikit-Learn to train the model and MLflow to track its performance. Customer churn is a critical business problem that many companies face, and predicting which customers are likely to churn can help companies retain their customers and increase revenue. By completing this lab, you will gain hands-on experience in machine learning and model tracking, and learn how to use Microsoft Fabric to create a notebook for your projects.
 
 This lab will take approximately **45** minutes to complete.
 
-> **Note**: You'll need a Microsoft Fabric license to complete this exercise. See [Getting started with Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) for details of how to enable a free Fabric trial license. You will need a Microsoft *school* or *work* account to do this. If you don't have one, you can [sign up for a trial of Microsoft Office 365 E3 or higher](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
-
-
 ## Create a lakehouse and upload files
 
 Using the same workspace, it's time to switch to the *Data science* experience in the portal.
 
-1. Download and save the `churn.csv` CSV file for this exercise from [https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/churn.csv](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/churn.csv).
-
-
-2. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** node in the **Lake view** pane, select **Upload** and **Upload files**, and then upload the **churn.csv** file from your local computer (or lab VM if applicable) to the lakehouse.
+1. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** node in the **Lake view** pane, select **Upload** and **Upload files**, and then upload the **churn.csv** file from **C:\LabFiles\Files\churn.csv** to the lakehouse.
 3. After the files have been uploaded, expand **Files** and verify that the CSV file have been uploaded.
 
 ## Create a notebook
@@ -233,12 +221,9 @@ Now that you've finished training and evaluating the models, you can save the no
 2. Set the **Name** of the notebook to **Train and compare models**, and then close the settings pane.
 3. On the notebook menu, select **Stop session** to end the Spark session.
 
-## Clean up resources
+---
 
 In this exercise, you have created a notebook and trained a machine learning model. You used Scikit-Learn to train the model and MLflow to track it´s performance.
 
-If you've finished exploring your model and experiments, you can delete the workspace you created for this exercise.
-
-1. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-2. In the **...** menu on the toolbar, select **Workspace settings**.
-3. In the **Other** section, select **Remove this workspace** .
+---
+Continue to page 6 ...
