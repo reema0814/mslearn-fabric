@@ -1,7 +1,8 @@
----
-lab:
-    title: 'Create a Microsoft Fabric Lakehouse'
-    module: 'Get started with lakehouses in Microsoft Fabric'
+
+title:  Create a Microsoft Fabric Lakehouse
+
+module: Get started with lakehouses in Microsoft Fabric
+
 ---
 
 # Ingest data with a pipeline in Microsoft Fabric
@@ -13,17 +14,6 @@ Fabric also supports Apache Spark, enabling you to write and run code to process
 This lab will take approximately **60** minutes to complete.
 
 
-## Create a workspace
-
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
-
-1. Sign into [Microsoft Fabric](https://app.fabric.microsoft.com) at `https://app.fabric.microsoft.com` and select **Power BI**.
-2. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
-3. Create a new workspace with a name of your choice, sselecting a licensing mode that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
-4. When your new workspace opens, it should be empty, as shown here:
-
-    ![Screenshot of an empty workspace in Power BI.](./Images/new-workspace.png)
-
 
 ## Create a Lakehouse
 
@@ -32,7 +22,7 @@ Large-scale data analytics solutions have traditionally been built around a *dat
 In Microsoft Fabric, a lakehouse provides highly scalable file storage in a *OneLake* store (built on Azure Data Lake Store Gen2) with a metastore for relational objects such as tables and views based on the open source *Delta Lake* table format. Delta Lake enables you to define a schema of tables in your lakehouse that you can query using SQL.
 
 
-Now that you have a workspace, it's time to switch to the *Data engineering* experience in the portal and create a data lakehouse into which you will ingest data.
+Now that you have created a workspace in the previous step, it's time to switch to the *Data engineering* experience in the portal and create a data lakehouse into which you will ingest data.
 
 1. At the bottom left of the Power BI portal, select the **Power BI** icon and switch to the **Data Engineering** experience.
 
