@@ -270,3 +270,7 @@ The tables in your lakehouse are automatically added to a default dataset that d
 
 In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default dataset to support data visualizations.
 
+---
+
+Continue to page 4 ...
+
