@@ -1,18 +1,8 @@
----
-lab:
-    title: 'Analyze data with Apache Spark'
-    module: 'Use Apache Spark to work with files in a lakehouse'
----
-
 # (Optional) Analyze data with Apache Spark
 
 Apache Spark is an open source engine for distributed data processing, and is widely used to explore, process, and analyze huge volumes of data in data lake storage. Spark is available as a processing option in many data platform products, including Azure HDInsight, Azure Databricks, Azure Synapse Analytics, and Microsoft Fabric. One of the benefits of Spark is support for a wide range of programming languages, including Java, Scala, Python, and SQL; making Spark a very flexible solution for data processing workloads including data cleansing and manipulation, statistical analysis and machine learning, and data analytics and visualization.
 
 This lab will take approximately **45** minutes to complete.
-
-> **Note**: You'll need a Microsoft Fabric license to complete this exercise. See [Getting started with Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) for details of how to enable a free Fabric trial license. You will need a Microsoft *school* or *work* account to do this. If you don't have one, you can [sign up for a trial of Microsoft Office 365 E3 or higher](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
-
-
 
 ## Create a lakehouse and upload files
 
@@ -22,13 +12,10 @@ Now that you have a workspace, it's time to switch to the *Data engineering* exp
 
 2. In the **Synapse Data Engineering** home page, create a new **Lakehouse** with a name of your choice.
 
-    After a minute or so, a new empty lakehouse will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise you'll simply download and extract a folder of text files your local computer (or lab VM if applicable) and then upload them to your lakehouse.
+    After a minute or so, a new empty lakehouse will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise you'll simply upload them to your lakehouse from the **LabVM**.
 
-3. Download and extract the data files for this exercise from [https://github.com/MicrosoftLearning/dp-data/raw/main/orders.zip](https://github.com/MicrosoftLearning/dp-data/raw/main/orders.zip).
-
-4. After extracting the zipped archive, verify that you have a folder named **orders** that contains CSV files named **2019.csv**, **2020.csv**, and **2021.csv**.
-5. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** folder in the **Explorer** pane, select **Upload** and **Upload folder**, and then upload the **orders** folder from your local computer (or lab VM if applicable) to the lakehouse.
-6. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
+3. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** folder in the **Explorer** pane, select **Upload** and **Upload folder**, and then upload the **orders** folder from **C:\LabFiles\Files\orders** to the lakehouse.
+4. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
 
     ![Screenshot of uploaded files in a lakehouse.](./Images/uploaded-files.png)
 
@@ -578,12 +565,9 @@ Now that you've finished working with the data, you can save the notebook with a
 2. Set the **Name** of the notebook to **Explore Sales Orders**, and then close the settings pane.
 3. On the notebook menu, select **Stop session** to end the Spark session.
 
-## Clean up resources
+---
 
 In this exercise, you've learned how to use Spark to work with data in Microsoft Fabric.
 
-If you've finished exploring your lakehouse, you can delete the workspace you created for this exercise.
-
-1. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-2. In the **...** menu on the toolbar, select **Workspace settings**.
-3. In the **Other** section, select **Remove this workspace**.
+---
+Continue to page 8 ...

@@ -1,28 +1,12 @@
----
-lab:
-    title: 'Get started with Real-Time Analytics in Microsoft Fabric'
-    module: 'Get started with real-time analytics in Microsoft Fabric'
----
-
 # Get started with Real-Time Analytics in Microsoft Fabric
 
 Microsoft Fabric provides a runtime that you can use to store and query data by using Kusto Query Language (KQL). Kusto is optimized for data that includes a time series component, such as real-time data from log files or IoT devices.
 
 This lab takes approximately **30** minutes to complete.
 
-> **Note**: You'll need a Microsoft Fabric license to complete this exercise. See [Getting started with Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) for details of how to enable a free Fabric trial license. You will need a Microsoft *school* or *work* account to do this. If you don't have one, you can [sign up for a trial of Microsoft Office 365 E3 or higher](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
-
-
-
-## Download file for KQL database
-
-Now that you have a workspace, it's time to switch to the *Synapse Real-Time Analytics* experience in the portal and download the data file you're going to analyze.
-
-1. Download the data file for this exercise from [https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv), saving it as **sales.csv** on your local computer (or lab VM if applicable)
-2. Return to browser window with **Microsoft Fabric** Experience.
+Now that you have created a workspace in the previous step, it's time to switch to the *Synapse Real-Time Analytics* experience in the portal.
 
 ## Create a KQL database
-
 Kusto query language (KQL) is used to query static or streaming data in a table that is defined in a KQL database. To analyze the sales data, you must create a table in a KQL database and ingest the data from the file.
 
 1. In the **Microsoft Fabric** experience portal, select the **Synapse Real-Time Analytics** experience image as shown here:
@@ -30,13 +14,17 @@ Kusto query language (KQL) is used to query static or streaming data in a table 
     ![Screenshot of selected Fabric Experience home with RTA selected](./Images/fabric-experience-home.png)
 
 2. On the **Home** page for the **Real-Time Analytics** experience, select **KQL database** and create a new database with a name of your choice.
-3. When the new database has been created, select the option to get data from **Local File**. Then use the wizard to import the data into a new table by selecting the following options:
+3. When the new database has been created, select the option to get data from **Local File**.
+
+   ![01](./Images/03/01.png)
+
+4. Use the wizard to import the data into a new table by selecting the following options:
     - **Destination**:
         - **Database**: *The database you created is already selected*
         - **Table**: *Create a new table named* **sales**.
     - **Source**:
         - **Source type**: File
-        - **Upload files**: *Drag or Browse for the file you downloaded earlier*
+        - **Upload files**: Drag or Browse for the file from **C:\LabFiles\Files\sales.csv**
     - **Schema**:
         - **Compression type**: Uncompressed
         - **Data format**: CSV
@@ -199,12 +187,10 @@ Delta lake supports streaming data. Delta tables can be a *sink* or a *source* f
 
     This code stops the stream.
 
-## Clean up resources
+
+---
 
 In this exercise, you have created a lakehouse, a KQL database to analyze the data uploaded into the lakehouse. You used KQL to query the data and create a query set, which was then used to create a Power BI report.
 
-If you've finished exploring your KQL database, you can delete the workspace you created for this exercise.
-
-1. In the bar on the left, select the icon for your workspace.
-2. In the **...** menu on the toolbar, select **Workspace settings**.
-3. In the **Other** section, select **Remove this workspace**.
+---
+Continue to page 6 ...

@@ -1,18 +1,8 @@
----
-lab:
-    title: 'Analyze data in a data warehouse'
-    module: 'Get started with data warehouses in Microsoft Fabric'
----
-
 # Analyze data in a data warehouse
 
 In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Unlike the default read-only SQL endpoint for tables defined in a lakehouse, a data warehouse provides full SQL semantics; including the ability to insert, update, and delete data in the tables.
 
 This lab will take approximately **30** minutes to complete.
-
-> **Note**: You'll need a Microsoft Fabric license to complete this exercise. See [Getting started with Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) for details of how to enable a free Fabric trial license. You will need a Microsoft *school* or *work* account to do this. If you don't have one, you can [sign up for a trial of Microsoft Office 365 E3 or higher](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
-
-
 
 ## Create a data warehouse
 
@@ -22,9 +12,9 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
     The Data Warehouse home page includes a shortcut to create a new warehouse:
 
-    > **Note**: If you don't see the an icon in the bottom left corner, Fabric isn't enabled for your tenant. Fabric is enabled in the admin portal for tenants that have a Power BI Premium subscription.
+   ![01](./Images/02/01a.png)
 
-2. In the **Data Warehouse** home page, create a new **Warehouse** with a name of your choice.
+3. In the **Data Warehouse** home page, create a new **Warehouse** with a name of your choice.
 
     After a minute or so, a new warehouse will be created:
 
@@ -63,7 +53,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 5. Run the new query to insert three rows into the **DimProduct** table.
 6. When the query has finished, select the **Data** tab at the bottom of the page in the data warehouse. In the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
-7. On the **Home** menu tab, use the **New SQL Query** button to create a new query. Then copy and paste the Transact-SQL code from [https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/create-dw.txt](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/create-dw.txt) into the new query pane.
+7. On the **Home** menu tab, use the **New SQL Query** button to create a new query. Then copy and paste the Transact-SQL code from **C:\LabFiles\Files\create-dw.txt** into the new query pane.
 <!-- I had to remove the GO command in this query as well -->
 8. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 9. Use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
@@ -185,6 +175,8 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. In the **Merge queries** window, select **DimProduct** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** join type, and click **OK**.
 
+![02](./Images/02/02.png)
+
 2. In the **Preview**, note that the new **DimProduct** column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select **ProductName** and click **OK**.
 
     ![Screenshot of the preview pane with the DimProduct column expanded, with ProductName selected.](./Images/visual-query-preview.png)
@@ -204,6 +196,9 @@ You can easily visualize the data in either a single query, or in your data ware
       - **SalesOrderDateKey**
       - **CustomerKey**
       - **ProductKey**
+
+     ![03](./Images/02/03.png)
+
    1. DimCustomer
       - **CustomerKey**
       - **CustomerAltKey**
@@ -226,18 +221,17 @@ You can easily visualize the data in either a single query, or in your data ware
 
 1. In the **Visualizations** pane, select the **Format your visual** tab and in the **General** sub-tab, in the **Title** section, change the **Text** to **Total Sales by Category**.
 
+![04](./Images/02/04.png)
+
 1. In the **File** menu, select **Save**. Then save the report as **Sales Report** in the workspace you created previously.
 
 1. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
 
     ![Screenshot of the workspace with the three items listed.](./Images/workspace-items.png)
 
-## Clean up resources
+---
 
 In this exercise, you have created a data warehouse that contains multiple tables. You used SQL to insert data into the tables and query them. and also used the visual query tool. Finally, you enhanced the data model for the data warehouse's default dataset and used it as the source for a report.
 
-If you've finished exploring your data warehouse, you can delete the workspace you created for this exercise.
-
-1. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-2. In the **...** menu on the toolbar, select **Workspace settings**.
-3. In the **Other** section, select **Remove this workspace**.
+---
+Continue to page 5 ...
