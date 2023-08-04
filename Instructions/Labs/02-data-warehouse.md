@@ -1,7 +1,7 @@
----
-lab:
-    title: 'Analyze data in a data warehouse'
-    module: 'Get started with data warehouses in Microsoft Fabric'
+Title: Analyze data in a data warehouse
+
+Module: Get started with data warehouses in Microsoft Fabric
+
 ---
 
 # Analyze data in a data warehouse
@@ -10,10 +10,6 @@ In Microsoft Fabric, a data warehouse provides a relational database for large-s
 
 This lab will take approximately **30** minutes to complete.
 
-> **Note**: You'll need a Microsoft Fabric license to complete this exercise. See [Getting started with Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) for details of how to enable a free Fabric trial license. You will need a Microsoft *school* or *work* account to do this. If you don't have one, you can [sign up for a trial of Microsoft Office 365 E3 or higher](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
-
-
-
 ## Create a data warehouse
 
 Now that you already have a workspace, it's time to switch to the *Data Warehouse* experience in the portal and create a data warehouse.
@@ -21,8 +17,6 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 1. At the bottom left of the Power BI portal, switch to the **Data Warehouse** experience.
 
     The Data Warehouse home page includes a shortcut to create a new warehouse:
-
-    > **Note**: If you don't see the an icon in the bottom left corner, Fabric isn't enabled for your tenant. Fabric is enabled in the admin portal for tenants that have a Power BI Premium subscription.
 
 2. In the **Data Warehouse** home page, create a new **Warehouse** with a name of your choice.
 
@@ -63,7 +57,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 5. Run the new query to insert three rows into the **DimProduct** table.
 6. When the query has finished, select the **Data** tab at the bottom of the page in the data warehouse. In the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
-7. On the **Home** menu tab, use the **New SQL Query** button to create a new query. Then copy and paste the Transact-SQL code from [https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/create-dw.txt](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/create-dw.txt) into the new query pane.
+7. On the **Home** menu tab, use the **New SQL Query** button to create a new query. Then copy and paste the Transact-SQL code from **C:\LabFiles\Files\create-dw.txt** into the new query pane.
 <!-- I had to remove the GO command in this query as well -->
 8. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 9. Use the **Refresh** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four tables:
@@ -232,12 +226,9 @@ You can easily visualize the data in either a single query, or in your data ware
 
     ![Screenshot of the workspace with the three items listed.](./Images/workspace-items.png)
 
-## Clean up resources
+---
 
 In this exercise, you have created a data warehouse that contains multiple tables. You used SQL to insert data into the tables and query them. and also used the visual query tool. Finally, you enhanced the data model for the data warehouse's default dataset and used it as the source for a report.
 
-If you've finished exploring your data warehouse, you can delete the workspace you created for this exercise.
-
-1. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-2. In the **...** menu on the toolbar, select **Workspace settings**.
-3. In the **Other** section, select **Remove this workspace**.
+---
+Continue to page 4 ...
