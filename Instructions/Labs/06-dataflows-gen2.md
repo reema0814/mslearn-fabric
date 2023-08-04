@@ -1,18 +1,8 @@
----
-lab:
-    title: 'Create and use Dataflows (Gen2) in Microsoft Fabric'
-    module: 'Ingest Data with Dataflows Gen2 in Microsoft Fabric'
----
-
 # (Optional) Create a Dataflow (Gen2) in Microsoft Fabric
 
 In Microsoft Fabric, Dataflows (Gen2) connect to various data sources and perform transformations in Power Query Online. They can then be used in Data Pipelines to ingest data into a lakehouse or other analytical store, or to define a dataset for a Power BI report.
 
 This lab is designed to introduce the different elements of Dataflows (Gen2), and not create a complex solution that may exist in an enterprise. This lab takes **approximately 30 minutes** to complete.
-
-> **Note**: You'll need a Microsoft Fabric license to complete this exercise. See [Getting started with Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) for details of how to enable a free Fabric trial license. You will need a Microsoft *school* or *work* account to do this. If you don't have one, you can [sign up for a trial of Microsoft Office 365 E3 or higher](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
-
-
 
 ## Create a Dataflow (Gen2) to ingest data
 
@@ -112,12 +102,4 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 >
 >![Power BI data source connectors](Images/pbid-dataflow-connectors.png)
 
-## Clean up resources
 
-If you've finished exploring dataflows in Microsoft Fabric, you can delete the workspace you created for this exercise.
-
-1. Navigate to Microsoft Fabric in your browser.
-1. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-1. In the **...** menu on the toolbar, select **Workspace settings**.
-1. In the **Other** section, select **Remove this workspace**.
-1. Don't save the changes to Power BI Desktop, or delete the .pbix file if already saved.
