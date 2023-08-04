@@ -25,11 +25,11 @@
 1. Now enter the following password and click on **Sign in**.
    * Password: <inject key="AzureAdUserPassword"></inject>
    
-     ![]()
+     ![05](./Images/gs/05.png)
      
    > If you see the **Help us protect your account** dialog box, then select **Skip for now** option.
 
-     ![]()
+      ![06](./Images/gs/06.png)
   
 1. If you see the pop-up **Stay Signed in?**, click No
 
