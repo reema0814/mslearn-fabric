@@ -1,6 +1,6 @@
-### Exercise 1: Create a Fabric workspace
+### Create a Fabric workspace
 
-In this exercise, you build a lakehouse, ingest sample data into the delta table, apply transformation where required, and then create reports.
+
 
 #### Task 1.1: Assign Fabric Administrator Role
 
@@ -81,4 +81,4 @@ Congratulations! You have successfully learnt to create a Fabric workspace.
 
 ----
 
-*Continue to page 9 ...*
+*Continue to page 3 ...*
