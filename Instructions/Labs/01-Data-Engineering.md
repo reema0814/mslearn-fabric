@@ -134,7 +134,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
    from pyspark.sql.functions import *
 
    # Read the new sales data
-   df = spark.read.format("csv").option("header","true").load("Files/new_data/*.csv")
+   df = spark.read.format("csv").option("header","true").option("inferSchema","true").load("Files/new_data/*.csv")
 
    ## Add month and year columns
    df = df.withColumn("Year", year(col("OrderDate"))).withColumn("Month", month(col("OrderDate")))
