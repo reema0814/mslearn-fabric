@@ -10,12 +10,14 @@ Now that you have a workspace, it's time to switch to the *Data engineering* exp
 
 1. At the bottom left of the Power BI portal, select the **Power BI** icon and switch to the **Data Engineering** experience.
 
-2. In the **Synapse Data Engineering** home page, create a new **Lakehouse** with a name of your choice.
+2. In the **Synapse Data Engineering** home page, create a new **Lakehouse**.
+
+   - **Name:** Enter **fabric_lakehouse**, and any extra characters to make the name unique.
 
     After a minute or so, a new empty lakehouse will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise you'll simply upload them to your lakehouse from the **LabVM**.
 
-3. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** folder in the **Explorer** pane, select **Upload** and **Upload folder**, and then upload the **orders** folder from **C:\LabFiles\Files\orders** to the lakehouse.
-4. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
+4. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** folder in the **Explorer** pane, select **Upload** and **Upload folder**, and then upload the **orders** folder from **C:\LabFiles\Files\orders** to the lakehouse.
+5. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
 
     ![Screenshot of uploaded files in a lakehouse.](./Images/uploaded-files.png)
 
@@ -562,7 +564,7 @@ While **matplotlib** enables you to create complex charts of multiple types, it 
 Now that you've finished working with the data, you can save the notebook with a meaningful name and end the Spark session.
 
 1. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
-2. Set the **Name** of the notebook to **Explore Sales Orders**, and then close the settings pane.
+2. Set the **Name** of the notebook to **Explore Sales Orders Notebook**, and then close the settings pane.
 3. On the notebook menu, select **Stop session** to end the Spark session.
 
 ---

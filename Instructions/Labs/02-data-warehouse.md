@@ -14,9 +14,11 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
    ![01](./Images/02/01a.png)
 
-3. In the **Data Warehouse** home page, create a new **Warehouse** with a name of your choice.
+3. In the **Data Warehouse** home page, create a new **Warehouse**.
+   
+   - **Name:** Enter **Data Warehouse** , and any extra characters to make the name unique.
 
-    After a minute or so, a new warehouse will be created:
+     After a minute or so, a new warehouse will be created:
 
     ![Screenshot of a new warehouse.](./Images/new-data-warehouse.png)
 

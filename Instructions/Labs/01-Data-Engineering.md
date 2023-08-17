@@ -19,11 +19,13 @@ Now that you have created a workspace in the previous step, it's time to switch 
 
 1. At the bottom left of the Power BI portal, select the **Power BI** icon and switch to the **Data Engineering** experience.
 
-2. In the **Data engineering** home page, create a new **Lakehouse** with a name of your choice.
+2. In the **Data engineering** home page, create a new **Lakehouse**.
+
+    - **Name:** Enter **Lakehouse**, and any extra characters to make the name unique.
 
     After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
-3. On the **Lake view** tab in the pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**.
+4. On the **Lake view** tab in the pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**.
 
    ![02](./Images/01/01.png)
 
@@ -39,7 +41,7 @@ In many scenarios, the data you need to work with in your lakehouse may be store
 
 A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
-1. On the **Home** page for your lakehouse, select **New data pipeline**, and create a new data pipeline named **Ingest Sales Data**.
+1. On the **Home** page for your lakehouse, select **New data pipeline**, and create a new data pipeline named **Ingest Sales Data Pipeline**.
 3. If the **Copy Data** wizard doesn't open automatically, select **Copy Data** in the pipeline editor page.
 
    ![03](./Images/01/03.png)
@@ -173,7 +175,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 
 9. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
-10. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales** and close the settings pane.
+10. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook** and close the settings pane.
 
 11. In the hub menu bar on the left, select your lakehouse.
 12. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
