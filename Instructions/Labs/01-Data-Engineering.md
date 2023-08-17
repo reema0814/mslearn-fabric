@@ -41,7 +41,7 @@ In many scenarios, the data you need to work with in your lakehouse may be store
 
 A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
-1. On the **Home** page for your lakehouse, select **New data pipeline**, and create a new data pipeline named **Ingest Sales Data**.
+1. On the **Home** page for your lakehouse, select **New data pipeline**, and create a new data pipeline named **Ingest Sales Data Pipeline**.
 3. If the **Copy Data** wizard doesn't open automatically, select **Copy Data** in the pipeline editor page.
 
    ![03](./Images/01/03.png)
