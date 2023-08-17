@@ -66,13 +66,14 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
 9. Select **Publish** to publish the dataflow. Then wait for the **Dataflow 1** dataflow to be created in your workspace.
 
-1. Once published, you can right-click on the dataflow in your workspace, select **Properties**, and rename your dataflow.
+1. Once published, you can right-click on the dataflow in your workspace, select **Properties**, and rename your dataflow as **Transform Orders Dataflow**.
+
 
 ## Add a dataflow to a pipeline
 
 You can include a dataflow as an activity in a pipeline. Pipelines are used to orchestrate data ingestion and processing activities, enabling you to combine dataflows with other kinds of operation in a single, scheduled process. Pipelines can be created in a few different experiences, including Data Factory experience.
 
-1. From your Fabric-enabled workspace, make sure you're still in the **Data Engineering** experience. Select **New**, **Data pipeline**, then when prompted, create a new pipeline named **Load data**.
+1. From your Fabric-enabled workspace, make sure you're still in the **Data Engineering** experience. Select **New**, **Data pipeline**, then when prompted, create a new pipeline named **Load Orders pipeline**.
 
    The pipeline editor opens.
 
@@ -82,7 +83,7 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
 2. Select **Add pipeline activity**, and add a **Dataflow** activity to the pipeline.
 
-3. With the new **Dataflow1** activity selected, on the **Settings** tab, in the **Dataflow** drop-down list, select **Dataflow 1** (the data flow you created previously)
+3. With the new **Dataflow1** activity selected, on the **Settings** tab, in the **Dataflow** drop-down list, select **Transform Orders Dataflow** (the data flow you created previously)
 
    ![Pipeline with a dataflow activity.](./Images/dataflow-activity.png)
 
