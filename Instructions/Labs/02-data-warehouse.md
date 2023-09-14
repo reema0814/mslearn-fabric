@@ -172,14 +172,14 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. Drag **DimProduct** onto the **canvas**. We now have two tables in our query.
 
-2. Use the **(+)** button on the **FactSalesOrder** table on the canvas to **Merge queries**.
+1. Use the **(+)** button on the **FactSalesOrder** table on the canvas to **Merge queries**.
 ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/visual-query-merge.png)
 
 1. In the **Merge queries** window, select **DimProduct** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** join type, and click **OK**.
 
-![02](./Images/02/02.png)
+   ![02](./Images/02/02.png)
 
-2. In the **Preview**, note that the new **DimProduct** column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select **ProductName** and click **OK**.
+1. In the **Preview**, note that the new **DimProduct** column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select **ProductName** and click **OK**.
 
     ![Screenshot of the preview pane with the DimProduct column expanded, with ProductName selected.](./Images/visual-query-preview.png)
 
@@ -223,13 +223,13 @@ You can easily visualize the data in either a single query, or in your data ware
 
 1. In the **Visualizations** pane, select the **Format your visual** tab and in the **General** sub-tab, in the **Title** section, change the **Text** to **Total Sales by Category**.
 
-![04](./Images/02/04.png)
+   ![04](./Images/02/04.png)
 
 1. In the **File** menu, select **Save**. Then save the report as **Sales Report** in the workspace you created previously.
 
 1. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
 
-    ![Screenshot of the workspace with the three items listed.](./Images/workspace-items.png)
+   ![Screenshot of the workspace with the three items listed.](./Images/workspace-items.png)
 
 ---
 

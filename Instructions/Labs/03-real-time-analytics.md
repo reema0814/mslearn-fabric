@@ -99,7 +99,7 @@ You can use your KQL Queryset as the basis for a Power BI report.
 
 Delta lake supports streaming data. Delta tables can be a *sink* or a *source* for data streams created using the Spark Structured Streaming API. In this example, you'll use a delta table as a sink for some streaming data in a simulated internet of things (IoT) scenario.
 
-1. Add a new code cell in the notebook. Then, in the new cell, add the following code and run it:
+1. Navigate back to your workspace and open **Load Sales Notebook**. Add a new code cell in the notebook. Then, in the new cell, add the following code and run it:
 
     ```python
    from notebookutils import mssparkutils

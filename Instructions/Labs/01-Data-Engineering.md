@@ -73,7 +73,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Column delimiter**: Comma (,)
     - **Row delimiter**: Line feed (\n)
     - **First row as header**: Selected
-    - **Compression type**: None
+    - **Compression type**: Leave default
 9. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
 
      ![06](./Images/01/06.png)
@@ -86,7 +86,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Root folder**: Files
     - **Folder path name**: new_data
     - **File name**: sales.csv
-    - **Copy behavior**: None
+    - **Copy behavior**: Leave default
    
     ![08](./Images/01/08.png)
 
@@ -95,7 +95,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Column delimiter**: Comma (,)
     - **Row delimiter**: Line feed (\n)
     - **Add header to file**: Selected
-    - **Compression type**: None
+    - **Compression type**: Leave default
    
     ![09](./Images/01/09.png)
 

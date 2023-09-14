@@ -182,7 +182,7 @@ When you've trained and tracked models with MLflow, you can use the MLflow libra
 
 Microsoft Fabric will keep track of all your experiments and allows you to visually explore them.
 
-1. Navigate to the **Data Science** home page.
+1. Navigate to the **Data Science** home page. In your workspace, you will see the **experiment-churn** Experiment created.
 1. Select the `experiment-churn` experiment to open it.
 
     > **Tip:**
@@ -206,7 +206,7 @@ After comparing machine learning models that you've trained across experiment ru
 1. In the experiment overview, ensure the **View** tab is selected.
 1. Select **Run details**.
 1. Select the run with the highest accuracy. 
-1. Select **Save** in the **Save as model** box.
+1. Scroll right to see the Save as model opton. Select **Save** in the **Save as model** box.
 1. Select **Create a new model** in the newly opened pop-up window.
 1. Name the model `model-churn`, and select **Create**. 
 1. Select **View model** in the notification that appears at the top right of your screen when the model is created. You can also refresh the window. The saved model is linked under **Registered version**. 
