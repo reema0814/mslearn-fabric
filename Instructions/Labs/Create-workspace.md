@@ -4,17 +4,17 @@
 
 #### Task 1.1: Assign Fabric Administrator Role
 
-1. Start by searching for **Azure Active Directory** in the search pane in Azure portal:
+1. Start by searching for **Microsoft Entra ID** in the search pane in Azure portal:
 
-   ![Navigate-To-AAD](./Images/ws/01.png)
+   ![Navigate-To-AAD](./Images/ws/entra01.png)
 
 2. Navigate to **Roles and administrators**:
 
-   ![Roles-and-Administrator](./Images/ws/02.png)
+   ![Roles-and-Administrator](./Images/ws/entraa02.png)
 
 3. In the **Roles and administrators** page, search for **Fabric Administrator**, and click on it:
 
-   ![search-fabric-admin](./Images/ws/03.png)
+   ![search-fabric-admin](./Images/ws/entra02.png)
 
 4. This will take you to the **Fabric Administrator | Assignments** page where you will have to assign yourself the **Fabric Administrator role**. Now, click on **+ Add Assignments**:
 
