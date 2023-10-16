@@ -182,7 +182,7 @@ When you've trained and tracked models with MLflow, you can use the MLflow libra
 
 Microsoft Fabric will keep track of all your experiments and allows you to visually explore them.
 
-1. Navigate to the **Data Science** home page. In your workspace, you will see the **experiment-churn** Experiment created.
+1. Navigate to your workspace, you will see the **experiment-churn** Experiment created.
 1. Select the `experiment-churn` experiment to open it.
 
     > **Tip:**
