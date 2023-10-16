@@ -8,8 +8,17 @@ This lab will take approximately **45** minutes to complete.
 
 Using the same workspace, it's time to switch to the *Data science* experience in the portal.
 
-1. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** node in the **Lake view** pane, select **Upload** and **Upload files**, and then upload the **churn.csv** file from **C:\LabFiles\Files\churn.csv** to the lakehouse.
+1. Navigate back to your lakehouse, and in the **... (1)** menu for the **Files** node in the **Explorer** pane, select **Upload (2)** and **Upload files (3)**. 
+
+   ![](./Images/Pg6-S1.png)
+
+2. Navigate to **C:\LabFiles\Files\churn.csv**, select the **churn.csv** file and upload it to the lakehouse.   
+
+   ![](./Images/Pg6-S2.png)
+
 3. After the files have been uploaded, expand **Files** and verify that the CSV file have been uploaded.
+
+   ![](./Images/Pg6-S2.1.png)
 
 ## Create a notebook
 
@@ -31,26 +40,39 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
    # Train a machine learning model and track with MLflow
 
    Use the code in this notebook to train and track models.
-    ``` 
+    ```    
 
 ## Load data into a dataframe
 
 Now you're ready to run code to prepare data and train a model. To work with data, you'll use *dataframes*. Dataframes in Spark are similar to Pandas dataframes in Python, and provide a common structure for working with data in rows and columns.
 
 1. In the **Add lakehouse** pane, select **Add** to add a lakehouse.
-1. Select **Existing lakehouse** and select **Add**.
-1. Select the lakehouse you created in a previous section.
-1. Expand the **Files** folder so that the CSV file is listed next to the notebook editor.
-1. In the **...** menu for **churn.csv**, select **Load data** > **Pandas**. A new code cell containing the following code should be added to the notebook:
 
-    ```python
+   ![](./Images/Pg6-Edit-S4.png)
+
+1. Select **Existing lakehouse (1)** and select **Add (2)**.
+
+   ![](./Images/Pg6-AddLakehouse.png)
+
+1. Select the lakehouse you created in a previous section.
+
+1. Expand the **Files** folder so that the CSV file is listed next to the notebook editor.
+
+1. In the **...** menu for **churn.csv**, select **Load data** > **Pandas**.
+
+    ![](./Images/Pg6-LoadData-S5.png)
+
+1.  A new code cell containing the following code should be added to the notebook:
+
+   ```
+   python
    import pandas as pd
    # Load data into pandas DataFrame from "/lakehouse/default/" + "Files/churn.csv"
    df = pd.read_csv("/lakehouse/default/" + "Files/churn.csv")
    display(df)
-    ```
-
-    > **Tip**: You can hide the pane containing the files on the left by using its **<<** icon. Doing so will help you focus on the notebook.
+   ```
+    
+   > **Tip**: You can hide the pane containing the files on the left by using its **<<** icon. Doing so will help you focus on the notebook.
 
 1. Use the **&#9655; Run cell** button on the left of the cell to run it.
 
@@ -182,19 +204,30 @@ When you've trained and tracked models with MLflow, you can use the MLflow libra
 
 Microsoft Fabric will keep track of all your experiments and allows you to visually explore them.
 
-1. Navigate to the **Data Science** home page. In your workspace, you will see the **experiment-churn** Experiment created.
+1. Navigate to your **Workspace (1)**, select **Data Science (2)**  you will see the **experiment-churn (3)** Experiment created.
+
+   ![](./Images/Pg6-ExpChurn-S1.png)
+
 1. Select the `experiment-churn` experiment to open it.
 
     > **Tip:**
     > If you don't see any logged experiment runs, refresh the page.
 
 1. Select the **View** tab.
+
 1. Select **Run list**. 
+
 1. Select the two latest runs by checking each box.
     As a result, your two last runs will be compared to each other in the **Metric comparison** pane. By default, the metrics are plotted by run name. 
+
 1. Select the **&#128393;** (Edit) button of the graph visualizing the accuracy for each run. 
+
+   ![](./Images/Pg6-ExpChurn-S6.png)
+
 1. Change the **visualization type** to `bar`. 
+
 1. Change the **X-axis** to `estimator`. 
+
 1. Select **Replace** and explore the new graph.
 
 By plotting the accuracy per logged estimator, you can review which algorithm resulted in a better model.
@@ -204,11 +237,17 @@ By plotting the accuracy per logged estimator, you can review which algorithm re
 After comparing machine learning models that you've trained across experiment runs, you can choose the best performing model. To use the best performing model, save the model and use it to generate predictions.
 
 1. In the experiment overview, ensure the **View** tab is selected.
+
 1. Select **Run details**.
+
 1. Select the run with the highest accuracy. 
+
 1. Scroll right to see the Save as model opton. Select **Save** in the **Save as model** box.
+
 1. Select **Create a new model** in the newly opened pop-up window.
+
 1. Name the model `model-churn`, and select **Create**. 
+
 1. Select **View model** in the notification that appears at the top right of your screen when the model is created. You can also refresh the window. The saved model is linked under **Registered version**. 
 
 Note that the model, the experiment, and the experiment run are linked, allowing you to review how the model is trained. 
@@ -218,7 +257,9 @@ Note that the model, the experiment, and the experiment run are linked, allowing
 Now that you've finished training and evaluating the models, you can save the notebook with a meaningful name and end the Spark session.
 
 1. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
+
 2. Set the **Name** of the notebook to **Train and compare models notebook**, and then close the settings pane.
+
 3. On the notebook menu, select **Stop session** to end the Spark session.
 
 ---
