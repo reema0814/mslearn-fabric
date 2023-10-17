@@ -16,8 +16,9 @@ Now that you have a workspace, it's time to switch to the *Data engineering* exp
 
     After a minute or so, a new empty lakehouse will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise you'll simply upload them to your lakehouse from the **LabVM**.
 
-4. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** folder in the **Explorer** pane, select **Upload** and **Upload folder**, and then upload the **orders** folder from **C:\LabFiles\Files\orders** to the lakehouse.
-5. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
+3. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** folder in the **Explorer** pane, select **Upload** and **Upload folder**, and then upload the **orders** folder from **C:\LabFiles\Files\orders** to the lakehouse.
+
+4. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
 
     ![Screenshot of uploaded files in a lakehouse.](./Images/uploaded-files.png)
 
@@ -25,7 +26,9 @@ Now that you have a workspace, it's time to switch to the *Data engineering* exp
 
 To work with data in Apache Spark, you can create a *notebook*. Notebooks provide an interactive environment in which you can write and run code (in multiple languages), and add notes to document it.
 
-1. On the **Home** page while viewing the contents of the **orders** folder in your datalake, in the **Open notebook** menu, select **New notebook**.
+1. On the **Home** page while viewing the contents of the **orders** folder in your datalake, in the **Open notebook (1)** menu, select **New notebook (2)**.
+
+   ![](./Images/Pg7-Notebook-S1.png)
 
     After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
@@ -53,7 +56,11 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
     ![Screenshot of a notebook with a Files pane.](./Images/notebook-files.png)
 
-2. In the **...** menu for **2019.csv**, select **Load data** > **Spark**. A new code cell containing the following code should be added to the notebook:
+2. In the **...** menu for **2019.csv**, select **Load data** > **Spark**.
+
+   ![](./Images/Pg7-LoadData-S2.png)
+
+3. A new code cell containing the following code should be added to the notebook:
 
     ```python
    df = spark.read.format("csv").option("header","true").load("Files/orders/2019.csv")
@@ -63,11 +70,11 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
     > **Tip**: You can hide the Lakehouse explorer panes on the left by using their **<<** icons. Doing so will help you focus on the notebook.
 
-3. Use the **&#9655; Run cell** button on the left of the cell to run it.
+4. Use the **&#9655; Run cell** button on the left of the cell to run it.
 
     > **Note**: Since this is the first time you've run any Spark code, a Spark session must be started. This means that the first run in the session can take a minute or so to complete. Subsequent runs will be quicker.
 
-4. When the cell command has completed, review the output below the cell, which should look similar to this:
+5. When the cell command has completed, review the output below the cell, which should look similar to this:
 
     | Index | SO43701 | 11 | 2019-07-01 | Christy Zhu | christy12@adventure-works.com | Mountain-100 Silver, 44 | 16 | 3399.99 | 271.9992 |
     | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
@@ -77,7 +84,7 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
     The output shows the rows and columns of data from the 2019.csv file. However, note that the column headers don't look right. The default code used to load the data into a dataframe assumes that the CSV file includes the column names in the first row, but in this case the CSV file just includes the data with no header information.
 
-5. Modify the code to set the **header** option to **false** as follows:
+6. Modify the code to set the **header** option to **false** as follows:
 
     ```python
    df = spark.read.format("csv").option("header","false").load("Files/orders/2019.csv")
@@ -85,7 +92,7 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
    display(df)
     ```
 
-6. Re-run the cell and review the output, which should look similar to this:
+7. Re-run the cell and review the output, which should look similar to this:
 
    | Index | _c0 | _c1 | _c2 | _c3 | _c4 | _c5 | _c6 | _c7 | _c8 |
     | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
@@ -96,7 +103,7 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
     Now the dataframe correctly includes first row as data values, but the column names are auto-generated and not very helpful. To make sense of the data, you need to explicitly define the correct schema and data type for the data values in the file.
 
-7. Modify the code as follows to define a schema and apply it when loading the data:
+8. Modify the code as follows to define a schema and apply it when loading the data:
 
     ```python
    from pyspark.sql.types import *
@@ -117,7 +124,7 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
    display(df)
     ```
 
-8. Run the modified cell and review the output, which should look similar to this:
+9. Run the modified cell and review the output, which should look similar to this:
 
    | Index | SalesOrderNumber | SalesOrderLineNumber | OrderDate | CustomerName | Email | Item | Quantity | UnitPrice | Tax |
     | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
@@ -128,13 +135,13 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
     Now the dataframe includes the correct column names (in addition to the **Index**, which is a built-in column in all dataframes based on the ordinal position of each row). The data types of the columns are specified using a standard set of types defined in the Spark SQL library, which were imported at the beginning of the cell.
 
-9. Confirm that your changes have been applied to the data by viewing the dataframe. Run the following cell:
+10. Confirm that your changes have been applied to the data by viewing the dataframe. Run the following cell:
 
     ```python
    display(df)
     ```
 
-10. The dataframe includes only the data from the **2019.csv** file. Modify the code so that the file path uses a \* wildcard to read the sales order data from all of the files in the **orders** folder:
+11. The dataframe includes only the data from the **2019.csv** file. Modify the code so that the file path uses a \* wildcard to read the sales order data from all of the files in the **orders** folder:
 
 ```python
 from pyspark.sql.types import *
@@ -321,7 +328,7 @@ Tables in a Spark metastore are relational abstractions over files in the data l
 
     ![Screenshot of the salesorder table in Explorer.](./Images/table-view.png)
 
-5. In the **...** menu for the **salesorders** table, select **Load data** > **Spark**.
+4. In the **...** menu for the **salesorders** table, select **Load data** > **Spark**.
 
     A new code cell containing code similar to the following example is added to the notebook:
 
@@ -330,7 +337,7 @@ Tables in a Spark metastore are relational abstractions over files in the data l
    display(df)
     ```
 
-6. Run the new code, which uses the Spark SQL library to embed a SQL query against the **salesorder** table in PySpark code and load the results of the query into a dataframe.
+5. Run the new code, which uses the Spark SQL library to embed a SQL query against the **salesorder** table in PySpark code and load the results of the query into a dataframe.
 
 ### Run SQL code in a cell
 
@@ -368,7 +375,9 @@ A picture is proverbially worth a thousand words, and a chart is often better th
     ```
 
 2. Run the code and observe that it returns the data from the **salesorders** view you created previously.
+
 3. In the results section beneath the cell, change the **View** option from **Table** to **Chart**.
+
 4. Use the **View options** button at the top right of the chart to display the options pane for the chart. Then set the options as follows and select **Apply**:
     - **Chart type**: Bar chart
     - **Key**: Item
@@ -524,6 +533,7 @@ While **matplotlib** enables you to create complex charts of multiple types, it 
     ```
 
 2. Run the code and observe that it displays a bar chart using the seaborn library.
+
 3. Modify the code as follows:
 
     ```Python

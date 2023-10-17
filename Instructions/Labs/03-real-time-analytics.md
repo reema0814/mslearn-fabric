@@ -7,6 +7,7 @@ This lab takes approximately **30** minutes to complete.
 Now that you have created a workspace in the previous step, it's time to switch to the *Synapse Real-Time Analytics* experience in the portal.
 
 ## Create a KQL database
+
 Kusto query language (KQL) is used to query static or streaming data in a table that is defined in a KQL database. To analyze the sales data, you must create a table in a KQL database and ingest the data from the file.
 
 1. In the **Microsoft Fabric** experience portal, select the **Synapse Real-Time Analytics** experience image as shown here:
@@ -17,11 +18,13 @@ Kusto query language (KQL) is used to query static or streaming data in a table 
 
    - **Name:** Enter **KQL-Database**, and any extra characters to make the name unique.
 
-4. When the new database has been created, select the option to get data from **Local File**.
+    ![](./Images/03/PgS2.png)
+
+3. When the new database has been created, select the option to get data from **Local File**.
 
    ![01](./Images/03/01.png)
 
-5. Use the wizard to import the data into a new table by selecting the following options:
+4. Use the wizard to import the data into a new table by selecting the following options:
     - **Destination**:
         - **Database**: *The database you created is already selected*
         - **Table**: *Create a new table named* **sales**.
@@ -75,6 +78,7 @@ Now that you have a table of data in your database, you can use KQL code to quer
     ```
 
 8. Run the query and review the results, which should contain the total net revenue for each product between January 1st and December 31st 2020 in ascending order of product name.
+
 9. Select **Save as KQL queryset** and save the query as **Revenue by Product**.
 
 ## Create a Power BI report from a KQL Queryset
@@ -82,13 +86,17 @@ Now that you have a table of data in your database, you can use KQL code to quer
 You can use your KQL Queryset as the basis for a Power BI report.
 
 1. In the query workbench editor for your query set, run the query and wait for the results.
+
 2. Select **Build Power BI report** and wait for the report editor to open.
+
 3. In the report editor, in the **Data** pane, expand **Kusto Query Result** and select the **Item** and **TotalRevenue** fields.
+
 4. On the report design canvas, select the table visualization that has been added and then in the **Visualizations** pane, select **Clustered bar chart**.
 
     ![Screenshot of a report from a KQL query.](./Images/kql-report.png)
 
 5. In the **Power BI** window, in the **File** menu, select **Save**. Then save the report as **Revenue by Item.pbix** in the workspace where your lakehouse and KQL database are defined using a **Non-Business** sensitivity label.
+
 6. Close the **Power BI** window, and in the bar on the left, select the icon for your workspace.
 
     Refresh the Workspace page if necessary to view all of the items it contains.

@@ -19,13 +19,17 @@ Now that you have created a workspace in the previous step, it's time to switch 
 
 1. At the bottom left of the Power BI portal, select the **Power BI** icon and switch to the **Data Engineering** experience.
 
+   ![02](./Images/01/Pg3-T1-S1.png)
+   
 2. In the **Data engineering** home page, create a new **Lakehouse**.
 
     - **Name:** Enter **Lakehouse**, and any extra characters to make the name unique.
 
+   ![02](./Images/01/Pg3-T1-S2.png)
+
     After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
-4. On the **Lake view** tab in the pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**.
+3. On the **Lake view** tab in the pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**.
 
    ![02](./Images/01/01.png)
 
@@ -41,14 +45,21 @@ In many scenarios, the data you need to work with in your lakehouse may be store
 
 A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
-1. On the **Home** page for your lakehouse, select **New data pipeline**, and create a new data pipeline named **Ingest Sales Data Pipeline**.
+1. On the **Home** page for your lakehouse, select **New Data pipeline**.
+
+    ![03](./Images/01/Pg3-TCreatePipeline-S1.png)
+
+2. Create a new data pipeline named **Ingest Sales Data Pipeline**. 
+   
+   ![03](./Images/01/Pg3-TCreatePipeline-S1.1.png)
+   
 3. If the **Copy Data** wizard doesn't open automatically, select **Copy Data** in the pipeline editor page.
 
    ![03](./Images/01/03.png)
 
-4. In the **Copy Data** wizard, on the **Choose a data source** page, in the **data sources** section, select the **Generic protocol** tab and then select **HTTP**.
+4. In the **Copy Data** wizard, on the **Choose a data source** page, in the **data sources** section, select the **Generic protocol (1)** tab and then select **HTTP (2)**, click on **Next (3)**.
 
-    ![Screenshot of the Choose data source page.](./Images/choose-data-source.png)
+   ![Screenshot of the Choose data source page.](./Images/01/Pg3-TCreatePipeline-S3.png)
 
 5. Select **Next** and then select **Create new connection** and enter the following settings for the connection to your data source:
     - **URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
@@ -107,7 +118,10 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 14. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeeded.
 
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
+
 15. In the menu bar on the left, select your lakehouse.
+
 16. On the **Home** page, in the **Lakehouse explorer** pane, expand **Files** and select the **new_data** folder to verify that the **sales.csv** file has been copied.
 
     ![10](./Images/01/10.png)
@@ -120,17 +134,19 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
-3. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
+2. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
 
     ```python
    table_name = "sales"
     ```
 
-4. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
+   ![11](./Images/01/Pg3-Notebook-S2.png) 
+
+3. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
      ![12](./Images/01/12.png)
 
-6. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
+4. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
 
     ```python
    from pyspark.sql.functions import *
@@ -154,13 +170,13 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a **managed table** - appending the data if the table already exists.
 
-7. Verify that your notebooks looks similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
+5. Verify that your notebooks looks similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
     ![Screenshot of a notebook with a parameters cell and code to transform data.](./Images/notebook.png)
 
     > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first cell can take a minute or so to complete.
 
-8. (Optional) You can also create **external tables** for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
+6. (Optional) You can also create **external tables** for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
 
     ```python
     df.write.format("delta").saveAsTable("external_sales", path="<abfs_path>/external_sales")
@@ -174,12 +190,15 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     > **Note**: To run the above code, you need to replace the <abfs_path> with your abfs path
 
 
-9. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
-10. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook** and close the settings pane.
+7. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
 
-11. In the hub menu bar on the left, select your lakehouse.
-12. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
+8. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook** and close the settings pane.
 
+   ![.](./Images/01/Pg3-Notebook-S10.png)
+ 
+9. In the hub menu bar on the left, select your lakehouse.
+
+10. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
 
 
 ## Use SQL to query tables
@@ -208,6 +227,7 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
 While many data professionals are familiar with SQL, data analysts with Power BI experience can apply their Power Query skills to create visual queries.
 
 1. On the toolbar, select **New visual query**.
+
 2. Drag the **sales** table to the new visual query editor pane that opens to create a Power Query as shown here: 
 
     ![Screenshot of a Visual query.](./Images/visual-query.png)
@@ -216,14 +236,20 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
     ![Screenshot of a Choose columns dialog box.](./Images/choose-columns.png)
 
-4. in the **Transform** menu, select **Group by**. Then group the data by using the following **Basic** settings:
+4. Click on **+ (1)** ,in the **Transform table** menu, select **Group by (2)**.
+
+    ![Screenshot of a Visual query with results.](./Images/01/Pg3-VisQuery-S4.0.png)
+
+5. Then group the data by using the following **Basic** settings:
 
     - **Group by**: SalesOrderNumber
     - **New column name**: LineItems
     - **Operation**: Count distinct values
     - **Column**: SalesOrderLineNumber
 
-    When you're done, the results pane under the visual query shows the number of line items for each sales order.
+    ![Screenshot of a Visual query with results.](./Images/01/Pg3-VisQuery-S4.01.png)
+
+6. When you're done, the results pane under the visual query shows the number of line items for each sales order.
 
     ![Screenshot of a Visual query with results.](./Images/visual-query-results.png)
 
