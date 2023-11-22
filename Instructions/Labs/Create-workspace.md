@@ -38,6 +38,7 @@
    https://powerbi.com
    ```
 
+> **Note**: In case a sign-up page asks for a phone number, you can enter a dummy phone number to proceed.
 2. Select **Account manager(1)**, and click on **Start trial(2)**:
 
    ![Account-manager-start](./Images/ws/07.png)
