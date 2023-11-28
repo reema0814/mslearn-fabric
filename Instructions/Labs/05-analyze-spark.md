@@ -291,7 +291,7 @@ A common task for data engineers is to ingest data in a particular format or str
 
     ![Screenshot of a hierarchy of partitioned data files.](./Images/partitioned-files.png)
 
-    Partitioning data files is a common way to optimize performance when dealing with large volumes of data. This technique can significant improve performance and make it easier to filter data.
+    Partitioning data files is a common way to optimize performance when dealing with large volumes of data. This technique can significantly improve performance and make it easier to filter data.
 
 3. Add a new cell with the following code to load a new dataframe from the **orders.parquet** file:
 
@@ -363,7 +363,7 @@ While it's useful to be able to embed SQL statements into a cell containing PySp
 
 ## Visualize data with Spark
 
-A picture is proverbially worth a thousand words, and a chart is often better than a thousand rows of data. While notebooks in Fabric include a built in chart view for data that is displayed from a dataframe or Spark SQL query, it is not designed for comprehensive charting. However, you can use Python graphics libraries like **matplotlib** and **seaborn** to create charts from data in dataframes.
+A picture is proverbially worth a thousand words, and a chart is often better than a thousand rows of data. While notebooks in Fabric include a built-in chart view for data that is displayed from a dataframe or Spark SQL query, it is not designed for comprehensive charting. However, you can use Python graphics libraries like **matplotlib** and **seaborn** to create charts from data in dataframes.
 
 ### View results as a chart
 
