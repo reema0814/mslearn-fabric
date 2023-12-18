@@ -10,23 +10,23 @@
 
 2. Navigate to **Roles and administrators**:
 
-   ![Roles-and-Administrator](./Images/ws/entraa02.png)
+   ![Roles-and-Administrator](./Images/ws/entraa002.png)
 
 3. In the **Roles and administrators** page, search for **Fabric Administrator**, and click on it:
 
-   ![search-fabric-admin](./Images/ws/entra02.png)
+   ![search-fabric-admin](./Images/ws/entra020.png)
 
 4. This will take you to the **Fabric Administrator | Assignments** page where you will have to assign yourself the **Fabric Administrator role**. Now, click on **+ Add Assignments**:
 
-   ![click-add-assignments](./Images/ws/04.png)
+   ![click-add-assignments](./Images/ws/004.png)
 
 5. Make sure to **check the box(1)** next to your username, confirm if it is **Selected(2)** and click on **Add(3)**:
 
-   ![check-and-add-role](./Images/ws/05.png)
+   ![check-and-add-role](./Images/ws/005.png)
 
 6. You can confirm the **Fabric Administrator** role has been added successfully by **refreshing(1)** Fabric Administrators | Assignments page. After **confirming(2)** it has been added successfully, navigate back to **Home(3)**.
 
-   ![check-and-navigate-back-to-home](./Images/ws/06.png)
+   ![check-and-navigate-back-to-home](./Images/ws/006.png)
 
 ----
 
@@ -53,7 +53,7 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 
 2. Fill out the **Create a workspace** form with the following details:
 
-   - **Name:** Enter **Fabric-<inject key="DeploymentID" enableCopy="false"/>**, and any extra characters to make the name unique.
+   - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**, and any extra characters to make the name unique.
    
 
    ![name-and-desc-of-workspc](./Images/ws/workspacename.png)
