@@ -257,9 +257,9 @@ You can easily visualize the data in either a single query, or in your data ware
 
    ![Screenshot of the workspace with the three items listed.](./Images/workspace-items.png)
 
----
+## Review
 
 In this exercise, you have created a data warehouse that contains multiple tables. You used SQL to insert data into the tables and query them. and also used the visual query tool. Finally, you enhanced the data model for the data warehouse's default dataset and used it as the source for a report.
 
----
-Continue to page 5 ...
+
+## Proceed to next exercise
