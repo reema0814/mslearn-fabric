@@ -22,7 +22,7 @@ Kusto query language (KQL) is used to query static or streaming data in a table 
    
    - **Name:** Enter **KQL-Database-<inject key="DeploymentID" enableCopy="false"/>**
 
-     ![00](./Images/03/createkql.png)
+    ![00](./Images/03/createkql.png)
    
    
 5. When the new database has been created, select the option to get data from **Local File**.

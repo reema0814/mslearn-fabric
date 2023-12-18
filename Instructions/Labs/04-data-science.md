@@ -8,7 +8,7 @@ This lab will take approximately **45** minutes to complete.
 
 Using the same workspace, it's time to switch to the *Data science* experience in the portal.
 
-1. Navigate back to your lakehouse, and in the **... (1)** menu for the **Files** node in the **Explorer** pane, select **Upload (2)** and **Upload files (3)**. 
+1. Navigate back to your lakehouse, and in the menu for the **Files(1)** node in the **Explorer** pane, select **Upload (2)** and **Upload files (3)**. 
 
    ![](./Images/Pg6-S1.png)
 

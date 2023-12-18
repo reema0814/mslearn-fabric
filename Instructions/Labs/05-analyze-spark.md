@@ -12,7 +12,7 @@ Now that you have a workspace, it's time to switch to the *Data engineering* exp
 
 2. In the **Synapse Data Engineering** home page, create a new **Lakehouse**.
 
-   - **Name:** Enter **fabric_lakehouse**, and any extra characters to make the name unique.
+   - **Name:** Enter **fabric_lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
 
     After a minute or so, a new empty lakehouse will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise you'll simply upload them to your lakehouse from the **LabVM**.
 
