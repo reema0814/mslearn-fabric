@@ -25,11 +25,11 @@ Now that you have created a workspace in the previous step, it's time to switch 
 
     - **Name:** Enter **Lakehouse**, and any extra characters to make the name unique.
 
-   ![02](./Images/01/Pg3-T1-S2.png)
+   ![02](./Images/01/lakehouse.png)
 
     After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
-3. On the **Lake view** tab in the pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**.
+4. On the **Lake view** tab in the pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**.
 
    ![02](./Images/01/01.png)
 
@@ -47,7 +47,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. On the **Home** page for your lakehouse, select **New Data pipeline**.
 
-    ![03](./Images/01/Pg3-TCreatePipeline-S1.png)
+    ![03](./Images/01/datapipeline.png)
 
 2. Create a new data pipeline named **Ingest Sales Data Pipeline**. 
    
