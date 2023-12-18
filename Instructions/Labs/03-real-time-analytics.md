@@ -198,10 +198,9 @@ Delta lake supports streaming data. Delta tables can be a *sink* or a *source* f
 
     This code stops the stream.
 
-
----
+## Review
 
 In this exercise, you have created a lakehouse, a KQL database to analyze the data uploaded into the lakehouse. You used KQL to query the data and create a query set, which was then used to create a Power BI report.
 
----
-Continue to page 6 ...
+
+## Proceed to next exercise
