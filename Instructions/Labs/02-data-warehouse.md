@@ -16,7 +16,7 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
 2. In the **Data Warehouse** home page, create a new **Warehouse**.
    
-   - **Name:** Enter **Data Warehouse** , and any extra characters to make the name unique.
+   - **Name:** Enter **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/>** , and any extra characters to make the name unique.
 
      After a minute or so, a new warehouse will be created:
 
