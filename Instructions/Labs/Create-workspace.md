@@ -53,7 +53,7 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 
 2. Fill out the **Create a workspace** form with the following details:
 
-   - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**, and any extra characters to make the name unique.
+   - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**.
    
 
    ![name-and-desc-of-workspc](./Images/ws/workspacename.png)
