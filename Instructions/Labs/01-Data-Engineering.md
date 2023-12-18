@@ -87,13 +87,13 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Compression type**: Leave default
 9. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
 
-     ![06](./Images/01/connectdata.png)
+     ![06](./Images/01/06.png)
 
 10. On the **Choose data destination** page, select your existing lakehouse. Then select **Next**.
 
      ![07](./Images/01/07.png)
 
-     ![07](./Images/01/lakehousenew.png)
+     ![07](./Images/01/connectdest02.png)
 
 12. Set the following data destination options, and then select **Next**:
     - **Root folder**: Files
@@ -101,7 +101,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **File name**: sales.csv
     - **Copy behavior**: Leave default
    
-    ![08](./Images/01/connectdest.png)
+    ![08](./Images/01/08.png)
 
 13. Set the following file format options and then select **Next**:
     - **File format**: DelimitedText
@@ -110,7 +110,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Add header to file**: Selected
     - **Compression type**: Leave default
    
-    ![09](./Images/01/connectdest1.png)
+    ![09](./Images/01/09.png)
 
 14. On the **Copy summary** page, review the details of your copy operation and then select **Review + Run**.
 
@@ -150,6 +150,8 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 4. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
 
+   >**Note:** Wait untill the previous code completes execution
+   
     ```python
    from pyspark.sql.functions import *
 
