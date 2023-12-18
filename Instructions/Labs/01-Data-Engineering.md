@@ -87,42 +87,44 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Compression type**: Leave default
 9. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
 
-     ![06](./Images/01/06.png)
+     ![06](./Images/01/connectdata.png)
 
 10. On the **Choose data destination** page, select your existing lakehouse. Then select **Next**.
 
      ![07](./Images/01/07.png)
 
-11. Set the following data destination options, and then select **Next**:
+     ![07](./Images/01/lakehousenew.png)
+
+12. Set the following data destination options, and then select **Next**:
     - **Root folder**: Files
     - **Folder path name**: new_data
     - **File name**: sales.csv
     - **Copy behavior**: Leave default
    
-    ![08](./Images/01/08.png)
+    ![08](./Images/01/connectdest.png)
 
-12. Set the following file format options and then select **Next**:
+13. Set the following file format options and then select **Next**:
     - **File format**: DelimitedText
     - **Column delimiter**: Comma (,)
     - **Row delimiter**: Line feed (\n)
     - **Add header to file**: Selected
     - **Compression type**: Leave default
    
-    ![09](./Images/01/09.png)
+    ![09](./Images/01/connectdest1.png)
 
-13. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
+14. On the **Copy summary** page, review the details of your copy operation and then select **Review + Run**.
 
     A new pipeline containing a **Copy Data** activity is created, as shown here:
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
 
-14. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+15. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
 
-15. In the menu bar on the left, select your lakehouse.
+16. In the menu bar on the left, select your lakehouse.
 
-16. On the **Home** page, in the **Lakehouse explorer** pane, expand **Files** and select the **new_data** folder to verify that the **sales.csv** file has been copied.
+17. On the **Home** page, in the **Lakehouse explorer** pane, expand **Files** and select the **new_data** folder to verify that the **sales.csv** file has been copied.
 
     ![10](./Images/01/10.png)
 
