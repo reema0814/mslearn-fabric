@@ -23,7 +23,7 @@ Now that you have created a workspace in the previous step, it's time to switch 
    
 2. In the **Data engineering** home page, create a new **Lakehouse**.
 
-    - **Name:** Enter **Lakehouse-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Name:** Enter **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
 
    ![02](./Images/01/lakehouse.png)
 
