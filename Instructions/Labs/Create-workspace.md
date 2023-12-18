@@ -66,4 +66,4 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 
     **Congratulations!** You have successfully learnt to create a Fabric workspace.
 
-     >Now, click on the Next from lower right corner to move to page 3.
+   ## Proceed to next exercise
