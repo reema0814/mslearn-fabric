@@ -64,13 +64,12 @@ Now you're ready to run code to prepare data and train a model. To work with dat
 
 1.  A new code cell containing the following code should be added to the notebook:
 
-   ```
-   python
-   import pandas as pd
-   # Load data into pandas DataFrame from "/lakehouse/default/" + "Files/churn.csv"
-   df = pd.read_csv("/lakehouse/default/" + "Files/churn.csv")
-   display(df)
-   ```
+     ```
+    import pandas as pd
+    # Load data into pandas DataFrame from "/lakehouse/default/" + "Files/churn.csv"
+    df = pd.read_csv("/lakehouse/default/" + "Files/churn.csv")
+    display(df)
+    ```
     
    > **Tip**: You can hide the pane containing the files on the left by using its **<<** icon. Doing so will help you focus on the notebook.
 
