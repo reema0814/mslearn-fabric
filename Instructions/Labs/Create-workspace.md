@@ -60,7 +60,7 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 
    - **Advanced:** Expand it and Under **License mode**, select **Fabric capacity(1)**.
 
-3. Select on **Apply(3)** to create and open the workspace.
+3. Select on exisitng **Capacity(2)** then click on **Apply(3)** to create and open the workspace.
 
    ![advanced-and-apply](./Images/ws/fabriccapacity.png)
 
