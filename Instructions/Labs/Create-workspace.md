@@ -64,6 +64,6 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 
    ![advanced-and-apply](./Images/ws/fabriccapacity.png)
 
-   Congratulations! You have successfully learnt to create a Fabric workspace.
+    **Congratulations!** You have successfully learnt to create a Fabric workspace.
 
-4. Now, click on the Next from lower right corner to move to page 3.
+     >Now, click on the Next from lower right corner to move to page 3.
