@@ -577,9 +577,8 @@ Now that you've finished working with the data, you can save the notebook with a
 2. Set the **Name** of the notebook to **Explore Sales Orders Notebook**, and then close the settings pane.
 3. On the notebook menu, select **Stop session** to end the Spark session.
 
----
+## Review
 
 In this exercise, you've learned how to use Spark to work with data in Microsoft Fabric.
 
----
-Continue to page 8 ...
+## Proceed to next exercise
