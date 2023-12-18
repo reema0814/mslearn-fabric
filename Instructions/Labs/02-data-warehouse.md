@@ -12,7 +12,7 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
     The Data Warehouse home page includes a shortcut to create a new warehouse:
 
-   ![01](./Images/02/01a.png)
+   ![01](./Images/01/warehouse.png)
 
 2. In the **Data Warehouse** home page, create a new **Warehouse**.
    
