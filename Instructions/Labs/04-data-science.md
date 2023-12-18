@@ -262,9 +262,8 @@ Now that you've finished training and evaluating the models, you can save the no
 
 3. On the notebook menu, select **Stop session** to end the Spark session.
 
----
+## Review
 
 In this exercise, you have created a notebook and trained a machine learning model. You used Scikit-Learn to train the model and MLflow to track it´s performance.
 
----
-Continue to page 7 ...
+## Proceed to next exercise
