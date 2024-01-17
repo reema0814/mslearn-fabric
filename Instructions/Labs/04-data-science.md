@@ -12,7 +12,7 @@ Using the same workspace, it's time to switch to the *Data science* experience i
 
    ![](./Images/Pg6-S1.png)
 
-2. Navigate to **C:\LabFiles\Files\churn.csv**, select the **churn.csv** file and upload it to the lakehouse.   
+2. Navigate to **C:\LabFiles\Files\churn.csv (1)**, select the **churn.csv (2)** file and click on **Open (3)** to upload it to the lakehouse.   
 
    ![](./Images/Pg6-S2.png)
 
@@ -56,22 +56,22 @@ Now you're ready to run code to prepare data and train a model. To work with dat
 
 1. Select the lakehouse you created in a previous section.
 
-1. Expand the **Files** folder so that the CSV file is listed next to the notebook editor.
+1. Expand the **Files (1)** folder so that the CSV file is listed next to the notebook editor.
 
-1. In the **...** menu for **churn.csv**, select **Load data** > **Pandas**.
+1. In the **...** menu for **churn.csv (2)**, select **Load data (3)** > **Pandas (4)**.
 
     ![](./Images/Pg6-LoadData-S5.png)
 
 1.  A new code cell containing the following code should be added to the notebook:
 
-   ```Python
-   import pandas as pd
-   # Load data into pandas DataFrame from "/lakehouse/default/" + "Files/churn.csv"
-   df = pd.read_csv("/lakehouse/default/" + "Files/churn.csv")
-   display(df)
-   ```
+    ```Python
+    import pandas as pd
+    # Load data into pandas DataFrame from "/lakehouse/default/" + "Files/churn.csv"
+    df = pd.read_csv("/lakehouse/default/" + "Files/churn.csv")
+    display(df)
+    ```
     
-   > **Tip**: You can hide the pane containing the files on the left by using its **<<** icon. Doing so will help you focus on the notebook.
+    > **Tip**: You can hide the pane containing the files on the left by using its **<<** icon. Doing so will help you focus on the notebook.
 
 1. Use the **&#9655; Run cell** button on the left of the cell to run it.
 
@@ -212,14 +212,14 @@ Microsoft Fabric will keep track of all your experiments and allows you to visua
     > **Tip:**
     > If you don't see any logged experiment runs, refresh the page.
 
-1. Select the **View** tab.
+1. Select the **View (1)** tab.
 
-1. Select **Run list**. 
+1. Select **Run list (2)**. 
 
-1. Select the two latest runs by checking each box.
+1. Select the **two latest runs (3)** by checking each box.
     As a result, your two last runs will be compared to each other in the **Metric comparison** pane. By default, the metrics are plotted by run name. 
 
-1. Select the **&#128393;** (Edit) button of the graph visualizing the accuracy for each run. 
+1. Select the **&#128393;** **(Edit) (4)** button of the graph visualizing the accuracy for each run. 
 
    ![](./Images/Pg6-ExpChurn-S6.png)
 
