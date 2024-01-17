@@ -1,4 +1,4 @@
-### Create a Fabric workspace
+## Create a Fabric workspace
 
 #### Task 1.1: Assign Fabric Administrator Role
 
