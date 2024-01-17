@@ -32,7 +32,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 2. Replace the default SQL code with the following CREATE TABLE statement:
 
-    ```sql
+    ```SQL
    CREATE TABLE dbo.DimProduct
    (
        ProductKey INTEGER NOT NULL,
@@ -52,7 +52,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 5. On the **Home** menu tab, use the **New SQL Query** button to create a new query, and enter the following INSERT statement:
 
-    ```sql
+    ```SQL
    INSERT INTO dbo.DimProduct
    VALUES
    (1, 'RING1', 'Bicycle bell', 'Accessories', 5.99),
@@ -123,7 +123,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
 1. Create a new SQL Query, and run the following code:
 
-    ```sql
+    ```SQL
    SELECT  d.[Year] AS CalendarYear,
             d.[Month] AS MonthOfYear,
             d.MonthName AS MonthName,
@@ -138,7 +138,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
 2. Modify the query as follows to add a second dimension to the aggregation.
 
-    ```sql
+    ```SQL
    SELECT  d.[Year] AS CalendarYear,
            d.[Month] AS MonthOfYear,
            d.MonthName AS MonthName,
@@ -153,7 +153,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
    ![](./Images/02/Pg4-T3QF-S2.png)
 
-3. Run the modified query and review the results, which now include sales revenue aggregated by year, month, and sales region.
+3. Run the modified query and review the results, which now include sales revenue aggregated by year, month and sales region.
 
 ## Create a view
 
@@ -161,7 +161,7 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
 
 1. Modify the query you created previously as follows to create a view (note that you need to remove the ORDER BY clause to create a view).
 
-    ```sql
+    ```SQL
    CREATE VIEW vSalesByRegion
    AS
    SELECT  d.[Year] AS CalendarYear,
@@ -199,7 +199,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
    ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/visual-query-merge.png)
 
-1. In the **Merge queries** window, select **DimProduct** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** join type, and click **OK**.
+1. In the **Merge queries** window, select **DimProduct** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** to join type, and click **OK**.
 
    ![02](./Images/02/02.png)
 
@@ -207,13 +207,13 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
    ![Screenshot of the preview pane with the DimProduct column expanded, with ProductName selected.](./Images/visual-query-preview.png)
 
-1. If you're interested in looking at data for a single product, per a manager request, you can now use the **ProductName** column to filter the data in the query. Filter the **ProductName** column to look at **Cable Lock** data only.
+1. If you're interested in looking at data for a single product, per a manager's request, you can now use the **ProductName** column to filter the data in the query. Filter the **ProductName** column to look at **Cable Lock** data only.
 
 1. From here, you can analyze the results of this single query by selecting **Visualize results** or **Open in Excel**. You can now see exactly what the manager was asking for, so we don't need to analyze the results further.
 
 ### Visualize your data
 
-You can easily visualize the data in either a single query, or in your data warehouse. Before you visualize, hide columns and/or tables that aren't friendly to report designers.
+You can easily visualize the data in either a single query or in your data warehouse. Before you visualize, hide columns and/or tables that aren't friendly to report designers.
 
 1. In the **Explorer** pane, select the **Model** view. 
 
@@ -242,7 +242,7 @@ You can easily visualize the data in either a single query, or in your data ware
 1. In the **Data** pane, expand **FactSalesOrder**. Note that the columns you hid are no longer visible. 
 
 1. Select **SalesTotal**. This will add the column to the **Report canvas**. Because the column is a numeric value, the default visual is a **column chart**.
-1. Ensure that the column chart on the canvas is active (with a gray border and handles), and then select **Category** from the **DimProduct** table to add a category to your column chart.
+1. Ensure that the column chart on the canvas is active (with a grey border and handles), and then select **Category** from the **DimProduct** table to add a category to your column chart.
 1. In the **Visualizations** pane, change the chart type from a column chart to a **clustered bar chart**. Then resize the chart as necessary to ensure that the categories are readable.
 
     ![Screenshot of the Visualizations pane with the bar chart selected.](./Images/visualizations-pane.png)
