@@ -12,15 +12,15 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
     The Data Warehouse home page includes a shortcut to create a new warehouse:
 
-   ![01](./Images/02/01a.png)
+   ![01](./Images/fabric13.png)
 
 2. In the **Data Warehouse** home page, create a new **Warehouse**.
    
-   - **Name:** Enter **Data Warehouse** , and any extra characters to make the name unique.
+   - **Name:** Enter **Data Warehouse<inject key="DeploymentID" enableCopy="false"/>**
 
-     After a minute or so, a new warehouse will be created:
+   - Click on **Create**
 
-    ![Screenshot of a new warehouse.](./Images/new-data-warehouse.png)
+        ![Screenshot of a new warehouse.](./Images/new-data-warehouse.png)
 
 ## Create tables and insert data
 
@@ -65,10 +65,10 @@ A warehouse is a relational database in which you can define tables and other ob
 
 7. When the query has finished, select the **Data** tab at the bottom of the page in the data warehouse. In the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
 
-8. On the Home menu tab, use the New SQL Query button to create a new query for each table. Open the first text file, from C:\LabFiles\Files\create-dw-01.txt, and copy the Transact-SQL code related to the 'DimProduct' table. Paste the 'DimProduct' table code into the query pane you created and execute the query. Repeat the steps for the 'DimCustomer', 'DimDate' and 'FactSalesOrder' tables using the respective files, C:\LabFiles\Files\create-dw-02.txt and C:\LabFiles\Files\create-dw-03.txt. Please ensure that each query is executed in its own query pane for each respective table.
+8. On the Home menu tab, use the New SQL Query button to create a new query for each table. Open the first text file, from **C:\LabFiles\Files\create-dw-01.txt**, and copy the Transact-SQL code related to the 'DimProduct' table. Paste the 'DimProduct' table code into the query pane you created and execute the query. Repeat the steps for the 'DimCustomer', 'DimDate' and 'FactSalesOrder' tables using the respective files, **C:\LabFiles\Files\create-dw-02.txt** and **C:\LabFiles\Files\create-dw-03.txt**. Please ensure that each query is executed in its own query pane for each respective table.
 <!-- I had to remove the GO command in this query as well -->
 
-   ![01](./Images/02/Pg4-T2-S7.png)
+![01](./Images/02/Pg4-T2-S7.png)
 
 9. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 
@@ -78,7 +78,7 @@ A warehouse is a relational database in which you can define tables and other ob
     - **DimProduct**
     - **FactSalesOrder**
 
-     ![01](./Images/02/Pg4-T2-S9.png)  
+      ![01](./Images/02/Pg4-T2-S9.png)  
 
     > **Tip**: If the schema takes a while to load, just refresh the browser page.
 
@@ -92,7 +92,7 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
     ![Screenshot of the data warehouse model page.](./Images/model-dw.png)
 
-3. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details:
+3. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details and click on **Ok**.
     - **Table 1**: FactSalesOrder
     - **Column**: ProductKey
     - **Table 2**: DimProduct
@@ -102,10 +102,11 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
     - **Make this relationship active**: Selected
     - **Assume referential integrity**: Unselected
 
-4. Repeat the process to create many-to-one relationships between the following tables:
-    - **FactOrderSales.CustomerKey** &#8594; **DimCustomer.CustomerKey**
+4. Repeat the process to create many-to-one relationships between the following tables and click on **Ok**.
 
-    ![Screenshot of the data warehouse model page.](./Images/02/Pg4-T3-S3.png)
+    - **FactSalesOrder.CustomerKey** &#8594; **DimCustomer.CustomerKey**
+
+      ![Screenshot of the data warehouse model page.](./Images/fabric12.png)
 
     - **FactOrderSales.SalesOrderDateKey** &#8594; **DimDate.DateKey**
 
@@ -117,7 +118,7 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
 Since the data warehouse is a relational database, you can use SQL to query its tables.
 
-### Query fact and dimension tables
+## Query fact and dimension tables
 
 Most queries in a relational data warehouse involve aggregating and grouping data (using aggregate functions and GROUP BY clauses) across related tables (using JOIN clauses).
 
@@ -199,9 +200,9 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
    ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/visual-query-merge.png)
 
-1. In the **Merge queries** window, select **DimProduct** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** to join type, and click **OK**.
+1. In the **Merge queries** window, select **DimProduct (1)** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** to join type, and click **OK (4)**.
 
-   ![02](./Images/02/02.png)
+   ![02](./Images/fabric15.png)
 
 1. In the **Preview**, note that the new **DimProduct** column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select **ProductName** and click **OK**.
 
@@ -223,7 +224,7 @@ You can easily visualize the data in either a single query or in your data wareh
       - **CustomerKey**
       - **ProductKey**
 
-     ![03](./Images/02/03.png)
+        ![03](./Images/02/03.png)
 
    1. DimCustomer
       - **CustomerKey**
@@ -247,7 +248,7 @@ You can easily visualize the data in either a single query or in your data wareh
 
     ![Screenshot of the Visualizations pane with the bar chart selected.](./Images/visualizations-pane.png)
 
-1. In the **Visualizations** pane, select the **Format your visual** tab and in the **General** sub-tab, in the **Title** section, change the **Text** to **Total Sales by Category**.
+1. In the **Visualizations** pane, select the **Format your visual (1)** tab and in the **General** sub-tab, in the **Title** section, change the **Text** to **Total Sales by Category (2)**.
 
    ![04](./Images/02/04.png)
 
