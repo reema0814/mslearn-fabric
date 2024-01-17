@@ -13,7 +13,7 @@
 
 ## Login to Azure Portal
 
-1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser which is created on the desktop.
+1. In the JumpVM, click on the **Azure portal** shortcut of the Microsoft Edge browser which is created on the desktop.
 
    ![09](./Images/gs/09.png)
    
