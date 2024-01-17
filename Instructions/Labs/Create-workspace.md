@@ -4,7 +4,7 @@
 
 #### Task 1.1: Assign Fabric Administrator Role
 
-1. Start by searching for **Microsoft Entra ID** in the search pane in Azure portal:
+1. Start by searching for **Microsoft Entra ID** in the search pane in the Azure portal:
 
    ![Navigate-To-AAD](./Images/ws/entra01.png)
 
@@ -59,7 +59,7 @@
 
 #### Task 1.3: Create a workspace
 
-Here, you create a Fabric workspace. The workspace contains all the items needed for this lakehouse tutorial, which includes lakehouse, dataflows, Data Factory pipelines, the notebooks, Power BI datasets, and reports.
+Here, you create a Fabric workspace. The workspace contains all the items needed for this lakehouse tutorial, which includes lakehouse, dataflows, Data Factory pipelines, notebooks, Power BI datasets, and reports.
 
 1.  Now, select **Workspaces** and click on **+ New workspace**:
 
@@ -68,7 +68,6 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 2. Fill out the **Create a workspace** form with the following details:
 
    - **Name:** Enter **Fabric**, and any extra characters to make the name unique.
-   
 
    ![name-and-desc-of-workspc](./Images/ws/12.png)
 
@@ -78,7 +77,7 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 
    ![advanced-and-apply](./Images/ws/13.png)
 
-Congratulations! You have successfully learnt to create a Fabric workspace.
+Congratulations! You have successfully learned to create a Fabric workspace.
 
 ----
 
