@@ -1,6 +1,6 @@
 # Use notebooks to train a model in Microsoft Fabric
 
-In this lab, we will use Microsoft Fabric to create a notebook and train a machine learning model to predict customer churn. We will use Scikit-Learn to train the model and MLflow to track its performance. Customer churn is a critical business problem that many companies face, and predicting which customers are likely to churn can help companies retain their customers and increase revenue. By completing this lab, you will gain hands-on experience in machine learning and model tracking, and learn how to use Microsoft Fabric to create a notebook for your projects.
+In this lab, we will use Microsoft Fabric to create a notebook and train a machine-learning model to predict customer churn. We will use Scikit-Learn to train the model and MLflow to track its performance. Customer churn is a critical business problem that many companies face, and predicting which customers are likely to churn can help companies retain their customers and increase revenue. By completing this lab, you will gain hands-on experience in machine learning and model tracking, and learn how to use Microsoft Fabric to create a notebook for your projects.
 
 This lab will take approximately **45** minutes to complete.
 
@@ -12,11 +12,11 @@ Using the same workspace, it's time to switch to the *Data science* experience i
 
    ![](./Images/Pg6-S1.png)
 
-2. Navigate to **C:\LabFiles\Files\churn.csv**, select the **churn.csv** file and upload it to the lakehouse.   
+2. Navigate to **C:\LabFiles\Files\churn.csv (1)**, select the **churn.csv (2)** file and click on **Open (3)** to upload it to the lakehouse.   
 
    ![](./Images/Pg6-S2.png)
 
-3. After the files have been uploaded, expand **Files** and verify that the CSV file have been uploaded.
+3. After the files have been uploaded, expand **Files** and verify that the CSV file has been uploaded.
 
    ![](./Images/Pg6-S2.1.png)
 
@@ -30,7 +30,7 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
     After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
-1. Select the first cell (which is currently a *code* cell), and then in the dynamic tool bar at its top-right, use the **M&#8595;** button to convert the cell to a *markdown* cell.
+1. Select the first cell (which is currently a *code* cell), and then in the dynamic toolbar at its top-right, use the **M&#8595;** button to convert the cell to a *markdown* cell.
 
     When the cell changes to a markdown cell, the text it contains is rendered.
 
@@ -56,29 +56,28 @@ Now you're ready to run code to prepare data and train a model. To work with dat
 
 1. Select the lakehouse you created in a previous section.
 
-1. Expand the **Files** folder so that the CSV file is listed next to the notebook editor.
+1. Expand the **Files (1)** folder so that the CSV file is listed next to the notebook editor.
 
-1. In the **...** menu for **churn.csv**, select **Load data** > **Pandas**.
+1. In the **...** menu for **churn.csv (2)**, select **Load data (3)** > **Pandas (4)**.
 
     ![](./Images/Pg6-LoadData-S5.png)
 
 1.  A new code cell containing the following code should be added to the notebook:
 
-   ```
-   python
-   import pandas as pd
-   # Load data into pandas DataFrame from "/lakehouse/default/" + "Files/churn.csv"
-   df = pd.read_csv("/lakehouse/default/" + "Files/churn.csv")
-   display(df)
-   ```
+    ```Python
+    import pandas as pd
+    # Load data into pandas DataFrame from "/lakehouse/default/" + "Files/churn.csv"
+    df = pd.read_csv("/lakehouse/default/" + "Files/churn.csv")
+    display(df)
+    ```
     
-   > **Tip**: You can hide the pane containing the files on the left by using its **<<** icon. Doing so will help you focus on the notebook.
+    > **Tip**: You can hide the pane containing the files on the left by using its **<<** icon. Doing so will help you focus on the notebook.
 
 1. Use the **&#9655; Run cell** button on the left of the cell to run it.
 
     > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first run in the session can take a minute or so to complete. Subsequent runs will be quicker.
 
-1. When the cell command has completed, review the output below the cell, which should look similar to this:
+1. When the cell command has been completed, review the output below the cell, which should look similar to this:
 
     |Index|CustomerID|years_with_company|total_day_calls|total_eve_calls|total_night_calls|total_intl_calls|average_call_minutes|total_customer_service_calls|age|churn|
     | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
@@ -92,7 +91,7 @@ Now you're ready to run code to prepare data and train a model. To work with dat
 
 ## Train a machine learning model
 
-Now that you've loaded the data, you can use it to train a machine learning model and predict customer churn. You'll train a model using the Scikit-Learn library and track the model with MLflow. 
+Now that you've loaded the data, you can use it to train a machine-learning model and predict customer churn. You'll train a model using the Scikit-Learn library and track the model with MLflow. 
 
 1. Use the **+ Code** icon below the cell output to add a new code cell to the notebook, and enter the following code in it:
 
@@ -129,7 +128,7 @@ Now that you've loaded the data, you can use it to train a machine learning mode
        mlflow.log_param("estimator", "LogisticRegression")
     ```
     
-    The code trains a classification model using Logistic Regression. Parameters, metrics, and artifacts, are automatically logged with MLflow. Additionally, you're logging a parameter called `estimator`, with the value `LogisticRegression`.
+    The code trains a classification model using Logistic Regression. Parameters, metrics, and artifacts are automatically logged with MLflow. Additionally, you're logging a parameter called `estimator`, with the value `LogisticRegression`.
 
 1. Add another new code cell to the notebook, enter the following code in it, and run it:
 
@@ -144,11 +143,11 @@ Now that you've loaded the data, you can use it to train a machine learning mode
        mlflow.log_param("estimator", "DecisionTreeClassifier")
     ```
 
-    The code trains a classification model using Decision Tree Classifier. Parameters, metrics, and artifacts, are automatically logged with MLflow. Additionally, you're logging a parameter called `estimator`, with the value `DecisionTreeClassifier`.
+    The code trains a classification model using a Decision Tree Classifier. Parameters, metrics, and artifacts, are automatically logged with MLflow. Additionally, you're logging a parameter called `estimator`, with the value `DecisionTreeClassifier`.
 
 ## Use MLflow to search and view your experiments
 
-When you've trained and tracked models with MLflow, you can use the MLflow library to retrieve your experiments and its details.
+When you've trained and tracked models with MLflow, you can use the MLflow library to retrieve your experiments and their details.
 
 1. To list all experiments, use the following code:
 
@@ -213,14 +212,14 @@ Microsoft Fabric will keep track of all your experiments and allows you to visua
     > **Tip:**
     > If you don't see any logged experiment runs, refresh the page.
 
-1. Select the **View** tab.
+1. Select the **View (1)** tab.
 
-1. Select **Run list**. 
+1. Select **Run list (2)**. 
 
-1. Select the two latest runs by checking each box.
+1. Select the **two latest runs (3)** by checking each box.
     As a result, your two last runs will be compared to each other in the **Metric comparison** pane. By default, the metrics are plotted by run name. 
 
-1. Select the **&#128393;** (Edit) button of the graph visualizing the accuracy for each run. 
+1. Select the **&#128393;** **(Edit) (4)** button of the graph visualizing the accuracy for each run. 
 
    ![](./Images/Pg6-ExpChurn-S6.png)
 
@@ -234,7 +233,7 @@ By plotting the accuracy per logged estimator, you can review which algorithm re
 
 ## Save the model
 
-After comparing machine learning models that you've trained across experiment runs, you can choose the best performing model. To use the best performing model, save the model and use it to generate predictions.
+After comparing machine learning models that you've trained across experiment runs, you can choose the best-performing model. To use the best-performing model, save the model and use it to generate predictions.
 
 1. In the experiment overview, ensure the **View** tab is selected.
 
@@ -264,7 +263,7 @@ Now that you've finished training and evaluating the models, you can save the no
 
 ---
 
-In this exercise, you have created a notebook and trained a machine learning model. You used Scikit-Learn to train the model and MLflow to track it´s performance.
+In this exercise, you have created a notebook and trained a machine-learning model. You used Scikit-Learn to train the model and MLflow to track its performance.
 
 ---
 Continue to page 7 ...

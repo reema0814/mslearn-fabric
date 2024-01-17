@@ -2,117 +2,124 @@
 
 A data lakehouse is a common analytical data store for cloud-scale analytics solutions. One of the core tasks of a data engineer is to implement and manage the ingestion of data from multiple operational data sources into the lakehouse. In Microsoft Fabric, you can implement *extract, transform, and load* (ETL) or *extract, load, and transform* (ELT) solutions for data ingestion through the creation of *pipelines*.
 
-Fabric also supports Apache Spark, enabling you to write and run code to process data at scale. By combining the pipeline and Spark capabilities in Fabric, you can implement complex data ingestion logic that copies data from external sources into the OneLake storage on which the lakehouse is based, and then uses Spark code to perform custom data transformations before loading it into tables for analysis.
+Fabric also supports Apache Spark, enabling you to write and run code to process data at scale. By combining the pipeline and Spark capabilities in Fabric, you can implement complex data ingestion logic that copies data from external sources into the OneLake storage on which the lakehouse is based and then uses Spark code to perform custom data transformations before loading it into tables for analysis.
 
 This lab will take approximately **60** minutes to complete.
 
-
-
 ## Create a Lakehouse
 
-Large-scale data analytics solutions have traditionally been built around a *data warehouse*, in which data is stored in relational tables and queried using SQL. The growth in "big data" (characterized by high *volumes*, *variety*, and *velocity* of new data assets) together with the availability of low-cost storage and cloud-scale distributed compute technologies has led to an alternative approach to analytical data storage; the *data lake*. In a data lake, data is stored as files without imposing a fixed schema for storage. Increasingly, data engineers and analysts seek to benefit from the best features of both of these approaches by combining them in a *data lakehouse*; in which data is stored in files in a data lake and a relational schema is applied to them as a metadata layer so that they can be queried using traditional SQL semantics.
+Large-scale data analytics solutions have traditionally been built around a *data warehouse*, in which data is stored in relational tables and queried using SQL. The growth in "big data" (characterized by high *volumes*, *variety*, and *velocity* of new data assets) together with the availability of low-cost storage and cloud-scale distributed computing technologies has led to an alternative approach to analytical data storage; the *data lake*. In a data lake, data is stored as files without imposing a fixed schema for storage. Increasingly, data engineers and analysts seek to benefit from the best features of both of these approaches by combining them in a *data lakehouse*; in which data is stored in files in a data lake and a relational schema is applied to them as a metadata layer so that they can be queried using traditional SQL semantics.
 
 In Microsoft Fabric, a lakehouse provides highly scalable file storage in a *OneLake* store (built on Azure Data Lake Store Gen2) with a metastore for relational objects such as tables and views based on the open source *Delta Lake* table format. Delta Lake enables you to define a schema of tables in your lakehouse that you can query using SQL.
 
 
 Now that you have created a workspace in the previous step, it's time to switch to the *Data engineering* experience in the portal and create a data lakehouse into which you will ingest data.
 
-1. At the bottom left of the Power BI portal, select the **Power BI** icon and switch to the **Data Engineering** experience.
+1. At the bottom left of the Power BI portal, select the **Power BI (1)** icon and switch to the **Data Engineering (2)** experience.
 
    ![02](./Images/01/Pg3-T1-S1.png)
    
-2. In the **Data engineering** home page, create a new **Lakehouse**.
+2. In the **Data engineering** home page, click on **Lakehouse** to create a new lakehouse.
 
-    - **Name:** Enter **Lakehouse**, and any extra characters to make the name unique.
+    - **Name:** Enter **Lakehouse<inject key="DeploymentID" enableCopy="false"/>**
 
-   ![02](./Images/01/Pg3-T1-S2.png)
+    - Click on **Create**.
+
+      ![02](./Images/fabric20.png)
 
     After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
-3. On the **Lake view** tab in the pane on the left, in the **...** menu for the **Files** node, select **New subfolder** and create a subfolder named **new_data**.
+3. On the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** tab in the pane on the left, in the **...** menu for the **Files (1)** node, select **New subfolder (2)** and create a subfolder named **new_data**
 
    ![02](./Images/01/01.png)
 
 ## Explore shortcuts
 
-In many scenarios, the data you need to work with in your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a *shortcut*. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.
+In many scenarios, the data you need to work within your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a *shortcut*. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.
 
 1. In the **...** menu for the **Files** folder, select **New shortcut**.
+
 2. View the available data source types for shortcuts. Then close the **New shortcut** dialog box without creating a shortcut.
 
 
 ## Create a pipeline
 
-A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
+A simple way to ingest data is to use a **Copy data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
-1. On the **Home** page for your lakehouse, select **New Data pipeline**.
+1. On the **Home** page for your lakehouse, select **Data pipeline**.
 
-    ![03](./Images/01/Pg3-TCreatePipeline-S1.png)
+    ![03](./Images/fabric21.png)
 
-2. Create a new data pipeline named **Ingest Sales Data Pipeline**. 
+2. Create a new data pipeline named **Ingest Sales Data Pipeline (1)** and click on **Create (2)**. 
    
    ![03](./Images/01/Pg3-TCreatePipeline-S1.1.png)
    
-3. If the **Copy Data** wizard doesn't open automatically, select **Copy Data** in the pipeline editor page.
+3. If the **Copy data** wizard doesn't open automatically, select **Copy data (1)** in the pipeline editor page.
 
    ![03](./Images/01/03.png)
 
 4. In the **Copy Data** wizard, on the **Choose a data source** page, in the **data sources** section, select the **Generic protocol (1)** tab and then select **HTTP (2)**, click on **Next (3)**.
 
-   ![Screenshot of the Choose data source page.](./Images/01/Pg3-TCreatePipeline-S3.png)
+   ![Screenshot of the Choose data source page.](./Images/fabric2.png)
 
-5. Select **Next** and then select **Create new connection** and enter the following settings for the connection to your data source:
-    - **URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
-    - **Connection**: Create new connection
-    - **Connection name**: *Specify a unique name*
-    - **Authentication kind**: Basic (*Leave the username and password blank*)
+5. Select **Next** and then select **Create new connection (1)** and enter the following settings for the connection to your data source:
+    - **URL (2)**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
+    - **Connection (3)**: Create new connection
+    - **Connection name (4)**: *Specify a unique name*
+    - **Authentication kind (5)**: Basic (*Leave the username and password blank*)
+    - Click on **Next (6)**
   
-    ![04](./Images/01/04.png)
+        ![04](./Images/fabric3.png)
     
-6. Select **Next**. Then ensure the following settings are selected:
+6. Select **Next**. Make sure the following settings are selected:
     - **Relative URL**: *Leave blank*
     - **Request method**: GET
     - **Additional headers**: *Leave blank*
-    - **Binary copy**: <u>Un</u>selected
+    - **Binary copy**: Unselected
     - **Request timeout**: *Leave blank*
     - **Max concurrent connections**: *Leave blank*
   
-    ![05](./Images/01/05.png)
+        ![05](./Images/fabric4.png)
    
-8. Select **Next**, and wait for the data to be sampled and then ensure that the following settings are selected:
-    - **File format**: DelimitedText
-    - **Column delimiter**: Comma (,)
-    - **Row delimiter**: Line feed (\n)
-    - **First row as header**: Selected
-    - **Compression type**: Leave default
+8. Wait for the data to be sampled and then ensure that the following settings are selected:
+    - **File format (1)**: DelimitedText
+    - **Column delimiter (2)**: Comma (,)
+    - **Row delimiter (3)**: Line feed (\n)
+    - Select **Preview data (4)** to see a sample of the data that will be ingested.
+
+      ![05](./Images/fabric5.png)
+
 9. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
 
-     ![06](./Images/01/06.png)
+     ![06](./Images/fabric6.png)
 
-10. On the **Choose data destination** page, select your existing lakehouse. Then select **Next**.
+10. On the **Choose data destination** page, select **Lakehouse (1)**. Then select **Next (2)**.
 
-     ![07](./Images/01/07.png)
+     ![07](./Images/fabric7.png)
 
-11. Set the following data destination options, and then select **Next**:
-    - **Root folder**: Files
-    - **Folder path name**: new_data
-    - **File name**: sales.csv
-    - **Copy behavior**: Leave default
+1. On the **Choose data destination** page, select your **Existing Lakehouse (1)** and from the drop-down select **Lakehouse<inject key="DeploymentID" enableCopy="false"/> (2)**, select **Next (3)**.
+
+   ![05](./Images/fabric8.png)
+
+11. Set the following data destination options, and then select **Next (4)**:
+    - **Root folder (1)**: Files
+    - **Folder path (2)**: new_data
+    - **File name (3)**: sales.csv
    
-    ![08](./Images/01/08.png)
+        ![08](./Images/fabric9.png)
 
-12. Set the following file format options and then select **Next**:
-    - **File format**: DelimitedText
-    - **Column delimiter**: Comma (,)
-    - **Row delimiter**: Line feed (\n)
-    - **Add header to file**: Selected
-    - **Compression type**: Leave default
+12. Set the following file format options and then select **Next (4)**:
+    - **File format (1)**: DelimitedText
+    - **Column delimiter (2)**: Comma (,)
+    - **Row delimiter (3)**: Line feed (\n)
    
-    ![09](./Images/01/09.png)
+      ![09](./Images/fabric10.png)
 
 13. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
-    A new pipeline containing a **Copy Data** activity is created, as shown here:
+    ![09](./Images/fabric11.png)
+
+    A new pipeline containing a **Copy data** activity is created, as shown here:
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
 
@@ -120,21 +127,21 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
 
-15. In the menu bar on the left, select your lakehouse.
+15. In the menu bar on the left, select your lakehouse i.e., **Lakehouse<inject key="DeploymentID" enableCopy="false"/>**.
 
-16. On the **Home** page, in the **Lakehouse explorer** pane, expand **Files** and select the **new_data** folder to verify that the **sales.csv** file has been copied.
+16. On the **Home** page, in the **Lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
 
     ![10](./Images/01/10.png)
 
 ## Create a notebook
 
-1. On the **Home** page for your lakehouse, in the **Open notebook** menu, select **New notebook**.
+1. On the **Home** page for your lakehouse, in the **Open notebook (1)** menu, select **New notebook (2)**.
 
       ![11](./Images/01/11.png)
 
     After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
-2. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
+2. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration and click on **&#9655; Run**.
 
     ```python
    table_name = "sales"
@@ -142,7 +149,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
    ![11](./Images/01/Pg3-Notebook-S2.png) 
 
-3. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
+3. In the **... (1)** menu for the cell (at its top-right) select **Toggle parameter cell (2)**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
      ![12](./Images/01/12.png)
 
@@ -170,7 +177,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a **managed table** - appending the data if the table already exists.
 
-5. Verify that your notebooks looks similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
+5. Verify that your notebooks look similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
     ![Screenshot of a notebook with a parameters cell and code to transform data.](./Images/notebook.png)
 
@@ -192,7 +199,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 7. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
 
-8. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook** and close the settings pane.
+8. In the notebook menu bar, use the ⚙️ **Settings (1)** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
 
    ![.](./Images/01/Pg3-Notebook-S10.png)
  
@@ -203,7 +210,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 ## Use SQL to query tables
 
-When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
+When you create a lakehouse and define tables in it, an SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
 1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL endpoint**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
 
@@ -211,7 +218,7 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
 
 2. Use the **New SQL query** button to open a new query editor, and enter the following SQL query:
 
-    ```sql
+    ```SQL
    SELECT Item, SUM(Quantity * UnitPrice) AS Revenue
    FROM sales
    GROUP BY Item
@@ -232,22 +239,22 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
     ![Screenshot of a Visual query.](./Images/visual-query.png)
 
-3. In the **Manage columns** menu, select **Choose columns**. Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns.
+3. In the **Manage columns** menu, select **Choose columns**. Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns and click on **OK**.
 
     ![Screenshot of a Choose columns dialog box.](./Images/choose-columns.png)
 
-4. Click on **+ (1)** ,in the **Transform table** menu, select **Group by (2)**.
+4. Click on **+ (1)**, in the **Transform table** menu, select **Group by (2)**.
 
     ![Screenshot of a Visual query with results.](./Images/01/Pg3-VisQuery-S4.0.png)
 
-5. Then group the data by using the following **Basic** settings:
+5. Then group the data by using the following **Basic** settings and click on **OK**.
 
     - **Group by**: SalesOrderNumber
     - **New column name**: LineItems
     - **Operation**: Count distinct values
     - **Column**: SalesOrderLineNumber
 
-    ![Screenshot of a Visual query with results.](./Images/01/Pg3-VisQuery-S4.01.png)
+        ![Screenshot of a Visual query with results.](./Images/01/Pg3-VisQuery-S4.01.png)
 
 6. When you're done, the results pane under the visual query shows the number of line items for each sales order.
 

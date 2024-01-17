@@ -16,36 +16,41 @@ Kusto query language (KQL) is used to query static or streaming data in a table 
 
 2. On the **Home** page for the **Real-Time Analytics** experience, select **KQL database** and create a new database.
 
-   - **Name:** Enter **KQL-Database**, and any extra characters to make the name unique.
+   - **Name:** Enter **KQL-Database<inject key="DeploymentID" enableCopy="false"/> (1)**.
 
-    ![](./Images/03/PgS2.png)
+   - Click on **Create (2)**.
 
-3. When the new database has been created, select the option to get data from **Local File**.
+     ![](./Images/fabric16.png)
+
+3. When the new database has been created, select the option to **Get data (1)** from **Local file (2)**.
 
    ![01](./Images/03/01.png)
 
 4. Use the wizard to import the data into a new table by selecting the following options:
-    - **Destination**:
-        - **Database**: *The database you created is already selected*
-        - **Table**: *Create a new table named* **sales**.
     - **Source**:
-        - **Source type**: File
-        - **Upload files**: Drag or Browse for the file from **C:\LabFiles\Files\sales.csv**
-    - **Schema**:
-        - **Compression type**: Uncompressed
-        - **Data format**: CSV
-        - **Ignore the first record**: *Selected*
-        - **Mapping name**: sales_mapping
-    - **Summary**:
+        - **Database:** *The database you created is already selected*
+        - **Table:** *Create a new table named* **sales**.
+        - **Source type:** File
+        - **Upload files:** Drag or Browse for the file from **C:\LabFiles\Files\sales.csv**
+
+            ![01](./Images/fabric17.png)
+
+    - **Inspect:** Preview the data and click on **Finish**.
+
+        ![01](./Images/fabric18.png)
+
+    - **Summary:**
         - *Review the preview of the table and close the wizard.*
 
-> **Note**: In this example, you imported a very small amount of static data from a file, which is fine for the purposes of this exercise. In reality, you can use Kusto to analyze much larger volumes of data; including real-time data from a streaming source such as Azure Event Hubs.
+            ![01](./Images/fabric19.png)
+
+> **Note:** In this example, you imported a very small amount of static data from a file, which is fine for this exercise. In reality, you can use Kusto to analyze much larger volumes of data; including real-time data from a streaming source such as Azure Event Hubs.
 
 ## Use KQL to query the sales table
 
 Now that you have a table of data in your database, you can use KQL code to query it.
 
-1. Make sure you have the **sales** table highlighted. From the menu bar, select the **Query table** drop-down, and from there select **Show any 100 records** .
+1. Make sure you have the **sales** table highlighted. From the menu bar, select the **Query table** drop-down, and from there select **Show any 100 records**.
 
 2. A new pane will open with the query and its result. 
 
@@ -79,7 +84,7 @@ Now that you have a table of data in your database, you can use KQL code to quer
 
 8. Run the query and review the results, which should contain the total net revenue for each product between January 1st and December 31st 2020 in ascending order of product name.
 
-9. Select **Save as KQL queryset** and save the query as **Revenue by Product**.
+9. Select **Save as KQL queryset** and save the query as **Revenue by Product** and click on **Create**.
 
 ## Create a Power BI report from a KQL Queryset
 
@@ -95,7 +100,7 @@ You can use your KQL Queryset as the basis for a Power BI report.
 
     ![Screenshot of a report from a KQL query.](./Images/kql-report.png)
 
-5. In the **Power BI** window, in the **File** menu, select **Save**. Then save the report as **Revenue by Item.pbix** in the workspace where your lakehouse and KQL database are defined using a **Non-Business** sensitivity label.
+5. In the **Power BI** window, in the **File** menu, select **Save**. Then save the report as **Revenue by Item** in the workspace where your lakehouse and KQL database are defined using a **Non-Business** sensitivity label.
 
 6. Close the **Power BI** window, and in the bar on the left, select the icon for your workspace.
 
@@ -105,7 +110,7 @@ You can use your KQL Queryset as the basis for a Power BI report.
 
 ## Use delta tables for streaming data
 
-Delta lake supports streaming data. Delta tables can be a *sink* or a *source* for data streams created using the Spark Structured Streaming API. In this example, you'll use a delta table as a sink for some streaming data in a simulated internet of things (IoT) scenario.
+Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* for data streams created using the Spark Structured Streaming API. In this example, you'll use a delta table as a sink for some streaming data in a simulated Internet of Things (IoT) scenario.
 
 1. Navigate back to your workspace and open **Load Sales Notebook**. Add a new code cell in the notebook. Then, in the new cell, add the following code and run it:
 
@@ -151,11 +156,11 @@ Delta lake supports streaming data. Delta tables can be a *sink* or a *source* f
    print("Streaming to delta sink...")
     ```
 
-    This code writes the streaming device data in delta format to a folder named **iotdevicedata**. Because the path for the folder location in the **Tables** folder, a table will automatically be created for it.
+    This code writes the streaming device data in delta format to a folder named **iotdevicedata**. Because the path for the folder location is in the **Tables** folder, a table will automatically be created for it.
 
 3. In a new code cell, add and run the following code:
 
-    ```sql
+    ```SQL
    %%sql
 
    SELECT * FROM IotDeviceData;
@@ -182,7 +187,7 @@ Delta lake supports streaming data. Delta tables can be a *sink* or a *source* f
 
 5. Re-run the cell containing the following code:
 
-    ```sql
+    ```SQL
    %%sql
 
    SELECT * FROM IotDeviceData;
