@@ -17,7 +17,7 @@
 
    ![09](./Images/gs/09.png)
    
-1. On the **Sign into Microsoft Azure** tab you will see the login screen, in that enter the following email/username and then click on **Next**. 
+1. On the **Sign-in into Microsoft Azure** tab you will see the login screen, in that enter the following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
    
      ![04](./Images/gs/04.png)
