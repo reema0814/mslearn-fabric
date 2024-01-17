@@ -12,7 +12,9 @@ Now that you have a workspace, it's time to switch to the *Data engineering* exp
 
 2. In the **Synapse Data Engineering** home page, create a new **Lakehouse**.
 
-   - **Name:** Enter **fabric_lakehouse**, and any extra characters to make the name unique.
+   - **Name:** Enter **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>**
+
+   - Click on **Create**
 
     After a minute or so, a new empty lakehouse will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise, you'll simply upload them to your lakehouse from the **LabVM**.
 
@@ -36,7 +38,7 @@ To work with data in Apache Spark, you can create a *notebook*. Notebooks provid
 
     When the cell changes to a markdown cell, the text it contains is rendered.
 
-3. Use the **&#128393;** (Edit) button to switch the cell to editing mode, then modify the markdown as follows:
+3. Use the **&#128393;** **(Edit)** button to switch the cell to editing mode, then modify the markdown as follows:
 
     ```
    # Sales order data exploration
@@ -56,7 +58,7 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
     ![Screenshot of a notebook with a Files pane.](./Images/notebook-files.png)
 
-2. In the **...** menu for **2019.csv**, select **Load data** > **Spark**.
+2. In the **orders (1)** folder, click on **... (2)** menu for **2019.csv**, select **Load data (3)** > **Spark (4)**.
 
    ![](./Images/Pg7-LoadData-S2.png)
 
@@ -143,28 +145,28 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
 11. The dataframe includes only the data from the **2019.csv** file. Modify the code so that the file path uses a \* wildcard to read the sales order data from all of the files in the **orders** folder:
 
-```python
-from pyspark.sql.types import *
+    ```python
+    from pyspark.sql.types import *
 
-orderSchema = StructType([
-    StructField("SalesOrderNumber", StringType()),
-    StructField("SalesOrderLineNumber", IntegerType()),
-    StructField("OrderDate", DateType()),
-    StructField("CustomerName", StringType()),
-    StructField("Email", StringType()),
-    StructField("Item", StringType()),
-    StructField("Quantity", IntegerType()),
-    StructField("UnitPrice", FloatType()),
-    StructField("Tax", FloatType())
-])
+    orderSchema = StructType([
+        StructField("SalesOrderNumber", StringType()),
+        StructField("SalesOrderLineNumber", IntegerType()),
+        StructField("OrderDate", DateType()),
+        StructField("CustomerName", StringType()),
+        StructField("Email", StringType()),
+        StructField("Item", StringType()),
+        StructField("Quantity", IntegerType()),
+        StructField("UnitPrice", FloatType()),
+        StructField("Tax", FloatType())
+    ])
 
-df = spark.read.format("csv").schema(orderSchema).load("Files/orders/*.csv")
-display(df)
-```
+    df = spark.read.format("csv").schema(orderSchema).load("Files/orders/*.csv")
+    display(df)
+    ```
 
 11. Run the modified code cell and review the output, which should now include sales for 2019, 2020, and 2021.
 
-    **Note**: Only a subset of the rows is displayed, so you may not be able to see examples from all years.
+    >**Note**: Only a subset of the rows is displayed, so you may not be able to see examples from all years.
 
 ## Explore data in a dataframe
 
@@ -265,7 +267,7 @@ A common task for data engineers is to ingest data in a particular format or str
 
     > **Note**: Commonly, the *Parquet* format is preferred for data files that you will use for further analysis or ingestion into an analytical store. Parquet is a very efficient format that is supported by most large-scale data analytics systems. In fact, sometimes your data transformation requirement may simply be to convert data from another format (such as CSV) to Parquet!
 
-2. Run the cell and wait for the message that the data has been saved. Then, in the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **Refresh**; and select the **transformed_orders** folder to verify that it contains a new folder named **orders**, which in turn contains one or more Parquet files.
+2. Run the cell and wait for the message that the data has been saved. Then, in the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **Refresh**; and select the **transformed_data** folder to verify that it contains a new folder named **orders**, which in turn contains one or more Parquet files.
 
     ![Screenshot of a folder containing parquet files.](./Images/saved-parquet.png)
 
@@ -287,7 +289,7 @@ A common task for data engineers is to ingest data in a particular format or str
    print ("Transformed data saved!")
     ```
 
-2. Run the cell and wait for the message that the data has been saved. Then, in the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **Refresh**; and expand the **partitioned_orders** folder to verify that it contains a hierarchy of folders named **Year=*xxxx***, each containing folders named **Month=*xxxx***. Each month's folder contains a parquet file with the orders for that month.
+2. Run the cell and wait for the message that the data has been saved. Then, in the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **Refresh**; and expand the **partitioned_data** folder to verify that it contains a hierarchy of folders named **Year=*xxxx***, each containing folders named **Month=*xxxx***. Each month's folder contains a parquet file with the orders for that month.
 
     ![Screenshot of a hierarchy of partitioned data files.](./Images/partitioned-files.png)
 
@@ -388,7 +390,7 @@ A picture is proverbially worth a thousand words, and a chart is often better th
 
 5. Verify that the chart looks similar to this:
 
-    ![Screenshot of a bar chart of products by total order quantiies](./Images/notebook-chart.png)
+    ![Screenshot of a bar chart of products by total order quantiies](./Images/fabric22.png)
 
 ### Get started with **matplotlib**
 
