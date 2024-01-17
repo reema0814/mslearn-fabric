@@ -25,7 +25,7 @@ Now that you have created a workspace in the previous step, it's time to switch 
 
     - Click on **Create**.
 
-      ![02](./Images/01/Pg3-T1-S2.png)
+      ![02](./Images/fabric20.png)
 
     After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
@@ -48,7 +48,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 1. On the **Home** page for your lakehouse, select **Data pipeline**.
 
-    ![03](./Images/01/Pg3-TCreatePipeline-S1.png)
+    ![03](./Images/fabric21.png)
 
 2. Create a new data pipeline named **Ingest Sales Data Pipeline (1)** and click on **Create (2)**. 
    
