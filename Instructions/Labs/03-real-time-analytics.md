@@ -16,28 +16,33 @@ Kusto query language (KQL) is used to query static or streaming data in a table 
 
 2. On the **Home** page for the **Real-Time Analytics** experience, select **KQL database** and create a new database.
 
-   - **Name:** Enter **KQL-Database**, and any extra characters to make the name unique.
+   - **Name:** Enter **KQL-Database<inject key="DeploymentID" enableCopy="false"/> (1)**.
 
-    ![](./Images/03/PgS2.png)
+   - Click on **Create (2)**.
 
-3. When the new database has been created, select the option to get data from **Local File**.
+     ![](./Images/fabric16.png)
+
+3. When the new database has been created, select the option to **Get data (1)** from **Local file (2)**.
 
    ![01](./Images/03/01.png)
 
 4. Use the wizard to import the data into a new table by selecting the following options:
-    - **Destination**:
+    - **Source**:
         - **Database**: *The database you created is already selected*
         - **Table**: *Create a new table named* **sales**.
-    - **Source**:
         - **Source type**: File
         - **Upload files**: Drag or Browse for the file from **C:\LabFiles\Files\sales.csv**
-    - **Schema**:
-        - **Compression type**: Uncompressed
-        - **Data format**: CSV
-        - **Ignore the first record**: *Selected*
-        - **Mapping name**: sales_mapping
+
+            ![01](./Images/fabric17.png)
+
+    - **Inspect:** Preview the data and click on **Finish**.
+
+        ![01](./Images/fabric18.png)
+
     - **Summary**:
         - *Review the preview of the table and close the wizard.*
+
+            ![01](./Images/fabric19.png)
 
 > **Note**: In this example, you imported a very small amount of static data from a file, which is fine for the purposes of this exercise. In reality, you can use Kusto to analyze much larger volumes of data; including real-time data from a streaming source such as Azure Event Hubs.
 
@@ -79,7 +84,7 @@ Now that you have a table of data in your database, you can use KQL code to quer
 
 8. Run the query and review the results, which should contain the total net revenue for each product between January 1st and December 31st 2020 in ascending order of product name.
 
-9. Select **Save as KQL queryset** and save the query as **Revenue by Product**.
+9. Select **Save as KQL queryset** and save the query as **Revenue by Product** and click on **Create**.
 
 ## Create a Power BI report from a KQL Queryset
 
