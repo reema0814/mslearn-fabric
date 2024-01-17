@@ -345,7 +345,7 @@ While it's useful to be able to embed SQL statements into a cell containing PySp
 
 1. Add a new code cell to the notebook, and enter the following code in it:
 
-    ```sql
+    ```SQL
    %%sql
    SELECT YEAR(OrderDate) AS OrderYear,
           SUM((UnitPrice * Quantity) + Tax) AS GrossRevenue
@@ -369,7 +369,7 @@ A picture is proverbially worth a thousand words, and a chart is often better th
 
 1. Add a new code cell to the notebook, and enter the following code in it:
 
-    ```sql
+    ```SQL
    %%sql
    SELECT * FROM salesorders
     ```
