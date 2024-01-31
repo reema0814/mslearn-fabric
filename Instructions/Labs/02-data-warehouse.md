@@ -151,14 +151,13 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
 3. Run the modified query and review the results, which now include sales revenue aggregated by year, month, and sales region.
 
-## Create a view and Visualize your data
+## Create a view
 
 A data warehouse in Microsoft Fabric has many of the same capabilities you may be used to in relational databases. For example, you can create database objects like *views* and *stored procedures* to encapsulate SQL logic.
-You can easily visualize the data in either a single query, or in your data warehouse. Before you visualize, hide columns and/or tables that aren't friendly to report designers.
 
 1. Modify the query you created previously as follows to create a view (note that you need to remove the ORDER BY clause to create a view).
 
-    ```sql
+    ```SQL
    CREATE VIEW vSalesByRegion
    AS
    SELECT  d.[Year] AS CalendarYear,
@@ -181,52 +180,76 @@ You can easily visualize the data in either a single query, or in your data ware
    FROM vSalesByRegion
    ORDER BY CalendarYear, MonthOfYear, SalesRegion;
     ```
-4. In the **Explorer** pane, select the **Model** view. 
 
-5. Hide the following columns in your Fact and Dimension tables that are not necessary to create a report. Note that this does not remove the columns from the model, it simply hides them from view on the report canvas.
-   
+### Create a visual query
+
+Instead of writing SQL code, you can use the graphical query designer to query the tables in your data warehouse. This experience is similar to Power Query online, where you can create data transformation steps with no code. For more complex tasks, you can use Power Query's M (Mashup) language.
+
+1. On the **Home** menu, select **New visual query**.
+
+1. Drag **FactSalesOrder** onto the **canvas**. Notice that a preview of the table is displayed in the **Preview** pane below.
+
+1. Drag **DimProduct** onto the **canvas**. We now have two tables in our query.
+
+1. Use the **(+)** button on the **FactSalesOrder** table on the canvas to **Merge queries**.
+
+   ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/visual-query-merge.png)
+
+1. In the **Merge queries** window, select **DimProduct (1)** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** to join type, and click **OK (4)**.
+
+1. In the **Preview**, note that the new **DimProduct** column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select **ProductName** and click **OK**.
+
+   ![Screenshot of the preview pane with the DimProduct column expanded, with ProductName selected.](./Images/visual-query-preview.png)
+
+1. If you're interested in looking at data for a single product, per a manager's request, you can now use the **ProductName** column to filter the data in the query. Filter the **ProductName** column to look at **Cable Lock** data only.
+
+1. From here, you can analyze the results of this single query by selecting **Visualize results** or **Open in Excel**. You can now see exactly what the manager was asking for, so we don't need to analyze the results further.
+
+### Visualize your data
+
+You can easily visualize the data in either a single query or in your data warehouse. Before you visualize, hide columns and/or tables that aren't friendly to report designers.
+
+1. In the **Explorer** pane, select the **Model** view. 
+
+1. Hide the following columns in your Fact and Dimension tables that are not necessary to create a report. Note that this does not remove the columns from the model, it simply hides them from view on the report canvas.
    1. FactSalesOrder
       - **SalesOrderDateKey**
       - **CustomerKey**
       - **ProductKey**
 
-    ![03](./Images/02/03.png)
+        ![03](./Images/02/03.png)
 
-   2. DimCustomer
+   1. DimCustomer
       - **CustomerKey**
       - **CustomerAltKey**
-   3. DimDate
+   1. DimDate
       - **DateKey**
       - **DateAltKey**
-   4. DimProduct
+   1. DimProduct
       - **ProductKey**
       - **ProductAltKey** 
 
-6. Now you're ready to build a report and make this dataset available to others. On the Home menu, select **New report**. This will open a new window, where you can create a Power BI report.
+1. Now you're ready to build a report and make this dataset available to others. On the Home menu, select **New report**. This will open a new window, where you can create a Power BI report.
 
    ![03](./Images/02/Pg4-VisualizeData-S3.png)
 
-7. In the **Data** pane, expand **FactSalesOrder**. Note that the columns you hid are no longer visible. 
+1. In the **Data** pane, expand **FactSalesOrder**. Note that the columns you hid are no longer visible. 
 
-8. Select **SalesTotal**. This will add the column to the **Report canvas**. Because the column is a numeric value, the default visual is a **column chart**.
+1. Select **SalesTotal**. This will add the column to the **Report canvas**. Because the column is a numeric value, the default visual is a **column chart**.
+1. Ensure that the column chart on the canvas is active (with a grey border and handles), and then select **Category** from the **DimProduct** table to add a category to your column chart.
+1. In the **Visualizations** pane, change the chart type from a column chart to a **clustered bar chart**. Then resize the chart as necessary to ensure that the categories are readable.
 
-9. Ensure that the column chart on the canvas is active (with a gray border and handles), and then select **Category** from the **DimProduct** table to add a category to your column chart.
+    ![Screenshot of the Visualizations pane with the bar chart selected.](./Images/visualizations-pane.png)
 
-10. In the **Visualizations** pane, change the chart type from a column chart to a **clustered bar chart**. Then resize the chart as necessary to ensure that the categories are readable.
+1. In the **Visualizations** pane, select the **Format your visual (1)** tab and in the **General** sub-tab, in the **Title** section, change the **Text** to **Total Sales by Category (2)**.
 
-    ![Screenshot of the Visualizations pane with the bar chart selected.](./Images/visualizations-pane1.png)
+   ![04](./Images/02/04.png)
 
-11. In the **Visualizations** pane, select the **Format your visual** tab and in the **General** sub-tab, in the **Title** section, change the **Text** to **Total Sales by Category**.
+1. In the **File** menu, select **Save**. Then save the report as **Sales Report** in the workspace you created previously.
 
-    ![04](./Images/02/04.png)
+1. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
 
-12. In the **File** menu, select **Save**. Then save the report as **Sales Report** in the workspace you created previously.
-
-13. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
-
-    ![Screenshot of the workspace with the three items listed.](./Images/workspace-items1.png)
-
-    - Refer to [DataWarehouse](https://learn.microsoft.com/en-us/fabric/data-warehouse/data-warehousing) for more delated information
+   ![Screenshot of the workspace with the three items listed.](./Images/workspace-items.png)
 
 ## Review
 
