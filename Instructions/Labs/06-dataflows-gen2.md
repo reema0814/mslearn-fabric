@@ -43,7 +43,7 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
 2. In the **Connect to data destination** dialog box, edit the connection and sign in using your Power BI organizational account to set the identity that the dataflow uses to access the lakehouse.
 
-    ![Data destination configuration page.](./Images/dataflow-connection1.png)
+    ![Data destination configuration page.](./Images/lakehuse_31-1.png)
 
 3. Select **Next** and in the list of available workspaces, find your workspace and select the lakehouse you created in it at the start of this exercise. Then specify a new table named **orders**:
 
