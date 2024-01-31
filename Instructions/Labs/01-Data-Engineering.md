@@ -112,7 +112,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
    
     ![09](./Images/01/09.png)
 
-14. On the **Copy summary** page, review the details of your copy operation and then select **Review + Run**.
+14. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
     A new pipeline containing a **Copy Data** activity is created, as shown here:
 
@@ -125,6 +125,8 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 16. In the menu bar on the left, select your lakehouse.
 
 17. On the **Home** page, in the **Lakehouse explorer** pane, expand **Files** and select the **new_data** folder to verify that the **sales.csv** file has been copied.
+
+    >**Note**: If you dont see sales.csv try refreshing 
 
     ![10](./Images/01/10.png)
 
@@ -209,11 +211,13 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
-1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL endpoint**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
+1. Switch Back to the **Home** page and select your **Lakehouse**. 
+
+2. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL endpoint**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
 
     ![Screenshot of the SQL endpoint page.](./Images/lakehouse-sql-endpoint.png)
 
-2. Use the **New SQL query** button to open a new query editor, and enter the following SQL query:
+3. Use the **New SQL query** button to open a new query editor, and enter the following SQL query:
 
     ```sql
    SELECT Item, SUM(Quantity * UnitPrice) AS Revenue
@@ -222,7 +226,7 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
    ORDER BY Revenue DESC;
     ```
 
-3. Use the **&#9655; Run** button to run the query and view the results, which should show the total revenue for each product.
+4. Use the **&#9655; Run** button to run the query and view the results, which should show the total revenue for each product.
 
     ![Screenshot of a SQL query with results.](./Images/sql-query.png)
 
