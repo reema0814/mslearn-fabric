@@ -116,7 +116,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     A new pipeline containing a **Copy Data** activity is created, as shown here:
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline1.png)
 
 15. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
@@ -148,7 +148,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 3. In the **...** menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
-     ![12](./Images/01/12.png)
+     ![12](./Images/toggle.png)
 
 4. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
 
@@ -215,7 +215,7 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
 
 2. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL endpoint**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
 
-    ![Screenshot of the SQL endpoint page.](./Images/lakehouse-sql-endpoint.png)
+    ![Screenshot of the SQL endpoint page.](./Images/sql_31-1.png)
 
 3. Use the **New SQL query** button to open a new query editor, and enter the following SQL query:
 
