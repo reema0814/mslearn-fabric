@@ -25,11 +25,10 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
 4. On the toolbar ribbon, select the **Add column** tab. Then select **Custom column** and create a new column named **MonthNo** that contains a number based on the formula `Date.Month([OrderDate])` - as shown here:
 
-   ![Custom column in Power Query editor.](./Images/custom-column1.png)
+    ![Custom column in Power Query editor.](./Images/custom-column1.png)
 
- The step to add the custom column is added to the query and the resulting column is displayed in the data pane:
-
-   ![Query with a custom column step.](./Images/custom-column-added1.png)
+     The step to add the custom column is added to the query and the resulting column is displayed in the data pane:
+     ![Query with a custom column step.](./Images/custom-column-added1.png)
 
 > **Tip:** In the Query Settings pane on the right side, notice the **Applied Steps** include each transformation step. At the bottom, you can also toggle the **Diagram flow** button to turn on the Visual Diagram of the steps.
 >
