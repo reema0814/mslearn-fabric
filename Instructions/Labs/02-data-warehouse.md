@@ -217,39 +217,43 @@ You can easily visualize the data in either a single query or in your data wareh
       - **CustomerKey**
       - **ProductKey**
 
-        ![03](./Images/02/03.png)
+    ![03](./Images/02/03.png)
 
-   1. DimCustomer
+   2. DimCustomer
       - **CustomerKey**
       - **CustomerAltKey**
-   1. DimDate
+   3. DimDate
       - **DateKey**
       - **DateAltKey**
-   1. DimProduct
+   4. DimProduct
       - **ProductKey**
       - **ProductAltKey** 
 
-1. Now you're ready to build a report and make this dataset available to others. On the Home menu, select **New report**. This will open a new window, where you can create a Power BI report.
+6. Now you're ready to build a report and make this dataset available to others. On the Home menu, select **New report**. This will open a new window, where you can create a Power BI report.
 
    ![03](./Images/02/Pg4-VisualizeData-S3.png)
 
-1. In the **Data** pane, expand **FactSalesOrder**. Note that the columns you hid are no longer visible. 
+7. In the **Data** pane, expand **FactSalesOrder**. Note that the columns you hid are no longer visible. 
 
-1. Select **SalesTotal**. This will add the column to the **Report canvas**. Because the column is a numeric value, the default visual is a **column chart**.
-1. Ensure that the column chart on the canvas is active (with a grey border and handles), and then select **Category** from the **DimProduct** table to add a category to your column chart.
-1. In the **Visualizations** pane, change the chart type from a column chart to a **clustered bar chart**. Then resize the chart as necessary to ensure that the categories are readable.
+8. Select **SalesTotal**. This will add the column to the **Report canvas**. Because the column is a numeric value, the default visual is a **column chart**.
 
-    ![Screenshot of the Visualizations pane with the bar chart selected.](./Images/visualizations-pane.png)
+9. Ensure that the column chart on the canvas is active (with a gray border and handles), and then select **Category** from the **DimProduct** table to add a category to your column chart.
 
-1. In the **Visualizations** pane, select the **Format your visual (1)** tab and in the **General** sub-tab, in the **Title** section, change the **Text** to **Total Sales by Category (2)**.
+10. In the **Visualizations** pane, change the chart type from a column chart to a **clustered bar chart**. Then resize the chart as necessary to ensure that the categories are readable.
 
-   ![04](./Images/02/04.png)
+    ![Screenshot of the Visualizations pane with the bar chart selected.](./Images/visualizations-pane1.png)
 
-1. In the **File** menu, select **Save**. Then save the report as **Sales Report** in the workspace you created previously.
+11. In the **Visualizations** pane, select the **Format your visual** tab and in the **General** sub-tab, in the **Title** section, change the **Text** to **Total Sales by Category**.
 
-1. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
+    ![04](./Images/02/04.png)
 
-   ![Screenshot of the workspace with the three items listed.](./Images/workspace-items.png)
+12. In the **File** menu, select **Save**. Then save the report as **Sales Report** in the workspace you created previously.
+
+13. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
+
+    ![Screenshot of the workspace with the three items listed.](./Images/workspace-items1.png)
+
+    - Refer to [DataWarehouse](https://learn.microsoft.com/en-us/fabric/data-warehouse/data-warehousing) for more delated information
 
 ## Review
 
