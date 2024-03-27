@@ -14,7 +14,7 @@ o	And leveraging the native integration of Copilot to use natural language to in
 1.	Text/CSV
 https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv
 
-    > **Note:** This is the same file and link you'll use in the labs.
+     >**Note:** This is the same file and link you'll use in the labs.
 
 1. Create new connection OR Edit Existing Connection
 1.	Basic authentication
