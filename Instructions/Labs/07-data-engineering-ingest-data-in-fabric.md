@@ -46,10 +46,10 @@
 1. Type the following into Copilot:
  
     ```
-    In the Item column, replace the ',' with ' '
+    In the Item column, replace the ',' with ' ' 
     ```
  
-1. The Item column now consistently has a delimiter of ' '.
+1. The Item column now consistently has a delimiter of **' '**.
 
 1. Show the m-code and new query step that copilot generated.
  
@@ -82,5 +82,5 @@ Call out that the quantities for all items are 1.
  
 1. Show that the quantity field for Red bikes is now 10 instead of 1.
  
-1.	Discuss the effects in the Visual Query and M-Query/M-Code script.
+1. Discuss the effects in the Visual Query and M-Query/M-Code script.
  
