@@ -61,13 +61,13 @@ Mention again that AI can generate different results and you're never sure what 
  
 1. Sales Orders Trends is usually a decent report you can work with (it can always  be different and you might not get a good report).
  
-1.	Click **Edit** to show you can adjust the query.
+1. Click **Edit** to show you can adjust the query.
 
-1.	Show a few generated reports.
+1. Show a few generated reports.
 
-    > **Note:** This is a report that you can change just like you would any other report. Demonstrate this by changing one of the visuals.
+    >**Note:** This is a report that you can change just like you would any other report. Demonstrate this by changing one of the visuals.
  
-1.	Sales Order Trends Report - One of the visuals usually has a field that can be adjusted.
+1. Sales Order Trends Report - One of the visuals usually has a field that can be adjusted.
 
     - Delete the **DayName field** and add **MonthName**
     - Visual is not by month and not day
@@ -83,8 +83,8 @@ Mention again that AI can generate different results and you're never sure what 
 
 1. Click through the footnotes to show where the text in the narrative comes from in the report.
 
-1. Bulleted List of Insights
-1. Click footnotes to show where in the report the item comes from
+1. Bulleted List of Insights.
+1. Click footnotes to show where in the report the item comes from.
  
 Explain how Copilot is analyzing the visuals in the report to generate text to explain the report
 This is true Generative AI building new content from existing data
