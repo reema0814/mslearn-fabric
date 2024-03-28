@@ -41,8 +41,11 @@
 1. Lets use Copilot to clean this up:
 
     ```
-   	Add a step to the query
+   	Add a step that
     ```
+
+    ![New dataflow.](./Images/3.png)
+
 1. Type the following into Copilot:
  
     ```
@@ -51,11 +54,14 @@
  
 1. The Item column now consistently has a delimiter of **' '**.
 
+   ![New dataflow.](./Images/4.png)
+
 1. Show the m-code and new query step that copilot generated.
  
    ```
-   Add a step to the query
+   Add a step that
    ```
+   ![New dataflow.](./Images/3.png)
 
 1. Type the following into Copilot:
  
@@ -63,7 +69,9 @@
     Split the Item column on the ' ', creating three new fields called Description, Color and Size
     ```
  
-1. Three new fields are now created to replace the Item Column
+1. Three new fields are now created to replace the Item Column.
+
+   ![New dataflow.](./Images/5.png)
  
 1. Show the m-code and new query step that copilot generated
  
@@ -72,7 +80,12 @@
 1. Scenario: think Red bikes are going to be a big seller, so increase the quantity in Inventory
 Call out that the quantities for all items are 1.
  
-1. Add a step to the query
+1. Add a step to the query:
+
+   ```
+   Add a step that
+   ```
+   ![New dataflow.](./Images/3.png)
 
 1. Type the following into Copilot:
  
@@ -81,6 +94,8 @@ Call out that the quantities for all items are 1.
     ```
  
 1. Show that the quantity field for Red bikes is now 10 instead of 1.
+
+   ![New dataflow.](./Images/6.png)
  
 1. Discuss the effects in the Visual Query and M-Query/M-Code script.
  
