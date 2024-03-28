@@ -49,7 +49,7 @@
     In the Item column, replace the ',' with ' '
     ```
  
-1. The Item column now consistently has a delimiter of ' ' .
+1. The Item column now consistently has a delimiter of ' '.
 
 1. Show the m-code and new query step that copilot generated.
  
