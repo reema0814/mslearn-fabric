@@ -1,11 +1,10 @@
 # Data Warehouse Analyze Data in a Warehouse
 
-1. Select the workspace **fabric-2024001** (this is the workspace that mimics the lab environment)
+1. Select the workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** (this is the workspace that mimics the lab environment)
 
 1. Select **Data Warehouse** Object in the workspace (this is the same data warehouse students will create)
 
     ![New dataflow.](./Images/2.png)
-
  
 1. In the **Explorer** pane, verify that the **dbo** schema in the data warehouse contains the following four tables:
     - **DimCustomer**
@@ -17,7 +16,7 @@
 
     > **Tip**: If the schema takes a while to load, just refresh the browser page.
  
-1. Clicking on **Model** view allows you to view the relationships between different tables within the data warehouse.
+1. Clicking on the **Model** view allows you to view the relationships between different tables within the data warehouse.
 
 1. When you right-click on the relationship between **FactSalesOrder** and **DimCustomer** and access its properties, you're essentially examining how these two tables are linked together. This relationship defines how data from these tables can be combined or related when querying or visualizing in Power BI.
 
@@ -71,7 +70,7 @@
  
 1. **Expand each suggestion** to show the text of the prompt and what will be created. This helps illustrate the range of suggestions Copilot can provide.
  
-1. Select **Sales Trend Identification** report as it's usually a decent report to work with. Note that the report generated can vary.
+1. Select the **Sales Trend Identification** report as it's usually a decent report to work with. Note that the report generated can vary.
  
 1. Click **Edit** to demonstrate that you can adjust the query and customize the report.
 
