@@ -17,7 +17,7 @@
 
     > **Tip**: If the schema takes a while to load, just refresh the browser page.
  
-1. Clicking on **Model** allows you to view the relationships between different tables within the data warehouse.
+1. Clicking on **Model** view allows you to view the relationships between different tables within the data warehouse.
 
 1. When you right-click on the relationship between **FactSalesOrder** and **DimCustomer** and access its properties, you're essentially examining how these two tables are linked together. This relationship defines how data from these tables can be combined or related when querying or visualizing in Power BI.
 
@@ -43,7 +43,7 @@
 
     - Discuss how, even in this straightforward model, Copilot's analysis can help users understand what the dataset contains and how it can be utilized. With more complex models, Copilot's insights become even more valuable in uncovering intricate relationships and patterns within the data.
     
-1. **AI for Data Analysis:** Highlight the significance of Copilot as an example of AI being used not only to generate code or manipulate data but also to assist in analyzing datasets. Copilot's ability to provide intelligent insights and suggestions enhances the data analysis process and empowers users to make informed decisions based on their data.
+1. Highlight the significance of Copilot as an example of AI being used not only to generate code or manipulate data but also to assist in analyzing datasets. Copilot's ability to provide intelligent insights and suggestions enhances the data analysis process and empowers users to make informed decisions based on their data.
  
 1. Explore the capabilities of Copilot further by **clicking on its logo** within the text box. This will allow you to access additional features and functionalities that Copilot offers, providing a deeper understanding of its capabilities.
  
@@ -66,20 +66,14 @@
 1. **Click the Copilot logo again** and select:
 
     ```
-    Suggest Content for this Report - GO
+    Suggest Content for this Report
     ```
  
 1. **Expand each suggestion** to show the text of the prompt and what will be created. This helps illustrate the range of suggestions Copilot can provide.
  
-1. Select **Sales Orders Trends** report as it's usually a decent report to work with. Note that the report generated can vary.
+1. Select **Sales Trend Identification** report as it's usually a decent report to work with. Note that the report generated can vary.
  
 1. Click **Edit** to demonstrate that you can adjust the query and customize the report.
-
-1. **Modify one of the visuals** by deleting the "DayName" field and adding "MonthName" instead. This showcases how you can adjust visuals as needed.
-
-1. **Delete a visual that isn't helpful** to create space on the page for further customization.
-
-1. **Add a new Narrative Visualization** in the created space and click Copilot within the visual.
 
 1. **Clear the input box** and select:
 
