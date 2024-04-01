@@ -9,9 +9,13 @@
     ![New dataflow.](./Images/2.png)
  
 1. In the **Explorer** pane, verify that the **dbo** schema in the data warehouse contains the following four tables:
+   
     - **DimCustomer**
+
     - **DimDate**
+
     - **DimProduct**
+
     - **FactSalesOrder**
 
       ![01](./Images/02/Pg4-T2-S9.png)  
@@ -22,7 +26,7 @@
 
     ![](./Images/11.png)
 
-1. When you Click on the relationship between **FactSalesOrder** and **DimCustomer** and access its properties, you're essentially examining how these two tables are linked together. This relationship defines how data from these tables can be combined or related when querying or visualizing in Power BI.
+1. When you click on the relationship between **FactSalesOrder** and **DimCustomer** and access its properties, you're essentially examining how these two tables are linked together. This relationship defines how data from these tables can be combined or related when querying or visualizing in Power BI.
 
      ![](./Images/10.png)
 
@@ -79,7 +83,7 @@
 
     ![](./Images/18.png)
 
-   - The report provides a comprehensive analysis of total sales across a spectrum of product categories, revealing a consistent pattern of total sales summing up to 19.59 million across all 39 categories. Similarly, the quantity sold uniformly stands at 25.98 thousand units for each category. With an average total sales figure of 4.55 thousand, it suggests an even distribution of sales performance across all categories. This uniformity underscores a balanced sales landscape across the diverse product categories, thereby offering valuable insights for informed decision-making in subsequent business strategies.
+   - The report provides a comprehensive analysis of total sales across a spectrum of product categories, revealing a consistent pattern of total sales summing up to 19.59 million across all 39 categories. Similarly, the quantity sold uniformly stands at 25.98 thousand units for each category. With an average total sales figure of 4.55 thousand, it suggests an even distribution of sales performance across all categories. This uniformity underscores a balanced sales landscape across diverse product categories, thereby offering valuable insights for informed decision-making in subsequent business strategies.
 
 1. **Undo the generated report** to maintain clarity in the demonstration.
 
@@ -113,6 +117,6 @@
 
 1. The summary provides an overview of sales revenue data from 2021 to 2022, highlighting increases year-over-year and identifying key months and regions driving revenue growth, with 2022 contributing significantly to total revenue, led by strong performance in the United States.
 
-  ![](./Images/25.png)
+    ![](./Images/25.png)
 
 
