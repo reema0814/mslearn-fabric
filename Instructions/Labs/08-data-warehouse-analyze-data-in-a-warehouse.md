@@ -108,11 +108,10 @@
     ```
     Summarize virtuals on this page
     ```
-
     ![](./Images/23.png)
 
 1. The summary provides an overview of sales revenue data from 2021 to 2022, highlighting increases year-over-year and identifying key months and regions driving revenue growth, with 2022 contributing significantly to total revenue, led by strong performance in the United States.
 
-  ![](./Images/25.png)
+   ![](./Images/25.png)
 
 
