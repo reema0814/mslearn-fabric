@@ -4,6 +4,10 @@
  
 # Create New - Dataflow Gen2
 
+1. Select the workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** (this is the workspace that mimics the lab environment)
+
+   ![New dataflow.](./Images/26.png)
+
 1. In the home page for your workspace, select **New Dataflow Gen2**. After a few seconds, the Power Query editor for your new dataflow opens as shown here.
 
    ![New dataflow.](./Images/new-dataflow.png)
@@ -97,5 +101,12 @@ Call out that the quantities for all items are 1.
 
    ![New dataflow.](./Images/6.png)
  
-1. Discuss the effects in the Visual Query and M-Query/M-Code script.
- 
+1. Hhere is a concise summary highlighting the impacts of Visual Query and M-Query/M-Code scripting:
+
+1. **Visual Query**:
+   - **Streamlines data exploration**: Visual Query tools offer intuitive interfaces, enabling users to interact with data visually, facilitating quicker insights without extensive coding.
+   - **Enhances accessibility**: With Visual Query, users with varying technical expertise can extract insights from data, reducing reliance on specialized programming skills and promoting broader data utilization across teams.
+
+2. **M-Query/M-Code scripting**:
+   - **Enables advanced data manipulation**: M-Query/M-Code scripting provides a robust framework for performing intricate data transformations and analysis, empowering users to tailor processes to specific requirements beyond the capabilities of visual tools.
+   - **Facilitates automation and customization**: Through M-Query/M-Code scripting, users can automate repetitive tasks, build custom functions, and create tailored solutions, increasing efficiency and flexibility in data workflows.
