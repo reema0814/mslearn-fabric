@@ -80,10 +80,4 @@
     Executive Summary
     ```
 
-1. **Click through the footnotes** to show where the text in the narrative comes from in the report. This demonstrates how Copilot analyzes visuals to generate text explanations.
-
-1. **Show a bulleted list of insights** and click footnotes to illustrate where each item comes from in the report.
-
-1. **Explain how Copilot utilizes Generative AI** to build new content from existing data, highlighting its innovative capabilities.
-
 By following these steps, you can effectively showcase how Copilot can assist in generating reports, suggesting content, and providing insights based on your data model.
