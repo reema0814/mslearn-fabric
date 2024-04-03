@@ -8,7 +8,15 @@
 
    ![New dataflow.](./Images/26.png)
 
-1. In the home page for your workspace, select **New Dataflow Gen2**. After a few seconds, the Power Query editor for your new dataflow opens as shown here.
+1. Select **Data Factory** Object in the workspace.
+
+    ![New dataflow.](./Images/27.png)
+
+1. In the home page for your workspace, select **New Dataflow Gen2**. 
+
+   ![New dataflow.](./Images/28.png)
+
+1. After a few seconds, the Power Query editor for your new dataflow opens as shown here.
 
    ![New dataflow.](./Images/new-dataflow.png)
 
@@ -20,9 +28,17 @@
     - **Connection**: Create new connection
     - **data gateway**: (none)
     - **Authentication kind**: Basic
-    - Click on **Create**.
+    - Click on **Next**.
+
+      ![New dataflow.](./Images/29.png)
+
+1. On **Preview file data** page, Click on **Create**.
+
+   ![New dataflow.](./Images/30.png)
 
 1. Click **Copilot** button on Ribbon. 
+
+    ![New dataflow.](./Images/31.png)
 
 1. To better illustrate all that Copilot is doing for you, let me expand the UI a little to see what's going on behind the scenes.
 

@@ -70,9 +70,9 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 
       ![name-and-desc-of-workspc](./Images/ws/12.png)
 
-   - **Advanced:** Expand it and Under **License mode**, select **Trial capacity (1)** and click on **Apply (2)** to create and open the workspace.
+   - **Advanced:** Expand it and Under **License mode**, select **Frabric capacity (1)**, Under **Capacity** Select **Fabric<inject key="DeploymentID" enableCopy="false"/>-<inject key="location" enableCopy="false"/> (2)** and click on **Apply (3)** to create and open the workspace.
 
-      ![advanced-and-apply](./Images/ws/13.png)
+      ![advanced-and-apply](./Images/32.png)
 
 Congratulations! You have successfully learned to create a Fabric workspace.
 
