@@ -239,7 +239,7 @@ You can easily visualize the data in either a single query or in your data wareh
 
    ![03](./Images/02/Pg4-VisualizeData-S3.png)
 
-1. In the **Data** pane, expand **FactSalesOrder**. Note that the columns you hid are no longer visible. 
+1. In the **Data** pane, expand **FactSalesOrder**. Note that the columns you hide are no longer visible. 
 
 1. Select **SalesTotal**. This will add the column to the **Report canvas**. Because the column is a numeric value, the default visual is a **column chart**.
 1. Ensure that the column chart on the canvas is active (with a grey border and handles), and then select **Category** from the **DimProduct** table to add a category to your column chart.
