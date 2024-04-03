@@ -108,7 +108,7 @@
 1. **Clear the input box** and select:
 
     ```
-    Summarize virtuals on this page
+    Summarize vituals on this page
     ```
     ![](./Images/23.png)
 
