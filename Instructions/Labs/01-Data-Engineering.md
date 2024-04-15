@@ -54,7 +54,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
    
    ![03](./Images/01/Pg3-TCreatePipeline-S1.1.png)
    
-3. If the **Copy data** wizard doesn't open automatically, select **Copy data (1)** in the pipeline editor page.
+3. If the **Copy data** wizard doesn't open automatically, select **Copy data assistance (1)** in the pipeline editor page.
 
    ![03](./Images/01/03.png)
 

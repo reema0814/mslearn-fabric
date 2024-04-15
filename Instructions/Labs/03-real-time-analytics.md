@@ -94,11 +94,11 @@ You can use your KQL Queryset as the basis for a Power BI report.
 
 2. Select **Build Power BI report** and wait for the report editor to open.
 
-3. In the report editor, in the **Data** pane, expand **Kusto Query Result** and select the **Item** and **TotalRevenue** fields.
+3. In the report editor, in the **Data** pane, expand **Kusto Query Result** and select the **Item** and **SalesOrderLine...** fields.
 
 4. On the report design canvas, select the table visualization that has been added and then in the **Visualizations** pane, select **Clustered bar chart**.
 
-    ![Screenshot of a report from a KQL query.](./Images/kql-report.png)
+    ![Screenshot of a report from a KQL query.](./Images/37.png)
 
 5. In the **Power BI** window, in the **File** menu, select **Save**. Then save the report as **Revenue by Item** in the workspace where your lakehouse and KQL database are defined using a **Non-Business** sensitivity label.
 

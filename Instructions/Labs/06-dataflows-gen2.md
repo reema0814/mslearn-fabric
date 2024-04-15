@@ -39,6 +39,8 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
 1. On the toolbar ribbon, select the **Home** tab. Then in the **Add data destination** drop-down menu, select **Lakehouse**.
 
+   ![Empty data pipeline.](./Images/35.png)
+
    > **Note:** If this option is greyed out, you may already have a data destination set. Check the data destination at the bottom of the Query settings pane on the right side of the Power Query editor. If a destination is already set, you can change it using the gear.
 
 2. In the **Connect to data destination** dialog box, edit the connection and sign in using your Power BI organizational account to set the identity that the dataflow uses to access the lakehouse.
@@ -82,7 +84,9 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
    > **Tip**: If the Copy Data wizard opens automatically, close it!
 
-2. Select **Add pipeline activity**, and add a **Dataflow** activity to the pipeline.
+2. Select **pipeline activity**, and add a **Dataflow** activity to the pipeline.
+
+   ![Empty data pipeline.](./Images/34.png)
 
 3. With the new **Dataflow1** activity selected, on the **Settings** tab, in the **Dataflow** drop-down list, select **Transform Orders Dataflow** (the data flow you created previously)
 
@@ -98,4 +102,6 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
    ![Table loaded by a dataflow.](./Images/loaded-table.png)
 
+---
+Continue to page 9 ...
 

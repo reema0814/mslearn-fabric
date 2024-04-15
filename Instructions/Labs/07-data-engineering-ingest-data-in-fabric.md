@@ -125,3 +125,6 @@ Call out that the quantities for all items are 1.
 2. **M-Query/M-Code scripting**:
    - **Enables advanced data manipulation**: M-Query/M-Code scripting provides a robust framework for performing intricate data transformations and analysis, empowering users to tailor processes to specific requirements beyond the capabilities of visual tools.
    - **Facilitates automation and customization**: Through M-Query/M-Code scripting, users can automate repetitive tasks, build custom functions, and create tailored solutions, increasing efficiency and flexibility in data workflows.
+
+---
+Continue to page 10 ...

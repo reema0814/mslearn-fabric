@@ -8,6 +8,10 @@
 
     ![New dataflow.](./Images/2.png)
  
+1. Select **Data Warehouse<inject key="DeploymentID" enableCopy="false"/>** from the list.
+
+   ![New dataflow.](./Images/33.png)
+
 1. In the **Explorer** pane, verify that the **dbo** schema in the data warehouse contains the following four tables:
    
     - **DimCustomer**
@@ -114,6 +118,5 @@
 
 1. The summary provides an overview of sales revenue data from 2021 to 2022, highlighting increases year-over-year and identifying key months and regions driving revenue growth, with 2022 contributing significantly to total revenue, led by strong performance in the United States.
 
-    ![](./Images/25.png)
 
-
+### You have successfully completed the lab.
