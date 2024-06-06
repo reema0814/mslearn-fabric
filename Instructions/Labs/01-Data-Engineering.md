@@ -21,7 +21,7 @@ Now that you have created a workspace in the previous step, it's time to switch 
    
 2. In the **Data engineering** home page, click on **Lakehouse** to create a new lakehouse.
 
-    - **Name:** Enter **Lakehouse<inject key="DeploymentID" enableCopy="false"/>**
+    - **Name:** Enter **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**
 
     - Click on **Create**.
 
@@ -46,7 +46,7 @@ In many scenarios, the data you need to work within your lakehouse may be stored
 
 A simple way to ingest data is to use a **Copy data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
-1. On the **Home** page for your lakehouse, select **Data pipeline**.
+1. On the **Home** page for your lakehouse, select **New data pipeline**.
 
     ![03](./Images/fabric21.png)
 
@@ -58,18 +58,18 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
    ![03](./Images/01/03.png)
 
-4. In the **Copy Data** wizard, on the **Choose a data source** page, in the **data sources** section, select the **Generic protocol (1)** tab and then select **HTTP (2)**, click on **Next (3)**.
+4. In the **Copy Data** wizard, on the **Choose a data source** page, search for HTTP and select the **Other** tab and then select **HTTP (2)**, click on **Next (3)**.
 
-   ![Screenshot of the Choose data source page.](./Images/fabric2.png)
+   ![Screenshot of the Choose data source page.](./Images/data-source.png)
 
-5. Select **Next** and then select **Create new connection (1)** and enter the following settings for the connection to your data source:
-    - **URL (2)**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
-    - **Connection (3)**: Create new connection
-    - **Connection name (4)**: *Specify a unique name*
-    - **Authentication kind (5)**: Basic (*Leave the username and password blank*)
-    - Click on **Next (6)**
+5. In the **Connection settings** pane, enter the following settings for the connection to your data source:
+    - **URL (1)**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
+    - **Connection (2)**: Create new connection
+    - **Connection name (3)**: *Specify a unique name*
+    - **Authentication kind (4)**: Anonymous
+    - Click on **Next (5)**
   
-        ![04](./Images/fabric3.png)
+        ![04](./Images/data-source-01.png)
     
 6. Select **Next**. Make sure the following settings are selected:
     - **Relative URL**: *Leave blank*
@@ -127,9 +127,9 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
 
-15. In the menu bar on the left, select your lakehouse i.e., **Lakehouse<inject key="DeploymentID" enableCopy="false"/>**.
+15. In the menu bar on the left, select your lakehouse i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
 
-16. On the **Home** page, in the **Lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
+16. On the **Home** page, in the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
 
     ![10](./Images/01/10.png)
 

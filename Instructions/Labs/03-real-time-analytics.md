@@ -10,11 +10,13 @@ Now that you have created a workspace in the previous step, it's time to switch 
 
 Kusto query language (KQL) is used to query static or streaming data in a table that is defined in a KQL database. To analyze the sales data, you must create a table in a KQL database and ingest the data from the file.
 
-1. In the **Microsoft Fabric** experience portal, select the **Synapse Real-Time Analytics** experience image as shown here:
+1. In the **Microsoft Fabric** experience portal, select the **Real-Time Intelligence** experience image as shown here:
 
     ![Screenshot of selected Fabric Experience home with RTA selected](./Images/fabric-experience-home.png)
 
-2. On the **Home** page for the **Real-Time Analytics** experience, select **KQL database** and create a new database.
+2. Create a new **Eventhouse** with the name **Eventhouse-<inject key="DeploymentID" enableCopy="false"/>**.
+
+3. Once the Eventhouse gets created, in the settings pane, create a **+ New Database** for the **KQL Databases**.
 
    - **Name:** Enter **KQL-Database<inject key="DeploymentID" enableCopy="false"/> (1)**.
 
@@ -22,11 +24,11 @@ Kusto query language (KQL) is used to query static or streaming data in a table 
 
      ![](./Images/fabric16.png)
 
-3. When the new database has been created, select the option to **Get data (1)** from **Local file (2)**.
+4. When the new database has been created, select the option to **Get data (1)** from **Local file (2)**.
 
    ![01](./Images/03/01.png)
 
-4. Use the wizard to import the data into a new table by selecting the following options:
+5. Use the wizard to import the data into a new table by selecting the following options:
     - **Source**:
         - **Database:** *The database you created is already selected*
         - **Table:** *Create a new table named* **sales**.
