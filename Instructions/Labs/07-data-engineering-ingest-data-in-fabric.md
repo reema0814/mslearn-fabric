@@ -27,7 +27,7 @@
     - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
     - **Connection**: Create new connection
     - **data gateway**: (none)
-    - **Authentication kind**: Basic
+    - **Authentication kind**: Anonymous
     - Click on **Next**.
 
       ![New dataflow.](./Images/29.png)
