@@ -93,13 +93,11 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
      ![06](./Images/fabric6.png)
 
-10. On the **Choose data destination** page, select **Lakehouse (1)**. Then select **Next (2)**.
+10. On the **Choose data destination** page, select **Lakehouse (1)**.
 
-     ![07](./Images/fabric7.png)
+     ![07](./Images/fabric7update.png)
 
-1. On the **Choose data destination** page, select your **Existing Lakehouse (1)** and from the drop-down select **Lakehouse<inject key="DeploymentID" enableCopy="false"/> (2)**, select **Next (3)**.
 
-   ![05](./Images/fabric8.png)
 
 11. Set the following data destination options, and then select **Next (4)**:
     - **Root folder (1)**: Files
