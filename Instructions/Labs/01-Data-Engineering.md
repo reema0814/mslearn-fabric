@@ -11,6 +11,12 @@ Fabric also supports Apache Spark, enabling you to write and run code to process
 You will be able to complete the following tasks:
 
 - Task 1: Enable Copilot inside a Codespace
+- Task 2: Explore shortcuts
+- Task 3: Create a pipeline
+- Task 4:Create a notebook
+- Task 5: Use SQL to query tables
+- Task 6: Create a visual query
+- Task 7: Create a report
   
 ### Task 1: Create a Lakehouse
 
@@ -136,7 +142,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
     ![10](./Images/01/10.png)
 
-### Task 4:Create a notebook
+### Task 4: Create a notebook
 
 1. On the **Home** page for your lakehouse, in the **Open notebook (1)** menu, select **New notebook (2)**.
 
