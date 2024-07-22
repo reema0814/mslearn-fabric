@@ -1,10 +1,16 @@
-# Analyze data in a data warehouse
+# Exercise 3: Analyze data in a data warehouse
+
+### Estimated Duration: 30 minutes
 
 In Microsoft Fabric, a data warehouse provides a relational database for large-scale analytics. Unlike the default read-only SQL endpoint for tables defined in a lakehouse, a data warehouse provides full SQL semantics; including the ability to insert, update, and delete data in the tables.
 
-This lab will take approximately **30** minutes to complete.
+## Lab objectives
 
-## Create a data warehouse
+You will be able to complete the following tasks:
+
+- 
+
+### Task 1: Create a data warehouse
 
 Now that you already have a workspace, it's time to switch to the *Data Warehouse* experience in the portal and create a data warehouse.
 
@@ -22,7 +28,7 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
         ![Screenshot of a new warehouse.](./Images/new-data-warehouse.png)
 
-## Create tables and insert data
+### Task 2: Create tables and insert data
 
 A warehouse is a relational database in which you can define tables and other objects.
 
@@ -81,7 +87,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
     > **Tip**: If the schema takes a while to load, just refresh the browser page.
 
-## Define a data model
+### Task 3: Define a data model
 
 A relational data warehouse typically consists of *fact* and *dimension* tables. The fact tables contain numeric measures you can aggregate to analyze business performance (for example, sales revenue), and the dimension tables contain attributes of the entities by which you can aggregate the data (for example, product, customer, or time). In a Microsoft Fabric data warehouse, you can use these keys to define a data model that encapsulates the relationships between the tables.
 
@@ -113,7 +119,7 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
     ![Screenshot of the model with relationships.](./Images/dw-relationships.png)
 
-## Query data warehouse tables
+### Task 4: Query data warehouse tables
 
 Since the data warehouse is a relational database, you can use SQL to query its tables.
 
@@ -155,7 +161,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
 3. Run the modified query and review the results, which now include sales revenue aggregated by year, month and sales region.
 
-## Create a view
+### Task 5: Create a view
 
 A data warehouse in Microsoft Fabric has many of the same capabilities you may be used to in relational databases. For example, you can create database objects like *views* and *stored procedures* to encapsulate SQL logic.
 
@@ -185,7 +191,7 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
    ORDER BY CalendarYear, MonthOfYear, SalesRegion;
     ```
 
-### Create a visual query
+### Task 6: Create a visual query
 
 Instead of writing SQL code, you can use the graphical query designer to query the tables in your data warehouse. This experience is similar to Power Query online, where you can create data transformation steps with no code. For more complex tasks, you can use Power Query's M (Mashup) language.
 
@@ -211,7 +217,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. From here, you can analyze the results of this single query by selecting **Visualize results** or **Open in Excel**. You can now see exactly what the manager was asking for, so we don't need to analyze the results further.
 
-### Visualize your data
+### Task 7: Visualize your data
 
 You can easily visualize the data in either a single query or in your data warehouse. Before you visualize, hide columns and/or tables that aren't friendly to report designers.
 
@@ -257,9 +263,8 @@ You can easily visualize the data in either a single query or in your data wareh
 
    ![Screenshot of the workspace with the three items listed.](./Images/workspace-items.png)
 
----
+### Summary
 
 In this exercise, you have created a data warehouse that contains multiple tables. You used SQL to insert data into the tables and query them. and also used the visual query tool. Finally, you enhanced the data model for the data warehouse's default dataset and used it as the source for a report.
 
----
-Continue to page 5 ...
+### You have successfully completed the lab
