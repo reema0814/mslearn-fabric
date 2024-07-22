@@ -8,7 +8,13 @@ In Microsoft Fabric, a data warehouse provides a relational database for large-s
 
 You will be able to complete the following tasks:
 
-- 
+- Task 1: Create a data warehouse
+- Task 2: Create tables and insert data
+- Task 3: Define a data model
+- Task 4: Query data warehouse tables
+- Task 5: Create a view
+- Task 6: Create a visual query
+- Task 7: Visualize your data
 
 ### Task 1: Create a data warehouse
 
