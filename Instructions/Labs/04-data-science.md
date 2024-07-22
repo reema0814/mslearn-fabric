@@ -8,6 +8,15 @@ In this lab, we will use Microsoft Fabric to create a notebook and train a machi
 
 You will be able to complete the following tasks:
 
+- Task 1: Create a lakehouse and upload files
+- Task 2: Create a notebook
+- Task 3: Load data into a dataframe
+- Task 4: Train a machine learning model
+- Task 5: Use MLflow to search and view your experiments
+- Task 6: Explore your experiments
+- Task 7: Save the model
+- Task 8: Save the notebook and end the Spark session
+
 ### Task 1: Create a lakehouse and upload files
 
 Using the same workspace, it's time to switch to the *Data science* experience in the portal.
