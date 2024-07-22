@@ -1,6 +1,16 @@
-## Create a Fabric workspace
+# Create a Fabric workspace
 
-#### Task 1.1: Assign Fabric Administrator Role
+### Estimated Duration:  minutes
+
+## Lab objectives
+
+You will be able to complete the following tasks:
+
+- Task 1.1: Assign Fabric Administrator Role
+- Task 1.2: Sign up for Microsoft Fabric Trial
+- Task 1.3: Create a workspace
+  
+### Task 1.1: Assign Fabric Administrator Role
 
 1. In the Azure portal, type **Microsoft Entra ID (1)** in the search box and select **Microsoft Entra ID (2)** from the results.
 
@@ -74,8 +84,8 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 
       ![advanced-and-apply](./Images/ws/13.png)
 
-Congratulations! You have successfully learned to create a Fabric workspace.
+### Summary
 
-----
+In this exercise, you have assigned Fabric Administrator Role, signed up for the for Microsoft Fabric Trial and created a workspace
 
-*Continue to page 3 ...*
+### You have successfully completed the lab
