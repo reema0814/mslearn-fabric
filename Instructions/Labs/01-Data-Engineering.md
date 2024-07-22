@@ -1,17 +1,22 @@
 # Exercise 2: Ingest data with a pipeline in Microsoft Fabric
 
+### Estimated Duration: 60 minutes
+
 A data lakehouse is a common analytical data store for cloud-scale analytics solutions. One of the core tasks of a data engineer is to implement and manage the ingestion of data from multiple operational data sources into the lakehouse. In Microsoft Fabric, you can implement *extract, transform, and load* (ETL) or *extract, load, and transform* (ELT) solutions for data ingestion through the creation of *pipelines*.
 
 Fabric also supports Apache Spark, enabling you to write and run code to process data at scale. By combining the pipeline and Spark capabilities in Fabric, you can implement complex data ingestion logic that copies data from external sources into the OneLake storage on which the lakehouse is based and then uses Spark code to perform custom data transformations before loading it into tables for analysis.
 
-This lab will take approximately **60** minutes to complete.
+## Lab objectives
 
-## Create a Lakehouse
+You will be able to complete the following tasks:
+
+- Task 1: Enable Copilot inside a Codespace
+  
+### Task 1: Create a Lakehouse
 
 Large-scale data analytics solutions have traditionally been built around a *data warehouse*, in which data is stored in relational tables and queried using SQL. The growth in "big data" (characterized by high *volumes*, *variety*, and *velocity* of new data assets) together with the availability of low-cost storage and cloud-scale distributed computing technologies has led to an alternative approach to analytical data storage; the *data lake*. In a data lake, data is stored as files without imposing a fixed schema for storage. Increasingly, data engineers and analysts seek to benefit from the best features of both of these approaches by combining them in a *data lakehouse*; in which data is stored in files in a data lake and a relational schema is applied to them as a metadata layer so that they can be queried using traditional SQL semantics.
 
 In Microsoft Fabric, a lakehouse provides highly scalable file storage in a *OneLake* store (built on Azure Data Lake Store Gen2) with a metastore for relational objects such as tables and views based on the open source *Delta Lake* table format. Delta Lake enables you to define a schema of tables in your lakehouse that you can query using SQL.
-
 
 Now that you have created a workspace in the previous step, it's time to switch to the *Data engineering* experience in the portal and create a data lakehouse into which you will ingest data.
 
@@ -33,7 +38,7 @@ Now that you have created a workspace in the previous step, it's time to switch 
 
    ![02](./Images/01/01.png)
 
-## Explore shortcuts
+### Task 2: Explore shortcuts
 
 In many scenarios, the data you need to work within your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a *shortcut*. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.
 
@@ -42,7 +47,7 @@ In many scenarios, the data you need to work within your lakehouse may be stored
 2. View the available data source types for shortcuts. Then close the **New shortcut** dialog box without creating a shortcut.
 
 
-## Create a pipeline
+## Task 3: Create a pipeline
 
 A simple way to ingest data is to use a **Copy data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
@@ -131,7 +136,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
     ![10](./Images/01/10.png)
 
-## Create a notebook
+### Task 4:Create a notebook
 
 1. On the **Home** page for your lakehouse, in the **Open notebook (1)** menu, select **New notebook (2)**.
 
@@ -206,7 +211,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 10. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
 
 
-## Use SQL to query tables
+### Task 5: Use SQL to query tables
 
 When you create a lakehouse and define tables in it, an SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
@@ -227,7 +232,7 @@ When you create a lakehouse and define tables in it, an SQL endpoint is automati
 
     ![Screenshot of a SQL query with results.](./Images/sql-query.png)
 
-## Create a visual query
+### Task 6: Create a visual query
 
 While many data professionals are familiar with SQL, data analysts with Power BI experience can apply their Power Query skills to create visual queries.
 
@@ -258,7 +263,7 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
     ![Screenshot of a Visual query with results.](./Images/visual-query-results.png)
 
-## Create a report
+### Task 7: Create a report
 
 The tables in your lakehouse are automatically added to a default dataset that defines a data model for reporting with Power BI.
 
@@ -292,11 +297,8 @@ The tables in your lakehouse are automatically added to a default dataset that d
     - The **Item Sales Report** report.
 
 
----
+### Summary
 
 In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default dataset to support data visualizations.
 
----
-
-Continue to page 4 ...
-
+### You have successfully completed the lab
