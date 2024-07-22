@@ -10,6 +10,10 @@ This lab is designed to introduce the different elements of Dataflows (Gen2), an
 
 You will be able to complete the following tasks:
 
+- Task 1: Create a Dataflow (Gen2) to ingest data
+- Task 2: Add data destination for Dataflow
+- Task 3: Add a dataflow to a pipeline
+
 ### Task 1: Create a Dataflow (Gen2) to ingest data
 
 Now that you have a lakehouse, you need to ingest some data into it. One way to do this is to define a dataflow that encapsulates an *extract, transform, and load* (ETL) process.
@@ -19,11 +23,11 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
    ![New dataflow.](./Images/new-dataflow.png)
 
 2. Select **Import from a Text/CSV file**, and create a new data source with the following settings:
- - **Link to file**: *Selected*
- - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv`
- - **Connection**: Create new connection
- - **data gateway**: (none)
- - **Authentication kind**: Anonymous
+    - **Link to file**: *Selected*
+    - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv`
+    - **Connection**: Create new connection
+    - **data gateway**: (none)
+    - **Authentication kind**: Anonymous
 
 3. Select **Next** to preview the file data, and then **Create** the data source. The Power Query editor shows the data source and an initial set of query steps to format the data, as shown here:
 
@@ -112,6 +116,6 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
 ### Summary
 
-In this exercise, 
+In this exercise, you have created a Dataflow (Gen2) to ingest data , added data destination for Dataflow and a dataflow to a pipeline.
 
 ### You have successfully completed the lab
