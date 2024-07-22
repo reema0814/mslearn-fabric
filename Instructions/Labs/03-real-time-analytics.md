@@ -10,6 +10,11 @@ Now that you have created a workspace in the previous step, it's time to switch 
 
 You will be able to complete the following tasks:
 
+- Task 1: Create a KQL database
+- Task 2: Use KQL to query the sales table
+- Task 3: Create a Power BI report from a KQL Queryset
+- Task 4: Use delta tables for streaming data
+  
 ### Task 1: Create a KQL database
 
 Kusto query language (KQL) is used to query static or streaming data in a table that is defined in a KQL database. To analyze the sales data, you must create a table in a KQL database and ingest the data from the file.
