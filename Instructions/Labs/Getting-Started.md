@@ -4,6 +4,13 @@
 
 ## Exercises Overview
 
+- Exercise 1: Create a Fabric workspace
+- Exercise 2: Ingest data with a pipeline in Microsoft Fabric
+- Exercise 3: Analyze data in a data warehouse
+- Exercise 4: Get started with Real-Time Analytics in Microsoft Fabric
+- Exercise 5: Use notebooks to train a model in Microsoft Fabric
+- Exercise 6: (Optional) Analyze data with Apache Spark
+- Exercise 7: (Optional) Create a Dataflow (Gen2) in Microsoft Fabric
 
 ## Getting Started with Lab
 
