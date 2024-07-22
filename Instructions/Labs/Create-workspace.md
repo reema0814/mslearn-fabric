@@ -8,11 +8,11 @@ Microsoft Fabric lets you set up workspaces depending on your workflows and use 
 
 You will be able to complete the following tasks:
 
-- Task 1.1: Assign Fabric Administrator Role
-- Task 1.2: Sign up for Microsoft Fabric Trial
-- Task 1.3: Create a workspace
+- Task 1: Assign Fabric Administrator Role
+- Task 2: Sign up for Microsoft Fabric Trial
+- Task 3: Create a workspace
   
-### Task 1.1: Assign Fabric Administrator Role
+### Task 1: Assign Fabric Administrator Role
 
 1. In the Azure portal, type **Microsoft Entra ID (1)** in the search box and select **Microsoft Entra ID (2)** from the results.
 
@@ -40,7 +40,7 @@ You will be able to complete the following tasks:
 
 ----
 
-#### Task 1.2: Sign up for Microsoft Fabric Trial
+#### Task 2: Sign up for Microsoft Fabric Trial
 
 1. Copy the **Power BI homepage link**, and open this link inside the VM in a new tab.
 
@@ -68,7 +68,7 @@ You will be able to complete the following tasks:
 
 ----
 
-#### Task 1.3: Create a workspace
+#### Task 3: Create a workspace
 
 Here, you create a Fabric workspace. The workspace contains all the items needed for this lakehouse tutorial, which includes lakehouse, dataflows, Data Factory pipelines, notebooks, Power BI datasets, and reports.
 
