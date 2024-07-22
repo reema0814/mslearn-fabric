@@ -1,10 +1,16 @@
-# (Optional) Create a Dataflow (Gen2) in Microsoft Fabric
+# Exercise 6: (Optional) Create a Dataflow (Gen2) in Microsoft Fabric
+
+Estimated Duration: 30 minutes
 
 In Microsoft Fabric, Dataflows (Gen2) connect to various data sources and perform transformations in Power Query Online. They can then be used in Data Pipelines to ingest data into a lakehouse or other analytical store or to define a dataset for a Power BI report.
 
-This lab is designed to introduce the different elements of Dataflows (Gen2), and not create a complex solution that may exist in an enterprise. This lab takes **approximately 30 minutes** to complete.
+This lab is designed to introduce the different elements of Dataflows (Gen2), and not create a complex solution that may exist in an enterprise.
 
-## Create a Dataflow (Gen2) to ingest data
+## Lab objectives
+
+You will be able to complete the following tasks:
+
+### Task 1: Create a Dataflow (Gen2) to ingest data
 
 Now that you have a lakehouse, you need to ingest some data into it. One way to do this is to define a dataflow that encapsulates an *extract, transform, and load* (ETL) process.
 
@@ -35,7 +41,7 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 >
 > Steps can be moved up or down, edited by selecting the gear icon, and you can select each step to see the transformations applied in the preview pane.
 
-## Add data destination for Dataflow
+### Task 2: Add data destination for Dataflow
 
 1. On the toolbar ribbon, select the **Home** tab. Then in the **Add data destination** drop-down menu, select **Lakehouse**.
 
@@ -55,24 +61,24 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
    ![Data destination settings page.](./Images/fabric27.png)
 
-1. Cancel this action, then go back to OrderDate and MonthNo columns in Power Query online. Right-click on the column header and **Change Type**.
+4. Cancel this action, then go back to OrderDate and MonthNo columns in Power Query online. Right-click on the column header and **Change Type**.
 
     - OrderDate = Date/Time
     - MonthNo = Whole number
 
       ![Data destination settings page.](./Images/fabric28.png)
 
-1. Now repeat the process outlined earlier to add a lakehouse destination.
+5. Now repeat the process outlined earlier to add a lakehouse destination.
 
-8. On the **Destination settings** page, select **Append**, and then save the settings. The **Lakehouse** destination is indicated as an icon in the query in the Power Query editor.
+6. On the **Destination settings** page, select **Append**, and then save the settings. The **Lakehouse** destination is indicated as an icon in the query in the Power Query editor.
 
    ![Query with a lakehouse destination.](./Images/lakehouse-destination.png)
 
-9. Select **Publish** to publish the dataflow. Then wait for the **Dataflow 1** dataflow to be created in your workspace.
+7. Select **Publish** to publish the dataflow. Then wait for the **Dataflow 1** dataflow to be created in your workspace.
 
-1. Once published, you can right-click on the dataflow in your workspace, select **Properties**, and rename your dataflow as **Transform Orders Dataflow**.
+8. Once published, you can right-click on the dataflow in your workspace, select **Properties**, and rename your dataflow as **Transform Orders Dataflow**.
 
-## Add a dataflow to a pipeline
+### Task 3: Add a dataflow to a pipeline
 
 You can include a dataflow as an activity in a pipeline. Pipelines are used to orchestrate data ingestion and processing activities, enabling you to combine dataflows with other kinds of operations in a single, scheduled process. Pipelines can be created in a few different experiences, including the Data Factory experience.
 
@@ -93,15 +99,19 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
    ![Pipeline with a dataflow activity.](./Images/dataflow-activity.png)
 
 4. On the **Home** tab, save the pipeline using the **&#128427;** **Save** icon.
+
 5. Use the **&#9655; Run** button to run the pipeline, and wait for it to complete. It may take a few minutes.
 
    ![Pipeline with a dataflow that has completed successfully.](./Images/dataflow-pipeline-succeeded.png)
 
 6. In the menu bar on the left edge, select your lakehouse.
+
 7. In the **...** menu for **Tables**, select **Refresh**. Then expand **Tables** and select the **orders** table, which has been created by your dataflow.
 
    ![Table loaded by a dataflow.](./Images/loaded-table.png)
 
----
-Continue to page 9 ...
+### Summary
 
+In this exercise, 
+
+### You have successfully completed the lab
