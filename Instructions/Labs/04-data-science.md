@@ -1,4 +1,4 @@
-# Exercise 4: Use notebooks to train a model in Microsoft Fabric
+# Exercise 5: Use notebooks to train a model in Microsoft Fabric
 
 ### Estimated Duration: 45 minutes
 
