@@ -1,4 +1,4 @@
-# Exercise 6: (Optional) Create a Dataflow (Gen2) in Microsoft Fabric
+# Exercise 7: (Optional) Create a Dataflow (Gen2) in Microsoft Fabric
 
 Estimated Duration: 30 minutes
 
