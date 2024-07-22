@@ -8,6 +8,15 @@ Apache Spark is an open-source engine for distributed data processing and is wid
 
 You will be able to complete the following tasks:
 
+- Task 1: Create a lakehouse and upload files
+- Task 2: Create a notebook
+- Task 3: Load data into a dataframe
+- Task 4: Explore data in a dataframe
+- Task 5: Aggregate and group data in a dataframe
+- Task 6: Use Spark to transform data files
+- Task 7: Work with tables and SQL
+- Task 8: Visualize data with Spark
+- Task 9: Save the notebook and end the Spark session
 
 ### Task 1: Create a lakehouse and upload files
 
@@ -145,7 +154,7 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 10. Confirm that your changes have been applied to the data by viewing the dataframe. Run the following cell:
 
     ```python
-   display(df)
+      display(df)
     ```
 
 11. The dataframe includes only the data from the **2019.csv** file. Modify the code so that the file path uses a \* wildcard to read the sales order data from all of the files in the **orders** folder:
