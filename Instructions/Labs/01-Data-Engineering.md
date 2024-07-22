@@ -47,7 +47,7 @@ In many scenarios, the data you need to work within your lakehouse may be stored
 2. View the available data source types for shortcuts. Then close the **New shortcut** dialog box without creating a shortcut.
 
 
-## Task 3: Create a pipeline
+### Task 3: Create a pipeline
 
 A simple way to ingest data is to use a **Copy data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
