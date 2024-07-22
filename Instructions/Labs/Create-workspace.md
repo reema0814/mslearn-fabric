@@ -1,4 +1,4 @@
-# Create a Fabric workspace
+# Exercise 1: Create a Fabric workspace
 
 ### Estimated Duration:  minutes
 
