@@ -73,3 +73,7 @@ By the end of this lab, you will be able to:
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
       
 1. Now, click on the **Next** from the lower right corner to move to the next page.
+
+This hands-on-lab demonstrates how to create and manage a workspace in Microsoft Fabric, including setting up data pipelines and using Apache Spark. You’ll also train a machine-learning model and explore dataflows for Power BI reports.
+
+## Happy Learning!!
