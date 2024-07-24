@@ -24,6 +24,8 @@ By the end of this lab, you will be able to:
 - Develop a machine-learning model to predict customer churn with Scikit-Learn and MLflow.
 - Create and manage dataflows in Microsoft Fabric to connect to various data sources.
 - Perform data transformations and define datasets for Power BI reports.
+
+## Architecture
   
 ## Getting Started with Lab
 
