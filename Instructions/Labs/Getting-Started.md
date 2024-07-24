@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 10 minutes
 
-## Exercises Overview
+## Overview
 
 This lab introduces you to creating a workspace in Microsoft Fabric, a collaborative environment for organizing and managing projects, data, and resources. You will learn how to set up a workspace, create data pipelines for ETL/ELT processes, and use Apache Spark for data processing. Additionally, you will create a notebook to train a machine-learning model to predict customer churn using Scikit-Learn and MLflow. You will also explore dataflows in Microsoft Fabric to connect to various data sources, perform transformations, and define datasets for Power BI reports.
 
@@ -14,6 +14,17 @@ This lab introduces you to creating a workspace in Microsoft Fabric, a collabora
 - Exercise 6: (Optional) Analyze data with Apache Spark
 - Exercise 7: (Optional) Create a Dataflow (Gen2) in Microsoft Fabric
 
+## Objective
+
+By the end of this lab, you will be able to:
+
+- Set up and manage a workspace in Microsoft Fabric.
+- Create and configure data pipelines for ETL/ELT processes.
+- Use Apache Spark for data processing.
+- Develop a machine-learning model to predict customer churn with Scikit-Learn and MLflow.
+- Create and manage dataflows in Microsoft Fabric to connect to various data sources.
+- Perform data transformations and define datasets for Power BI reports.
+  
 ## Getting Started with Lab
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the **Lab guide** to switch to different exercises of the lab guide.
