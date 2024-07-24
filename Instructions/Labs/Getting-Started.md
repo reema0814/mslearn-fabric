@@ -25,6 +25,12 @@ By the end of this lab, you will be able to:
 - Create and manage dataflows in Microsoft Fabric to connect to various data sources.
 - Perform data transformations and define datasets for Power BI reports.
 
+## Pre-requisites
+
+- **Fundamental Knowledge of Data Engineering**: Understanding ETL/ELT and data pipelines
+- **Programming Skills**: Familiarity with Python, SQL, or similar languages
+- **Basic Understanding of Data Visualization**: Experience with tools like Power BI
+
 ## Architecture
   
 ## Getting Started with Lab
