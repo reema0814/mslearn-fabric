@@ -46,7 +46,9 @@ By the end of this lab, you will be able to:
 1. **Real-Time Analytics**: Cloud-based analysis of data from apps, websites, and device.
 
 1. **Power BI**: Microsoft’s flagship business intelligence service.
-   
+
+## Architecture Key Components
+
   ![](./Images/arch10.jpg)
 
 ## Getting Started with Lab
