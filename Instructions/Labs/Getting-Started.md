@@ -47,7 +47,7 @@ By the end of this lab, you will be able to:
 
 1. **Power BI**: Microsoft’s flagship business intelligence service.
 
-## Architecture Key Components
+## Architecture Diagram
 
   ![](./Images/arch10.jpg)
 
