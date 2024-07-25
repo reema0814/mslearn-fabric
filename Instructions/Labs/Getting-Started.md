@@ -45,3 +45,7 @@ In Microsoft Fabric, the workflow begins with creating a Fabric workspace to man
 1. **Real-Time Analytics**: Facilitates real-time data processing and analysis, enabling insights from streaming data sources.
    
 1. **Power BI**: A powerful analytics and visualization tool that allows you to create reports and dashboards, providing interactive and actionable insights from your data.
+
+This hands-on-lab demonstrates how to create and manage a workspace in Microsoft Fabric, including setting up data pipelines and using Apache Spark. You’ll also train a machine-learning model and explore dataflows for Power BI reports.
+
+## Happy Learning!!
