@@ -1,6 +1,6 @@
 # MS Fabric Foundation for Enterprise Analytics
 
-### Estimated Duration: 10 minutes
+### Overall Estimated Duration: 400 minutes
 
 ## Overview
 
@@ -33,6 +33,18 @@ By the end of this lab, you will be able to:
 
 ## Architecture
 
+1. **Data Factory**: The data integration service.
+
+1. **Data Warehouse**: Lake-centric warehousing that scales compute and storage independently.
+   
+1. **Data Engineering**: A Spark service for designing, building, and maintaining your data estate to support data analysis.
+
+1. **Data Science**: A service to create and deploy end-to-end data science workflows at scale
+
+1. **Real-Time Analytics**: Cloud-based analysis of data from apps, websites, and device.
+
+1. **Power BI**: Microsoft’s flagship business intelligence service.
+   
   ![](./Images/arch10.jpg)
 
 ## Getting Started with Lab
