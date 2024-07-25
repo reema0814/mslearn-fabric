@@ -13,8 +13,8 @@ Here are the exercises you will be performing in this lab:
 - Exercise 3: Analyze data in a data warehouse
 - Exercise 4: Get started with Real-Time Analytics in Microsoft Fabric
 - Exercise 5: Use notebooks to train a model in Microsoft Fabric
-- Exercise 6: (Optional) Analyze data with Apache Spark
-- Exercise 7: (Optional) Create a Dataflow (Gen2) in Microsoft Fabric
+- Exercise 6: Analyze data with Apache Spark
+- Exercise 7: Create a Dataflow (Gen2) in Microsoft Fabric
 
 ## Objective
 
