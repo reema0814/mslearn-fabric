@@ -34,14 +34,14 @@ In Microsoft Fabric, the workflow begins with creating a Fabric workspace to man
 
 ## Explanation of Components
 
-1. **Data Factory**: Ingests and integrates data from various sources. 
+1. **Data Factory**: Handles data integration and workflow orchestration, allowing you to move and transform data from various sources into your data platform.
 
 1. **Data Warehouse**: Lake-centric warehousing that scales compute and storage independently.
    
-1. **Data Engineering**: A Spark service for designing, building, and maintaining your data estate to support data analysis.
+1. **Data Engineering**: Provides tools and services for preparing and transforming data for analysis. This includes data pipelines, data flow orchestration, and data quality management.
 
-1. **Data Science**: A service to create and deploy end-to-end data science workflows at scale
+1. **Data Science**: Offers capabilities for building, training, and deploying machine learning models. It supports various programming languages and frameworks for data science.
 
-1. **Real-Time Analytics**: Cloud-based analysis of data from apps, websites, and device.
-
-1. **Power BI**: Microsoft’s flagship business intelligence service.
+1. **Real-Time Analytics**: Facilitates real-time data processing and analysis, enabling insights from streaming data sources.
+   
+1. **Power BI**: A powerful analytics and visualization tool that allows you to create reports and dashboards, providing interactive and actionable insights from your data.
