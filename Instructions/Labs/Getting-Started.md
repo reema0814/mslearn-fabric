@@ -26,13 +26,13 @@ By the end of this lab, you will be able to:
 
 ## Architecture
 
-In Microsoft Fabric, data flows from initial ingestion and integration into storage, followed by preparation and transformation. Once processed, it undergoes analysis for insights, with real-time data being examined immediately. The insights are then visualized through interactive reports and dashboards, while the entire system is continuously monitored to ensure performance and security.
+In Microsoft Fabric, the workflow begins with creating a Fabric workspace to manage projects, data, and resources collaboratively. Next, ingest data with a pipeline using ETL/ELT processes and Apache Spark for scalable data integration. Once data is ingested, it is stored in the data warehouse, which supports full SQL functionality for extensive analytics. For real-time data processing, get started with Real-Time Analytics using Kusto Query Language (KQL) to handle time-series data like real-time logs and IoT information. Use notebooks to train machine learning models, such as a customer churn prediction model, using Scikit-Learn and MLflow. Finally, create a Dataflow (Gen2) to leverage Apache Spark for distributed data processing and analysis across platforms like Azure HDInsight and Databricks.
 
 ## Architecture Diagram
 
   ![](./Images/arch10.jpg)
 
-**Explanation of the Components**:
+## Explanation of the Components
 
 1. **Data Factory**: The data integration service.
 
