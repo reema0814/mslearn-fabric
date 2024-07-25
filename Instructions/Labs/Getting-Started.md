@@ -26,7 +26,7 @@ By the end of this lab, you will be able to:
 
 ## Architecture
 
-
+In Microsoft Fabric, data flows from initial ingestion and integration into storage, followed by preparation and transformation. Once processed, it undergoes analysis for insights, with real-time data being examined immediately. The insights are then visualized through interactive reports and dashboards, while the entire system is continuously monitored to ensure performance and security.
 
 ## Architecture Diagram
 
