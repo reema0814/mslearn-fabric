@@ -36,7 +36,7 @@ In Microsoft Fabric, the workflow begins with creating a Fabric workspace to man
 
 1. **Data Factory**: Handles data integration and workflow orchestration, allowing you to move and transform data from various sources into your data platform.
 
-1. **Data Warehouse**: Lake-centric warehousing that scales compute and storage independently.
+1. **Data Warehouse**: provides scalable, high-performance storage and full SQL functionality for large-scale analytics. It supports complex queries, including insert, update, and delete operations, to efficiently handle extensive data sets.
    
 1. **Data Engineering**: Provides tools and services for preparing and transforming data for analysis. This includes data pipelines, data flow orchestration, and data quality management.
 
