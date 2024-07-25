@@ -32,7 +32,7 @@ In Microsoft Fabric, the workflow begins with creating a Fabric workspace to man
 
   ![](./Images/arch10.jpg)
 
-## Explanation of the Components
+## Explanation of Components
 
 1. **Data Factory**: Ingests and integrates data from various sources. 
 
