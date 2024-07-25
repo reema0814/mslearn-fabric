@@ -1,32 +1,23 @@
 # MS Fabric Foundation for Enterprise Analytics
 
-### Overall Estimated Duration: 400 minutes
+### Overall Estimated Duration: 8 Hours
 
 ## Overview
 
 This lab introduces you to creating a workspace in Microsoft Fabric, a collaborative environment for organizing and managing projects, data, and resources. You will learn how to set up a workspace, create data pipelines for ETL/ELT processes, and use Apache Spark for data processing. Additionally, you will create a notebook to train a machine-learning model to predict customer churn using Scikit-Learn and MLflow. You will also explore dataflows in Microsoft Fabric to connect to various data sources, perform transformations, and define datasets for Power BI reports.
 
-Here are the exercises you will be performing in this lab:
-
-- Exercise 1: Create a Fabric workspace
-- Exercise 2: Ingest data with a pipeline in Microsoft Fabric
-- Exercise 3: Analyze data in a data warehouse
-- Exercise 4: Get started with Real-Time Analytics in Microsoft Fabric
-- Exercise 5: Use notebooks to train a model in Microsoft Fabric
-- Exercise 6: Analyze data with Apache Spark
-- Exercise 7: Create a Dataflow (Gen2) in Microsoft Fabric
-
 ## Objective
 
 By the end of this lab, you will be able to:
 
-- Set up and manage a workspace in Microsoft Fabric.
-- Create and configure data pipelines for ETL/ELT processes.
-- Use Apache Spark for data processing.
-- Develop a machine-learning model to predict customer churn with Scikit-Learn and MLflow.
-- Create and manage dataflows in Microsoft Fabric to connect to various data sources.
-- Perform data transformations and define datasets for Power BI reports.
-
+- **Create a Fabric workspace** :
+- **Ingest data with a pipeline in Microsoft Fabric**
+- **Analyze data in a data warehouse**
+- **Get started with Real-Time Analytics in Microsoft Fabric**
+- **Use notebooks to train a model in Microsoft Fabric**
+- **Analyze data with Apache Spark**
+- **Create a Dataflow (Gen2) in Microsoft Fabric**
+  
 ## Pre-requisites
 
 - **Fundamental Knowledge of Data Engineering**: Understanding ETL/ELT and data pipelines
@@ -34,6 +25,14 @@ By the end of this lab, you will be able to:
 - **Basic Understanding of Data Visualization**: Experience with tools like Power BI
 
 ## Architecture
+
+
+
+## Architecture Diagram
+
+  ![](./Images/arch10.jpg)
+
+**Explanation of the Components**:
 
 1. **Data Factory**: The data integration service.
 
@@ -46,11 +45,7 @@ By the end of this lab, you will be able to:
 1. **Real-Time Analytics**: Cloud-based analysis of data from apps, websites, and device.
 
 1. **Power BI**: Microsoft’s flagship business intelligence service.
-
-## Architecture Diagram
-
-  ![](./Images/arch10.jpg)
-
+   
 ## Getting Started with Lab
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the **Lab guide** to switch to different exercises of the lab guide.
