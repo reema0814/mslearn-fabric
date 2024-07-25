@@ -13,8 +13,8 @@ By the end of this lab, you will be able to:
 - **Create a Fabric workspace** : Learn to create and configure a collaborative workspace in Microsoft Fabric to efficiently manage projects, data, and resources.
 - **Ingest data with a pipeline in Microsoft Fabric** : Implement and manage data ingestion in Microsoft Fabric using ETL/ELT pipelines and Apache Spark for scalable analytics.
 - **Analyze data in a data warehouse** : Understand how Microsoft Fabric's data warehouse enables full SQL functionality, including insert, update, and delete operations, for large-scale analytics.
-- **Get started with Real-Time Analytics in Microsoft Fabric** : Learn to use Microsoft Fabric’s Kusto Query Language (KQL) for efficiently storing and querying time-series data, including real-time logs and IoT information.
-- **Use notebooks to train a model in Microsoft Fabric** : Learn to use Microsoft Fabric’s Kusto Query Language (KQL) for efficiently storing and querying time-series data, including real-time logs and IoT information.
+- **Get started with Real-Time Analytics in Microsoft Fabric** : Use Microsoft Fabric’s Kusto Query Language (KQL) for efficient storage and querying of time-series data, including real-time logs and IoT information.
+- **Use notebooks to train a model in Microsoft Fabric** : Discover how to use Microsoft Fabric’s Kusto Query Language (KQL) for efficient storage and querying of time-series data, including real-time logs and IoT information.
 - **Analyze data with Apache Spark** : Use Microsoft Fabric to train and track a customer churn prediction model with Scikit-Learn and MLflow.
 - **Create a Dataflow (Gen2) in Microsoft Fabric** : Master Apache Spark for flexible, distributed data processing and analysis across platforms like Azure HDInsight and Databricks.
   
