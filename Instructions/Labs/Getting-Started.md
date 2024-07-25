@@ -11,12 +11,12 @@ This lab introduces you to creating a workspace in Microsoft Fabric, a collabora
 By the end of this lab, you will be able to:
 
 - **Create a Fabric workspace** :
-- **Ingest data with a pipeline in Microsoft Fabric**
-- **Analyze data in a data warehouse**
-- **Get started with Real-Time Analytics in Microsoft Fabric**
-- **Use notebooks to train a model in Microsoft Fabric**
-- **Analyze data with Apache Spark**
-- **Create a Dataflow (Gen2) in Microsoft Fabric**
+- **Ingest data with a pipeline in Microsoft Fabric** :
+- **Analyze data in a data warehouse** :
+- **Get started with Real-Time Analytics in Microsoft Fabric** :
+- **Use notebooks to train a model in Microsoft Fabric** :
+- **Analyze data with Apache Spark** :
+- **Create a Dataflow (Gen2) in Microsoft Fabric** :
   
 ## Pre-requisites
 
