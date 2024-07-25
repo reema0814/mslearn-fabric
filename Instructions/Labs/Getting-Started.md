@@ -34,7 +34,7 @@ In Microsoft Fabric, the workflow begins with creating a Fabric workspace to man
 
 ## Explanation of the Components
 
-1. **Data Factory**: The data integration service.
+1. **Data Factory**: Ingests and integrates data from various sources. 
 
 1. **Data Warehouse**: Lake-centric warehousing that scales compute and storage independently.
    
