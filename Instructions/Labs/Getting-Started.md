@@ -10,13 +10,13 @@ This lab introduces you to creating a workspace in Microsoft Fabric, a collabora
 
 By the end of this lab, you will be able to:
 
-- **Create a Fabric workspace** : Learn to create and configure a collaborative workspace in Microsoft Fabric to efficiently manage projects, data, and resources.
-- **Ingest data with a pipeline in Microsoft Fabric** : Implement and manage data ingestion in Microsoft Fabric using ETL/ELT pipelines and Apache Spark for scalable analytics.
-- **Analyze data in a data warehouse** : Understand how Microsoft Fabric's data warehouse enables full SQL functionality, including insert, update, and delete operations, for large-scale analytics.
-- **Get started with Real-Time Analytics in Microsoft Fabric** : Use Microsoft Fabric’s Kusto Query Language (KQL) for efficient storage and querying of time-series data, including real-time logs and IoT information.
-- **Use notebooks to train a model in Microsoft Fabric** : Discover how to use Microsoft Fabric’s Kusto Query Language (KQL) for efficient storage and querying of time-series data, including real-time logs and IoT information.
-- **Analyze data with Apache Spark** : Use Microsoft Fabric to train and track a customer churn prediction model with Scikit-Learn and MLflow.
-- **Create a Dataflow (Gen2) in Microsoft Fabric** : Master Apache Spark for flexible, distributed data processing and analysis across platforms like Azure HDInsight and Databricks.
+- **Create a Fabric workspace** : This hands-on exercise aims to learn to create and configure a collaborative workspace in Microsoft Fabric to efficiently manage projects, data, and resources. As part of this exercise, you will successfully assign the Fabric Administrator role, sign up for a Microsoft Fabric trial, and create a workspace. This will enable you to manage your environment and start exploring Fabric's capabilities effectively.
+- **Ingest data with a pipeline in Microsoft Fabric** : This hands-on exercise aims to implement and manage data ingestion in Microsoft Fabric using ETL/ELT pipelines and Apache Spark for scalable analytics. By completing the tasks in this exercise, users will enable Copilot inside a Codespace, explore shortcuts, create a pipeline and notebook, use SQL to query tables, create a visual query, and generate a report. This exercise builds proficiency in essential Microsoft tools and features.
+- **Analyze data in a data warehouse** : This hands-on exercise aims to understand how Microsoft Fabric's data warehouse enables full SQL functionality, including insert, update, and delete operations, for large-scale analytics. By completing this exercise, you will have created a data warehouse, populated it with data, defined a model, queried tables, created a view, and visualized your data.
+- **Get started with Real-Time Analytics in Microsoft Fabric** : Use Microsoft Fabric’s Kusto Query Language (KQL) for efficient storage and querying of time-series data, including real-time logs and IoT information. Upon completing this exercise, you will have created a KQL database, queried a sales table using KQL, generated a Power BI report from a KQL Queryset, and utilized delta tables for streaming data. This will enhance your skills in data querying, visualization, and real-time data management within Microsoft Fabric.
+- **Use notebooks to train a model in Microsoft Fabric** : This hands-on exercise aims to discover how to use Microsoft Fabric’s Kusto Query Language (KQL) for efficient storage and querying of time-series data, including real-time logs and IoT information. In this exercise, you'll build a lakehouse, upload files, create a notebook, train a machine learning model, use MLflow to track experiments, and save your work, concluding with ending the Spark session.
+- **Analyze data with Apache Spark** : Use Microsoft Fabric to train and track a customer churn prediction model with Scikit-Learn and MLflow. After completing this exercise, you will have set up a lakehouse, uploaded and explored data, used Spark for transformation and visualization, and effectively managed your notebook and Spark session. This will demonstrate your ability to integrate and analyze data through multiple stages using advanced tools and techniques.
+- **Create a Dataflow (Gen2) in Microsoft Fabric** : This hands-on exercise aims to master Apache Spark for flexible, distributed data processing and analysis across platforms like Azure HDInsight and Databricks. Successfully created a Dataflow (Gen2) to ingest data, configured its destination, and integrated it into a pipeline. This streamlined the data ingestion and processing workflow within your environment.
   
 ## Pre-requisites
 
@@ -45,6 +45,47 @@ In Microsoft Fabric, the workflow begins with creating a Fabric workspace to man
 1. **Real-Time Analytics**: Facilitates real-time data processing and analysis, enabling insights from streaming data sources.
    
 1. **Power BI**: A powerful analytics and visualization tool that allows you to create reports and dashboards, providing interactive and actionable insights from your data.
+
+# Getting Started with the Lab
+
+1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the **Lab guide** to switch to different exercises of the lab guide.
+
+   ![07](./Images/gs/1a.png)
+
+1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your registered email address. You can also open the Lab Guide on separate and full windows by selecting the **Split Window** from the lower right corner. Also, you can start, stop, and restart virtual machines from the **Resources** tab.
+
+   ![08](./Images/gs/08.png)
+ 
+    > You will see the DeploymentID value on the **Environment Details** tab, use it wherever you see SUFFIX or DeploymentID in lab steps.
+
+
+## Login to Azure Portal
+
+1. In the JumpVM, click on the **Azure portal** shortcut of the Microsoft Edge browser which is created on the desktop.
+
+   ![09](./Images/gs/09.png)
+   
+1. On the **Sign-in into Microsoft Azure** tab you will see the login screen, in that enter the following email/username and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+   
+     ![04](./Images/gs/04.png)
+     
+1. Now enter the following password and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
+   
+     ![05](./Images/gs/05.png)
+     
+   > If you see the **Help us protect your account** dialog box, then select the **Skip for now** option.
+
+      ![06](./Images/gs/06.png)
+  
+1. If you see the pop-up **Stay Signed in?**, click No
+
+1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
+1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
+      
+1. Now, click on the **Next** from the lower right corner to move to the next page.
 
 This hands-on-lab demonstrates how to create and manage a workspace in Microsoft Fabric, including setting up data pipelines and using Apache Spark. You’ll also train a machine-learning model and explore dataflows for Power BI reports.
 
