@@ -104,9 +104,9 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
      ![06](./Images/fabric6.png)
 
-10. On the **Choose data destination** page, select **Lakehouse (1)**.
+10. On the **Choose data destination** page, click on **OneLake data hub** and select **Lakehouse (1)**.
 
-     ![07](./Images/fabric7update.png)
+     ![07](./Images/update2.png)
 
 
 
