@@ -10,9 +10,9 @@
 
    >**Note**: In case a sign-up page asks for a phone number, you can enter a dummy phone number to proceed.
 
-2. Select **Account manager (1)**, and click on **Start trial (2)**.
+2. Select **Account manager (1)**, and click on **Free trial (2)**.
 
-   ![Account-manager-start](./Images/ws/07.png)
+   ![Account-manager-start](./Images/update1.png)
 
 3. A new prompt will appear asking you to **Upgrade to a free Microsoft Fabric trial**, click on **Start trial (1)**.
 
