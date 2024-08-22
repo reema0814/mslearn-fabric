@@ -80,7 +80,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
     - **Authentication kind (4)**: Anonymous
     - Click on **Next (5)**
   
-        ![04](./Images/data-source-01.png)
+       ![Account-manager-start](./Images/lab1-image11.png)
     
 6. Select **Next**. Make sure the following settings are selected:
     - **Relative URL**: *Leave blank*
@@ -92,39 +92,37 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
   
         ![05](./Images/fabric4.png)
    
-8. Wait for the data to be sampled and then ensure that the following settings are selected:
+7. Wait for the data to be sampled and then ensure that the following settings are selected:
     - **File format (1)**: DelimitedText
     - **Column delimiter (2)**: Comma (,)
     - **Row delimiter (3)**: Line feed (\n)
     - Select **Preview data (4)** to see a sample of the data that will be ingested.
 
-      ![05](./Images/fabric5.png)
+      ![Account-manager-start](./Images/lab1-image12.png)
 
-9. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
+8. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
 
-     ![06](./Images/fabric6.png)
+     ![Account-manager-start](./Images/lab1-image13.png)
 
-10. On the **Choose data destination** page, click on **OneLake data hub** and select **Lakehouse (1)**.
+9. On the **Choose data destination** page, click on **OneLake data hub** and select **Lakehouse**.
 
-     ![07](./Images/update2.png)
+     ![Account-manager-start](./Images/lab1-image14.png)
 
-
-
-11. Set the following data destination options, and then select **Next (4)**:
+10. Set the following data destination options, and then select **Next (4)**:
     - **Root folder (1)**: Files
     - **Folder path (2)**: new_data
     - **File name (3)**: sales.csv
    
         ![08](./Images/fabric9.png)
 
-12. Set the following file format options and then select **Next (4)**:
+11. Set the following file format options and then select **Next (4)**:
     - **File format (1)**: DelimitedText
     - **Column delimiter (2)**: Comma (,)
     - **Row delimiter (3)**: Line feed (\n)
    
       ![09](./Images/fabric10.png)
 
-13. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
+12. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
     ![09](./Images/fabric11.png)
 
@@ -132,15 +130,15 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
 
-14. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+13. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
 
-15. In the menu bar on the left, select your lakehouse i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
+14. In the menu bar on the left, select your lakehouse i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
 
-16. On the **Home** page, in the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
+15. On the **Home** page, in the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
 
-    ![10](./Images/01/10.png)
+    ![Account-manager-start](./Images/lab1-image16.png)
 
 ### Task 4: Create a notebook
 
