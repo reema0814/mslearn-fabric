@@ -158,7 +158,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 3. In the **... (1)** menu for the cell (at its top-right) select **Toggle parameter cell (2)**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
-     ![12](./Images/01/12.png)
+     ![Account-manager-start](./Images/lab1-image17.png)
 
 4. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
 
@@ -248,7 +248,9 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
 3. In the **Manage columns** menu, select **Choose columns**. Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns and click on **OK**.
 
-    ![Screenshot of a Choose columns dialog box.](./Images/choose-columns.png)
+    ![Account-manager-start](./Images/lab1-image22.png)
+
+    ![Account-manager-start](./Images/lab1-image23.png)
 
 4. Click on **+ (1)**, in the **Transform table** menu, select **Group by (2)**.
 
