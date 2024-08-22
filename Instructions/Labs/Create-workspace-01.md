@@ -12,19 +12,17 @@
 
 2. Select **Account manager (1)**, and click on **Free trial (2)**.
 
-   ![Account-manager-start](./Images/update1.png)
+   ![Account-manager-start](./Images/lab1-image3.png)
 
-3. A new prompt will appear asking you to **Upgrade to a free Microsoft Fabric trial**, click on **Start trial (1)**.
+3. A new prompt will appear asking you to **Upgrade to a free Microsoft Fabric trial**, click on **Start trial**.
 
-   ![Start-trial](./Images/ws/08.png)
+   ![Account-manager-start](./Images/lab1-image4.png)
 
-4. Once your trial capacity is ready, you receive a confirmation message. Select **Got it (1)** to begin working in Fabric.
+4. Once your trial capacity is ready, you receive a confirmation message. Select **Got it** to begin working in Fabric.
 
-   ![Got-it](./Images/ws/09.png)
+5. Now, open **Account manager (1)** again, and verify **Trial Status (2)**.
 
-6. Now, open **Account manager (1)** again, and verify **Trial Status (2)**.
-
-   ![Verify-trial-status](./Images/ws/10.png)
+    ![Account-manager-start](./Images/lab1-image5.png)
 
 ----
 
