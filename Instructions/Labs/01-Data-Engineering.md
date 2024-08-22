@@ -221,9 +221,9 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 When you create a lakehouse and define tables in it, an SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
-1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL endpoint**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
+1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL analytics endpoint**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
 
-    ![Screenshot of the SQL endpoint page.](./Images/lakehouse-sql-endpoint.png)
+    ![.](./Images/01/lab1-image20.png)
 
 2. Use the **New SQL query** button to open a new query editor, and enter the following SQL query:
 
