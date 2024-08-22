@@ -24,7 +24,7 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
     The Data Warehouse home page includes a shortcut to create a new warehouse:
 
-   ![01](./Images/fabric13.png)
+   ![01](./Images/lab2-image1.png)
 
 2. In the **Data Warehouse** home page, create a new **Warehouse**.
    
@@ -32,7 +32,7 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
    - Click on **Create**
 
-        ![Screenshot of a new warehouse.](./Images/new-data-warehouse.png)
+        ![01](./Images/lab2-image2.png)
 
 ### Task 2: Create tables and insert data
 
@@ -62,7 +62,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 4. Use the **Refresh** button on the toolbar to refresh the view. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **DimProduct** table has been created.
 
-5. On the **Home** menu tab, use the **New SQL Query** button to create a new query, and enter the following INSERT statement:
+5. On the **Home** menu tab, use the **New SQL Query** button and from the drop down select **New SQL Query**  to create a new query, and enter the following INSERT statement:
 
     ```SQL
    INSERT INTO dbo.DimProduct
@@ -77,7 +77,10 @@ A warehouse is a relational database in which you can define tables and other ob
 
 7. When the query has finished, select the **Data** tab at the bottom of the page in the data warehouse. In the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
 
-8. On the Home menu tab, use the New SQL Query button to create a new query for each table. Open the first text file, from **C:\LabFiles\Files\create-dw-01.txt**, and copy the Transact-SQL code related to the 'DimProduct' table. Paste the 'DimProduct' table code into the query pane you created and execute the query. Repeat the steps for the 'DimCustomer', 'DimDate' and 'FactSalesOrder' tables using the respective files, **C:\LabFiles\Files\create-dw-02.txt** and **C:\LabFiles\Files\create-dw-03.txt**. Please ensure that each query is executed in its own query pane for each respective table.
+8. On the Home menu tab, use the New SQL Query button to create a new query for each table. Open the first text file, from **C:\LabFiles\Files\create-dw-01.txt**, and copy the Transact-SQL code related to the 
+   'DimProduct' table. Paste the 'DimProduct' table code into the query pane you created and similarily copy code from file **C:\LabFiles\Files\create-dw-02.txt** and **C:\LabFiles\Files\create-dw-03.txt** one after 
+   the other in same code editor and execute the query. Repeat the steps for the 'DimCustomer', 'DimDate' and 'FactSalesOrder' tables using the respective files. Please ensure that each query is executed in its own 
+   query pane for each respective table.
 
    ![01](./Images/02/Pg4-T2-S7.png)
 
@@ -209,7 +212,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. Use the **(+)** button on the **FactSalesOrder** table on the canvas to **Merge queries**.
 
-   ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/visual-query-merge.png)
+   ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/visual-query-merge1.png)
 
 1. In the **Merge queries** window, select **DimProduct (1)** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** to join type, and click **OK (4)**.
 
@@ -217,7 +220,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. In the **Preview**, note that the new **DimProduct** column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select **ProductName** and click **OK**.
 
-   ![Screenshot of the preview pane with the DimProduct column expanded, with ProductName selected.](./Images/visual-query-preview.png)
+   ![Screenshot of the preview pane with the DimProduct column expanded, with ProductName selected.](./Images/visual-query-preview1.png)
 
 1. If you're interested in looking at data for a single product, per a manager's request, you can now use the **ProductName** column to filter the data in the query. Filter the **ProductName** column to look at **Cable Lock** data only.
 
@@ -267,10 +270,10 @@ You can easily visualize the data in either a single query or in your data wareh
 
 1. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
 
-   ![Screenshot of the workspace with the three items listed.](./Images/workspace-items.png)
+   ![Screenshot of the workspace with the three items listed.](./Images/workspace-items1.png)
 
 ### Summary
 
 In this exercise, you have created a data warehouse that contains multiple tables. You used SQL to insert data into the tables and query them. and also used the visual query tool. Finally, you enhanced the data model for the data warehouse's default dataset and used it as the source for a report.
 
-### You have successfully completed the lab
+### You have successfully completed the lab. Click on Next >> to procced with next exercise.

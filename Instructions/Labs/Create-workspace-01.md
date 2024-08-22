@@ -12,19 +12,17 @@
 
 2. Select **Account manager (1)**, and click on **Free trial (2)**.
 
-   ![Account-manager-start](./Images/update1.png)
+   ![Account-manager-start](./Images/lab1-image3.png)
 
-3. A new prompt will appear asking you to **Upgrade to a free Microsoft Fabric trial**, click on **Start trial (1)**.
+3. A new prompt will appear asking you to **Upgrade to a free Microsoft Fabric trial**, click on **Start trial**.
 
-   ![Start-trial](./Images/ws/08.png)
+   ![Account-manager-start](./Images/lab1-image4.png)
 
-4. Once your trial capacity is ready, you receive a confirmation message. Select **Got it (1)** to begin working in Fabric.
+4. Once your trial capacity is ready, you receive a confirmation message. Select **Got it** to begin working in Fabric.
 
-   ![Got-it](./Images/ws/09.png)
+5. Now, open **Account manager (1)** again, and verify **Trial Status (2)**.
 
-6. Now, open **Account manager (1)** again, and verify **Trial Status (2)**.
-
-   ![Verify-trial-status](./Images/ws/10.png)
+    ![Account-manager-start](./Images/lab1-image5.png)
 
 ----
 
@@ -34,20 +32,16 @@ Here, you create a Fabric workspace. The workspace contains all the items needed
 
 1.  Now, select **Workspaces** and click on **+ New workspace**.
 
-    ![New Workspace](./Images/ws/11.png)
+    ![Account-manager-start](./Images/lab1-image6.png)
 
-2. Fill out the **Create a workspace** form with the following details:
+2. Fill out the **Create a workspace** form with the following details and click on **Apply**
 
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**
 
-      ![name-and-desc-of-workspc](./Images/ws/12.png)
-
-   - **Advanced:** Expand it and Under **License mode**, select **Frabric capacity (1)**, Under **Capacity** Select available fabric capacity (2)** and click on **Apply (3)** to create and open the workspace.
-
-      ![advanced-and-apply](./Images/32.png)
+      ![Account-manager-start](./Images/lab1-image7.png)
 
 Congratulations! You have successfully learned to create a Fabric workspace.
 
 ----
 
-*Continue to page 3 ...*
+### You have successfully completed the lab. Click on Next >> to procced with next exercise.

@@ -80,7 +80,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
     - **Authentication kind (4)**: Anonymous
     - Click on **Next (5)**
   
-        ![04](./Images/data-source-01.png)
+       ![Account-manager-start](./Images/lab1-image11.png)
     
 6. Select **Next**. Make sure the following settings are selected:
     - **Relative URL**: *Leave blank*
@@ -92,39 +92,37 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
   
         ![05](./Images/fabric4.png)
    
-8. Wait for the data to be sampled and then ensure that the following settings are selected:
+7. Wait for the data to be sampled and then ensure that the following settings are selected:
     - **File format (1)**: DelimitedText
     - **Column delimiter (2)**: Comma (,)
     - **Row delimiter (3)**: Line feed (\n)
     - Select **Preview data (4)** to see a sample of the data that will be ingested.
 
-      ![05](./Images/fabric5.png)
+      ![Account-manager-start](./Images/lab1-image12.png)
 
-9. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
+8. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
 
-     ![06](./Images/fabric6.png)
+     ![Account-manager-start](./Images/lab1-image13.png)
 
-10. On the **Choose data destination** page, click on **OneLake data hub** and select **Lakehouse (1)**.
+9. On the **Choose data destination** page, click on **OneLake data hub** and select **Lakehouse**.
 
-     ![07](./Images/update2.png)
+     ![Account-manager-start](./Images/lab1-image14.png)
 
-
-
-11. Set the following data destination options, and then select **Next (4)**:
+10. Set the following data destination options, and then select **Next (4)**:
     - **Root folder (1)**: Files
     - **Folder path (2)**: new_data
     - **File name (3)**: sales.csv
    
         ![08](./Images/fabric9.png)
 
-12. Set the following file format options and then select **Next (4)**:
+11. Set the following file format options and then select **Next (4)**:
     - **File format (1)**: DelimitedText
     - **Column delimiter (2)**: Comma (,)
     - **Row delimiter (3)**: Line feed (\n)
    
       ![09](./Images/fabric10.png)
 
-13. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
+12. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
     ![09](./Images/fabric11.png)
 
@@ -132,15 +130,15 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
 
-14. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+13. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
 
-15. In the menu bar on the left, select your lakehouse i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
+14. In the menu bar on the left, select your lakehouse i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
 
-16. On the **Home** page, in the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
+15. On the **Home** page, in the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
 
-    ![10](./Images/01/10.png)
+    ![Account-manager-start](./Images/lab1-image16.png)
 
 ### Task 4: Create a notebook
 
@@ -160,7 +158,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 3. In the **... (1)** menu for the cell (at its top-right) select **Toggle parameter cell (2)**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
-     ![12](./Images/01/12.png)
+     ![Account-manager-start](./Images/lab1-image17.png)
 
 4. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
 
@@ -208,9 +206,9 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 7. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
 
-8. In the notebook menu bar, use the ⚙️ **Settings (1)** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
+8. Navigate to notebook menu bar, use the ⚙️ **Settings (1)** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
 
-   ![.](./Images/01/Pg3-Notebook-S10.png)
+   ![.](./Images/01/lab1-image19.png)
  
 9. In the hub menu bar on the left, select your lakehouse.
 
@@ -221,9 +219,9 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 When you create a lakehouse and define tables in it, an SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
-1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL endpoint**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
+1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL analytics endpoint**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
 
-    ![Screenshot of the SQL endpoint page.](./Images/lakehouse-sql-endpoint.png)
+    ![.](./Images/01/lab1-image20.png)
 
 2. Use the **New SQL query** button to open a new query editor, and enter the following SQL query:
 
@@ -250,7 +248,9 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
 3. In the **Manage columns** menu, select **Choose columns**. Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns and click on **OK**.
 
-    ![Screenshot of a Choose columns dialog box.](./Images/choose-columns.png)
+    ![Account-manager-start](./Images/lab1-image22.png)
+
+    ![Account-manager-start](./Images/lab1-image23.png)
 
 4. Click on **+ (1)**, in the **Transform table** menu, select **Group by (2)**.
 
@@ -307,4 +307,4 @@ The tables in your lakehouse are automatically added to a default dataset that d
 
 In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default dataset to support data visualizations.
 
-### You have successfully completed the lab
+### You have successfully completed the lab. Click on Next >> to procced with next exercise.
