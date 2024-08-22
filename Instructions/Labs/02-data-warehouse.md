@@ -62,7 +62,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 4. Use the **Refresh** button on the toolbar to refresh the view. Then, in the **Explorer** pane, expand **Schemas** > **dbo** > **Tables** and verify that the **DimProduct** table has been created.
 
-5. On the **Home** menu tab, use the **New SQL Query** button to create a new query, and enter the following INSERT statement:
+5. On the **Home** menu tab, use the **New SQL Query** button and from the drop down select **New SQL Query**  to create a new query, and enter the following INSERT statement:
 
     ```SQL
    INSERT INTO dbo.DimProduct
