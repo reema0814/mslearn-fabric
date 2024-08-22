@@ -103,9 +103,11 @@ You can use your KQL Queryset as the basis for a Power BI report.
 
 1. In the query workbench editor for your query set, run the query and wait for the results.
 
-2. Select **Build Power BI report** and wait for the report editor to open.
+2. Select **Power BI** and wait for the report editor to open.
 
-3. In the report editor, in the **Data** pane, expand **Kusto Query Result** and select the **Item** and **TotalNet Revenue** fields.
+    ![Screenshot of a report from a KQL query.](./Images/imagekql.png)
+
+3. In the report editor, in the **Data** pane, expand **Kusto Query Result** and select the checkboxes of **Item** and **TotalNet Revenue** fields.
 
 4. On the report design canvas, select the table visualization that has been added and then in the **Visualizations** pane, select **Clustered bar chart**.
 

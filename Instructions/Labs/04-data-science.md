@@ -92,13 +92,7 @@ Now you're ready to run code to prepare data and train a model. To work with dat
 
 1. When the cell command has been completed, review the output below the cell, which should look similar to this:
 
-    |Index|CustomerID|years_with_company|total_day_calls|total_eve_calls|total_night_calls|total_intl_calls|average_call_minutes|total_customer_service_calls|age|churn|
-    | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-    |1|1000038|0|117|88|32|607|43.90625678|0.810828179|34|0|
-    |2|1000183|1|164|102|22|40|49.82223317|0.294453889|35|0|
-    |3|1000326|3|116|43|45|207|29.83377967|1.344657937|57|1|
-    |4|1000340|0|92|24|11|37|31.61998183|0.124931779|34|0|
-    | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
+    ![](./Images/output.png)
 
     The output shows the rows and columns of customer data from the churn.csv file.
 
@@ -250,9 +244,7 @@ After comparing machine learning models that you've trained across experiment ru
 
 1. In the experiment overview, ensure the **View** tab is selected.
 
-1. Select **Run details**.
-
-1. Select the run with the highest accuracy. 
+1. Select **Run details**. 
 
 1. Scroll right to see the Save as model option. Select **Save** in the **Save run as an ML model** box.
 
@@ -260,9 +252,9 @@ After comparing machine learning models that you've trained across experiment ru
 
 1. Select **Create a new model** in the newly opened pop-up window.
 
-1. Name the model `model-churn`, and select **Create**. 
+1. Select the existing folder and name the model `model-churn`, and select **Save**. 
 
-1. Select **View model** in the notification that appears at the top right of your screen when the model is created. You can also refresh the window. The saved model is linked under **Registered version**. 
+1. Select **View ML model** in the notification that appears at the top right of your screen when the model is created. You can also refresh the window. The saved model is linked under **Registered version**. 
 
 Note that the model, the experiment, and the experiment run are linked, allowing you to review how the model is trained. 
 
@@ -270,13 +262,13 @@ Note that the model, the experiment, and the experiment run are linked, allowing
 
 Now that you've finished training and evaluating the models, you can save the notebook with a meaningful name and end the Spark session.
 
-1. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
+1. Select the notebook that you created. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
 
-2. Set the **Name** of the notebook to **Train and compare models notebook**, and then close the settings pane.
+1. Set the **Name** of the notebook to **Train and compare models notebook**, and then close the settings pane.
 
-3. On the notebook menu, select **Stop session** to end the Spark session.
+1. On the notebook menu, select **Stop session** to end the Spark session.
 
-   Note: If you can't see the **Stop Session** option, it means the spark session has already ended.
+   >**Note:** If you can't see the **Stop Session** option, it means the spark session has already ended.
 
 ### Summary
 
