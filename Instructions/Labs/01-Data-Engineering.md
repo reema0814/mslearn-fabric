@@ -208,9 +208,9 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 7. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
 
-8. In the notebook menu bar, use the ⚙️ **Settings (1)** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
+8. Navigate to notebook menu bar, use the ⚙️ **Settings (1)** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
 
-   ![.](./Images/01/Pg3-Notebook-S10.png)
+   ![.](./Images/01/lab1-image19.png)
  
 9. In the hub menu bar on the left, select your lakehouse.
 
