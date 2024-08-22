@@ -209,7 +209,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. Use the **(+)** button on the **FactSalesOrder** table on the canvas to **Merge queries**.
 
-   ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/visual-query-merge.png)
+   ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/visual-query-merge1.png)
 
 1. In the **Merge queries** window, select **DimProduct (1)** as the right table for merge. Select **ProductKey** in both queries, leave the default **Left outer** to join type, and click **OK (4)**.
 
@@ -217,7 +217,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. In the **Preview**, note that the new **DimProduct** column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select **ProductName** and click **OK**.
 
-   ![Screenshot of the preview pane with the DimProduct column expanded, with ProductName selected.](./Images/visual-query-preview.png)
+   ![Screenshot of the preview pane with the DimProduct column expanded, with ProductName selected.](./Images/visual-query-preview1.png)
 
 1. If you're interested in looking at data for a single product, per a manager's request, you can now use the **ProductName** column to filter the data in the query. Filter the **ProductName** column to look at **Cable Lock** data only.
 
@@ -267,7 +267,7 @@ You can easily visualize the data in either a single query or in your data wareh
 
 1. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
 
-   ![Screenshot of the workspace with the three items listed.](./Images/workspace-items.png)
+   ![Screenshot of the workspace with the three items listed.](./Images/workspace-items1.png)
 
 ### Summary
 
