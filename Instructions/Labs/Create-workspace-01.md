@@ -44,4 +44,4 @@ Congratulations! You have successfully learned to create a Fabric workspace.
 
 ----
 
-*Continue to page 3 ...*
+### You have successfully completed the lab. Click on Next >> to procced with next exercise.
