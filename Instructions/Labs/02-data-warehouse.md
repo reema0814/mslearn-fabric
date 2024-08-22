@@ -24,7 +24,7 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
     The Data Warehouse home page includes a shortcut to create a new warehouse:
 
-   ![01](./Images/fabric13.png)
+   ![01](./Images/lab2-image1.png)
 
 2. In the **Data Warehouse** home page, create a new **Warehouse**.
    
@@ -32,7 +32,7 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
    - Click on **Create**
 
-        ![Screenshot of a new warehouse.](./Images/new-data-warehouse.png)
+        ![01](./Images/lab2-image2.png)
 
 ### Task 2: Create tables and insert data
 
