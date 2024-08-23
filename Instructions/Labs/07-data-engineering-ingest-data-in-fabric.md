@@ -68,7 +68,7 @@
 1. Type the following into Copilot:
  
     ```
-    In the Item column, replace the ',' with ' ' 
+    In the Item column, remove the ','
     ```
  
 1. The Item column now consistently has a delimiter of **' '**.
