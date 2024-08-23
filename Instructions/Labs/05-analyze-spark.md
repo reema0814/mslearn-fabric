@@ -197,6 +197,8 @@ The dataframe object includes a wide range of functions that you can use to filt
    display(customers.distinct())
     ```
 
+   >**Note:** You might have to hover your mouse below the output to view the + Code option.
+
 2. Run the new code cell, and review the results. Observe the following details:
     - When you operate on a dataframe, the result is a new dataframe (in this case, a new **customers** dataframe is created by selecting a specific subset of columns from the **df** dataframe)
     - Dataframes provide functions such as **count** and **distinct** that can be used to summarize and filter the data they contain.
@@ -392,9 +394,9 @@ A picture is proverbially worth a thousand words, and a chart is often better th
 
 2. Run the code and observe that it returns the data from the **salesorders** view you created previously.
 
-3. In the results section beneath the cell, change the **View** option from **Table** to **Chart**.
+3. In the results section beneath the cell, change the View  from **Table** to **Chart**.
 
-4. Use the **View options** button at the top right of the chart to display the options pane for the chart. Then set the options as follows and select **Apply**:
+4. Use the **Customize Chart** button at the top right of the chart to display the options pane for the chart. Then set the options as follows and select **Apply**:
     - **Chart type**: Bar chart
     - **Key**: Item
     - **Values**: Quantity
@@ -589,9 +591,10 @@ While **matplotlib** enables you to create complex charts of multiple types, it 
 
 Now that you've finished working with the data, you can save the notebook with a meaningful name and end the Spark session.
 
-1. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
-2. Set the **Name** of the notebook to **Explore Sales Orders Notebook**, and then close the settings pane.
-3. On the notebook menu, select **Stop session** to end the Spark session.
+1. In the top left corner, set the **Name** of the notebook from Notebook 1 to **Explore Sales Orders Notebook**.
+2. On the notebook menu, select **Stop session** to end the Spark session.
+
+ > **Note:** The stop session icon is present next to the **Start Session** option.
 
 ### Summary
 
