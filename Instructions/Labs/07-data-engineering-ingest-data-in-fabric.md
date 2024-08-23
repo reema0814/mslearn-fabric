@@ -118,6 +118,8 @@ Call out that the quantities for all items are 1.
  
 1. Here is a concise summary highlighting the impacts of Visual Query and M-Query/M-Code scripting:
 
+1. Close the Report.
+
 1. **Visual Query**:
    - **Streamlines data exploration**: Visual Query tools offer intuitive interfaces, enabling users to interact with data visually, and facilitating quicker insights without extensive coding.
    - **Enhances accessibility**: With Visual Query, users with varying technical expertise can extract insights from data, reducing reliance on specialized programming skills and promoting broader data utilization across teams.
