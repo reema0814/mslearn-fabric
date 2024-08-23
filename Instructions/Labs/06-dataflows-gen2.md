@@ -20,7 +20,7 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
 1. In the home page for your workspace, select **New Dataflow Gen2**. After a few seconds, the Power Query editor for your new dataflow opens as shown here.
 
-   ![New dataflow.](./Images/lak5.png)
+   ![New dataflow.](./Images/lak5.1.png)
 
    ![New dataflow.](./Images/new-dataflow.png)
 
