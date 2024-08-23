@@ -20,20 +20,22 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
 1. In the home page for your workspace, select **New Dataflow Gen2**. After a few seconds, the Power Query editor for your new dataflow opens as shown here.
 
+   ![New dataflow.](./Images/lak5.png)
+
    ![New dataflow.](./Images/new-dataflow.png)
 
-2. Select **Import from a Text/CSV file**, and create a new data source with the following settings:
+1. Select **Import from a Text/CSV file**, and create a new data source with the following settings:
     - **Link to file**: *Selected*
     - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv`
     - **Connection**: Create new connection
     - **data gateway**: (none)
     - **Authentication kind**: Anonymous
 
-3. Select **Next** to preview the file data, and then **Create** the data source. The Power Query editor shows the data source and an initial set of query steps to format the data, as shown here:
+1. Select **Next** to preview the file data, and then **Create** the data source. The Power Query editor shows the data source and an initial set of query steps to format the data, as shown here:
 
    ![Query in the Power Query editor.](./Images/fabric23.png)
 
-4. On the toolbar ribbon, select the **Add column** tab. Then select **Custom column** and create a new column named **MonthNo** that contains a number based on the formula `Date.Month([OrderDate])` - as shown here:
+1. On the toolbar ribbon, select the **Add column** tab. Then select **Custom column** and create a new column named **MonthNo** that contains a number based on the formula `Date.Month([OrderDate])` - as shown here:
 
    ![Custom column in Power Query editor.](./Images/fabric24.png)
 
