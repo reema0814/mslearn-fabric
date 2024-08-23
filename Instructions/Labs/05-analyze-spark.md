@@ -591,9 +591,10 @@ While **matplotlib** enables you to create complex charts of multiple types, it 
 
 Now that you've finished working with the data, you can save the notebook with a meaningful name and end the Spark session.
 
-1. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
-2. Set the **Name** of the notebook to **Explore Sales Orders Notebook**, and then close the settings pane.
-3. On the notebook menu, select **Stop session** to end the Spark session.
+1. In the top left corner, set the **Name** of the notebook from Notebook 1 to **Explore Sales Orders Notebook**.
+2. On the notebook menu, select **Stop session** to end the Spark session.
+
+ > **Note:** The stop session icon is present next to the **Start Session** option.
 
 ### Summary
 
