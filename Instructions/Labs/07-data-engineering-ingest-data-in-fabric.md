@@ -68,7 +68,7 @@
 1. Type the following into Copilot:
  
     ```
-    In the Item column, replace the ',' with ' ' 
+    In the Item column, remove the ','
     ```
  
 1. The Item column now consistently has a delimiter of **' '**.
@@ -109,7 +109,7 @@ Call out that the quantities for all items are 1.
 1. Type the following into Copilot:
  
     ```
-    Multiply the column Quantity by 10 where the Color is 'Red'
+    Multiply the Quantity column by 10 for all rows where the Color column equals 'Red'. Make sure that the Color column is treated as text and the Quantity column as a number.
     ```
  
 1. Show that the quantity field for Red bikes is now 10 instead of 1.
@@ -117,6 +117,8 @@ Call out that the quantities for all items are 1.
    ![New dataflow.](./Images/6.png)
  
 1. Here is a concise summary highlighting the impacts of Visual Query and M-Query/M-Code scripting:
+
+1. Close the Report.
 
 1. **Visual Query**:
    - **Streamlines data exploration**: Visual Query tools offer intuitive interfaces, enabling users to interact with data visually, and facilitating quicker insights without extensive coding.

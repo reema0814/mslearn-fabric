@@ -31,14 +31,18 @@
 Here, you create a Fabric workspace. The workspace contains all the items needed for this lakehouse tutorial, which includes lakehouse, dataflows, Data Factory pipelines, notebooks, Power BI datasets, and reports.
 
 1.  Now, select **Workspaces** and click on **+ New workspace**.
-
-    ![Account-manager-start](./Images/lab1-image6.png)
-
-2. Fill out the **Create a workspace** form with the following details and click on **Apply**
-
+ 
+    ![New Workspace](./Images/ws/11.png)
+ 
+2. Fill out the **Create a workspace** form with the following details:
+ 
    - **Name:** Enter **fabric-<inject key="DeploymentID" enableCopy="false"/>**
-
-      ![Account-manager-start](./Images/lab1-image7.png)
+ 
+      ![name-and-desc-of-workspc](./Images/ws/12.png)
+ 
+   - **Advanced:** Expand it and Under **License mode**, select **Frabric capacity (1)**, Under **Capacity** Select available fabric capacity (2)** and click on **Apply (3)** to create and open the workspace.
+ 
+      ![advanced-and-apply](./Images/32.png)
 
 Congratulations! You have successfully learned to create a Fabric workspace.
 

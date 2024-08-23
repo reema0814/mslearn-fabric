@@ -1,12 +1,10 @@
 # Data Warehouse Analyze Data in a Warehouse
 
+Now, you will analyze data within a data warehouse, leveraging Copilot to generate reports and gain insights into sales performance, customer details, and product information. By utilizing Copilot's AI capabilities, you will create custom pages, reports, and executive summaries based on the dataset, enabling deeper analysis and informed decision-making.
+
 1. Select the workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** (this is the workspace that mimics the lab environment)
 
    ![New dataflow.](./Images/26.png)
-
-1. Select **Data Warehouse** Object in the workspace (this is the same data warehouse students will create)
-
-    ![New dataflow.](./Images/2.png)
  
 1. Select **Data Warehouse<inject key="DeploymentID" enableCopy="false"/>** from the list.
 
@@ -58,7 +56,7 @@
 
 1. Recognize that Copilot offers functionalities such as providing suggestions, generating code snippets, and offering explanations. However, it's important to note its limitations, which may include the inability to create certain visualizations or directly modify page layouts.
 
-1. Selecting **What's in my dataset** prompts Copilot to analyze the semantic model or dataset currently in use.
+1. Selecting **What's in my data** prompts Copilot to analyze the semantic model or dataset currently in use.
 
    ![](./Images/16.png)
 
@@ -87,10 +85,6 @@
     ![](./Images/18.png)
 
    - The report provides a comprehensive analysis of total sales across a spectrum of product categories, revealing a consistent pattern of total sales summing up to 19.59 million across all 39 categories. Similarly, the quantity sold uniformly stands at 25.98 thousand units for each category. With an average total sales figure of 4.55 thousand, it suggests an even distribution of sales performance across all categories. This uniformity underscores a balanced sales landscape across diverse product categories, thereby offering valuable insights for informed decision-making in subsequent business strategies.
-
-1. **Undo the generated report** to maintain clarity in the demonstration.
-
-   ![](./Images/19.png)
    
 1. **Click the Copilot logo again** and select:
 
@@ -112,7 +106,7 @@
 1. **Clear the input box** and select:
 
     ```
-    Summarize vituals on this page
+    Give me an executive summary
     ```
     ![](./Images/23.png)
 
