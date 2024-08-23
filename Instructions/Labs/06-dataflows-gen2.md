@@ -37,13 +37,13 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
    ![Custom column in Power Query editor.](./Images/fabric24.png)
 
- The step to add the custom column is added to the query and the resulting column is displayed in the data pane:
+   The step to add the custom column is added to the query and the resulting column is displayed in the data pane:
 
- ![Query with a custom column step.](./Images/custom-column-added.png)
+   ![Query with a custom column step.](./Images/lak4.png)
 
-> **Tip:** In the Query Settings pane on the right side, notice the **Applied Steps** include each transformation step. At the bottom, you can also toggle the **Diagram flow** button to turn on the Visual Diagram of the steps.
->
-> Steps can be moved up or down, edited by selecting the gear icon, and you can select each step to see the transformations applied in the preview pane.
+   > **Tip:** In the Query Settings pane on the right side, notice the **Applied Steps** include each transformation step. At the bottom, you can also toggle the **Diagram flow** button to turn on the Visual Diagram of the steps.
+   >
+   > Steps can be moved up or down, edited by selecting the gear icon, and you can select each step to see the transformations applied in the preview pane.
 
 ### Task 2: Add data destination for Dataflow
 
