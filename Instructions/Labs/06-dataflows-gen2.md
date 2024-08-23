@@ -56,15 +56,16 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
    > **Note:** If this option is greyed out, you may already have a data destination set. Check the data destination at the bottom of the Query settings pane on the right side of the Power Query editor. If a destination is already set, you can change it using the gear.
 
 2. In the **Connect to data destination** dialog box, edit the connection, choose **Create a new connection** and sign in using your Power BI organizational account to set the identity that the dataflow uses to access the lakehouse.
+
    ![Data destination configuration page.](./Images/lak1.png)
 
-3. Select **Next** and in the list of available workspaces, find your workspace and select the lakehouse you created in it at the start of this exercise. Then specify a new table named **orders**:
+4. Select **Next** and in the list of available workspaces, find your workspace and select the lakehouse you created in it at the start of this exercise. Then specify a new table named **orders**:
 
    ![Data destination configuration page.](./Images/fabric26.png)
 
-4. On the Destination settings page, notice how **MonthNo** is not selected in the Column mapping and there is an informational message.
+5. On the Destination settings page, notice how **MonthNo** is not selected in the Column mapping and there is an informational message.
  
-5. On the  Destination settings page toggle off the **Use Automatic Settings** option then change the data type for the MonthNo column. Right-click on the column header and **Change Type** to **MonthNo = Whole number**
+6. On the  Destination settings page toggle off the **Use Automatic Settings** option then change the data type for the MonthNo column. Right-click on the column header and **Change Type** to **MonthNo = Whole number**
 and subsequently click on **Save Settings**
 
     ![Data destination settings page.](./Images/lak2.png)
