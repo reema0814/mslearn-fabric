@@ -109,7 +109,7 @@ Call out that the quantities for all items are 1.
 1. Type the following into Copilot:
  
     ```
-    Multiply the column Quantity by 10 where the Color is 'Red'
+    Multiply the Quantity column by 10 for all rows where the Color column equals 'Red'. Make sure that the Color column is treated as text and the Quantity column as a number."
     ```
  
 1. Show that the quantity field for Red bikes is now 10 instead of 1.
