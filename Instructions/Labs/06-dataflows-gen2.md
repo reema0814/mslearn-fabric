@@ -82,7 +82,7 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
     ![Empty data pipeline.](./Images/lak3.png)
 
-    ![Empty data pipeline.](./Images/new-pipeline.png)
+    ![Empty data pipeline.](./Images/lak6.png)
 
    > **Tip**: If the Copy Data wizard opens automatically, close it!
 
@@ -92,19 +92,19 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
 4. With the new **Dataflow1** activity selected, on the **Settings** tab, in the **Dataflow** drop-down list, select **Transform Orders Dataflow** (the data flow you created previously)
 
-   ![Pipeline with a dataflow activity.](./Images/dataflow-activity.png)
+   ![Pipeline with a dataflow activity.](./Images/lak7.png)
 
 5. On the **Home** tab, save the pipeline using the **&#128427;** **Save** icon.
 
 6. Use the **&#9655; Run** button to run the pipeline, and wait for it to complete. It may take a few minutes.
 
-   ![Pipeline with a dataflow that has completed successfully.](./Images/dataflow-pipeline-succeeded.png)
+   ![Pipeline with a dataflow that has completed successfully.](./Images/lak8.png)
 
 7. In the menu bar on the left edge, select your lakehouse.
 
 8. In the **...** menu for **Tables**, select **Refresh**. Then expand **Tables** and select the **orders** table, which has been created by your dataflow.
 
-   ![Table loaded by a dataflow.](./Images/loaded-table.png)
+   ![Table loaded by a dataflow.](./Images/lak9.png)
 
    >**Note:** You might have to refresh the browser to get the expected output.
 
