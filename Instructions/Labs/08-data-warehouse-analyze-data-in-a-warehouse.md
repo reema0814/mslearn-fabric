@@ -1,4 +1,4 @@
-# Data Warehouse Analyze Data in a Warehouse
+# Lab 7: Data Warehouse Analyze Data in a Warehouse with Fabric Copilot
 
 Now, you will analyze data within a data warehouse, leveraging Copilot to generate reports and gain insights into sales performance, customer details, and product information. By utilizing Copilot's AI capabilities, you will create custom pages, reports, and executive summaries based on the dataset, enabling deeper analysis and informed decision-making.
 
