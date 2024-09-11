@@ -1,0 +1,15 @@
+[{
+    "Name": "Microsoft Fabric with Copilot",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/mslearn-fabric/main/Instructions/Labs/Getting-Started.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/suraj-only-git/mslearn-fabric/main/Instructions/Labs/01-IBM-RTIAD-Data-Engineering.md",
+        "Order": 2
+      }
+    ]
+  }]
+  
