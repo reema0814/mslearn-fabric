@@ -17,6 +17,7 @@ You will be able to complete the following tasks:
 - Task 5: Use SQL to query tables
 - Task 6: Create a visual query
 - Task 7: Create a report
+- Task 8: Fabric Copilot
   
 ### Task 1: Create a Lakehouse
 
@@ -302,6 +303,123 @@ The tables in your lakehouse are automatically added to a default dataset that d
     - A default dataset for the tables in your lakehouse.
     - The **Item Sales Report** report.
 
+### Task 8: Fabric Copilot
+
+1. Select the workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** (this is the workspace that mimics the lab environment)
+
+   ![New dataflow.](./Images/26.png)
+
+2. Select **Data Factory** Object in the workspace.
+
+    ![New dataflow.](./Images/27.png)
+
+3. In the home page for your workspace, select **New Dataflow Gen2**. 
+
+   ![New dataflow.](./Images/28.png)
+
+4. After a few seconds, the Power Query editor for your new dataflow opens as shown here.
+
+   ![New dataflow.](./Images/new-dataflow.png)
+
+5. Select **Import from a Text/CSV file**, and create a new data source with the following settings:
+
+    - **Create new connection**
+    - **Link to file**: *Selected*
+    - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
+    - **Connection**: Create new connection
+    - **data gateway**: (none)
+    - **Authentication kind**: Anonymous
+    - Click on **Next**.
+
+      ![New dataflow.](./Images/29.png)
+
+6. On **Preview file data** page, Click on **Create**.
+
+   ![New dataflow.](./Images/30.png)
+
+7. Click **Copilot** button on Ribbon. 
+
+    ![New dataflow.](./Images/31.png)
+
+8. To better illustrate all that Copilot is doing for you, let me expand the UI a little to see what's going on behind the scenes.
+
+9. Expand **Query Settings** (these are the steps in the query that bring in the data)
+
+10. **View menu**: Look for the option or menu labeled "View" in the toolbar or menu bar. Click on it to reveal a dropdown menu.
+
+11. **Diagram View**: From the dropdown menu, select "Diagram View." This will switch your view to a visual representation of your code.
+
+12. **Script View**: Once you're in Script View, you should be able to see the M-Code that Copilot has generated. This is the underlying code representation of the actions or commands depicted in the Diagram View.
+
+   ![New dataflow.](./Images/1.png)
+
+13. Looking at the data… Notice the Item Column.
+
+14. This is really three different fields -- It contains a short description of the item, a color and a size.
+
+15.	The fields are not consistently delimited (' ' and then ',')
+
+16. Let's use Copilot to clean this up:
+
+    ```
+   	Add a step that
+    ```
+    ![New dataflow.](./Images/3.png)
+
+17. Type the following into Copilot:
+ 
+    ```
+    In the Item column, remove the ','
+    ```
+ 
+18. The Item column now consistently has a delimiter of **' '**.
+
+   ![New dataflow.](./Images/4.png)
+
+19. Show the m-code and new query step that the copilot generated.
+ 
+   ```
+   Add a step that
+   ```
+   ![New dataflow.](./Images/3.png)
+
+20. Type the following into Copilot:
+ 
+    ```
+    Split the Item column on the ' ', creating three new fields called Description, Color and Size
+    ```
+ 
+21. Three new fields are now created to replace the Item Column.
+
+   ![New dataflow.](./Images/5.png)
+ 
+22. Show the m-code and new query step that the copilot generated
+ 
+   >**Note:** Copilot can do more than transform the table, we can actually change data as well.
+
+23. Scenario: think Red bikes are going to be a big seller, so increase the quantity in Inventory
+Call out that the quantities for all items are 1.
+ 
+24. Add a step to the query:
+
+   ```
+   Add a step that
+   ```
+   ![New dataflow.](./Images/3.png)
+
+25. Type the following into Copilot:
+ 
+    ```
+    Multiply the Quantity column by 10 for all rows where the Color column equals 'Red'. Make sure that the Color column is treated as text and the Quantity column as a number.
+    ```
+ 
+26. Show that the quantity field for Red bikes is now 10 instead of 1.
+
+   ![New dataflow.](./Images/6.png)
+ 
+27. Here is a concise summary highlighting the impacts of Visual Query and M-Query/M-Code scripting:
+
+28. Close the Report.
 
 ### Summary
 
