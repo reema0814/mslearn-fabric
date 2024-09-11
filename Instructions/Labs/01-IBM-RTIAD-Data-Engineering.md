@@ -305,7 +305,7 @@ The tables in your lakehouse are automatically added to a default dataset that d
 
 ### Task 8: Analyze report using Fabric Copilot
 
-1. Click on Copilot button at the right of the screen
+1. Click on Copilot button at the right of the screen to open the copilot chat window.
 
    ![New dataflow.](./Images/Copilot-gettingstarted.png)
 
