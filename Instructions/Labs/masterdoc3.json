@@ -7,8 +7,12 @@
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/suraj-only-git/mslearn-fabric/main/Instructions/Labs/01-IBM-RTIAD-Data-Engineering.md",
+        "RawFilePath": "https://raw.githubusercontent.com/suraj-only-git/mslearn-fabric/main/Instructions/Labs/Create-workspace-01.md",
         "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/suraj-only-git/mslearn-fabric/main/Instructions/Labs/01-IBM-RTIAD-Data-Engineering.md",
+        "Order": 3
       }
     ]
   }]
