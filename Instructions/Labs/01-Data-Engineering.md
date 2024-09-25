@@ -50,6 +50,8 @@ In many scenarios, the data you need to work within your lakehouse may be stored
 
 1. In the **Ellipsis(...) (1)** menu for the **Files** folder, select **New shortcut (2)**.
 
+  ![02](./Images/fab10.png)
+
 2. View the available data source types for shortcuts. Then close the **New shortcut** dialog box without creating a shortcut.
 
 
@@ -191,7 +193,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 5. Verify that your notebooks look similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
-    ![Screenshot of a notebook with a parameters cell and code to transform data.](./Images/notebook.png)
+    ![Screenshot of a notebook with a parameters cell and code to transform data.](./Images/fab8.png)
 
     > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first cell can take a minute or so to complete.
 
@@ -211,9 +213,11 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 7. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **Ellipsis(...)** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
 
+    ![.](./Images/fab-6.png)
+
 8. Navigate to notebook menu bar, use the ⚙️ **Settings (1)** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
 
-   ![.](./Images/01/lab1-image19.png)
+     ![.](./Images/fab-7.png)
  
 9. In the hub menu bar on the left, select your lakehouse.
 
@@ -288,16 +292,16 @@ The tables in your lakehouse are automatically added to a default dataset that d
     ![Screenshot of the report designer.](./Images/report-designer.png)
 
 3. In the **Data** pane on the right, expand the **sales** table. Then select the following fields:
-    - **Item**
-    - **Quantity**
+    - **Item (1)**
+    - **Quantity (2)**
 
     A table visualization is added to the report:
 
-    ![Screenshot of a report containing a table.](./Images/table-visualization.png)
+      ![Screenshot of a report containing a table.](./Images/fab-4.png)
 
 4. Hide the **Data** and **Filters** panes to create more space. Then ensure the table visualization is selected and in the **Visualizations** pane, change the visualization to a **Clustered bar chart** and resize it as shown here.
 
-    ![Screenshot of a report containing a clustered bar chart.](./Images/clustered-bar-chart.png)
+      ![Screenshot of a report containing a clustered bar chart.](./Images/fab11.png)
 
 5. On the **File** menu, select **Save**. Then save the report as **Item Sales Report** in the workspace you created previously.
 6. Close the browser tab containing the report to return to the SQL endpoint for your lakehouse. Then, in the hub menu bar on the left, select your workspace to verify that it contains the following items:
