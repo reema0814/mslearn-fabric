@@ -117,7 +117,7 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
     - **FactSalesOrder.CustomerKey** &#8594; **DimCustomer.CustomerKey**
 
-      ![Screenshot of the data warehouse model page.](./Images/fabric12.png)
+      ![Screenshot of the data warehouse model page.](./Images/fabric12.1.png)
 
     - **FactOrderSales.SalesOrderDateKey** &#8594; **DimDate.DateKey**
 
