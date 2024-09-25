@@ -28,9 +28,9 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
 2. In the **Data Warehouse** home page, create a new **Warehouse**.
    
-   - **Name:** Enter **Data Warehouse<inject key="DeploymentID" enableCopy="false"/>**
+   - **Name:** Enter **Data Warehouse<inject key="DeploymentID" enableCopy="false"/>** **(1)**
 
-   - Click on **Create**
+   - Click on **Create (2)**
 
         ![01](./Images/lab2-image2.png)
 
