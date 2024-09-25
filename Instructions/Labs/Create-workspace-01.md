@@ -21,19 +21,21 @@ You will be able to complete the following tasks:
 
    >**Note**: In case a sign-up page asks for a phone number, you can enter a dummy phone number to proceed.
 
-2. Select **Account manager (1)**, and click on **Free trial (2)**.
+1. Select **Account manager (1)**, and click on **Free trial (2)**.
 
-   ![Account-manager-start](./Images/lab1-image3.png)
+     ![Account-manager-start](./Images/lab1-image3.png)
 
-3. A new prompt will appear asking you to **Upgrade to a free Microsoft Fabric trial**, click on **Start trial**.
+1. A new prompt will appear asking you to **Activate your 60-day free Fabric trial capacity**, click on **Activate**.
 
-   ![Account-manager-start](./Images/lab1-image4.png)
+      ![Account-manager-start](./Images/fabric-1.png)
 
-4. Once your trial capacity is ready, you receive a confirmation message. Select **Got it** to begin working in Fabric.
+1. Click on S**tay in current page** when prompted.
 
-5. Now, open **Account manager (1)** again, and verify **Trial Status (2)**.
+      ![Account-manager-start](./Images/fabric-2.png)
 
-    ![Account-manager-start](./Images/lab1-image5.png)
+1. Now, open **Account manager (1)** again, and verify **Trial Status (2)**.
+
+      ![Account-manager-start](./Images/lab1-image5.png)
 
 ### Task 2: Create a workspace
 
