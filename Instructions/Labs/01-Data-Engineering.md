@@ -74,6 +74,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
    ![Screenshot of the Choose data source page.](./Images/data-source.png)
 
 6. In the **Connection settings** pane, enter the following settings for the connection to your data source:
+    
     - URL: **`https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`**  **(1)**
     - Connection: **Create new connection (2)**
     - Connection name: **Specify a unique name (3)**
@@ -83,16 +84,18 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
        ![Account-manager-start](./Images/lab1-image11.png)
     
 7. Make sure the following settings are selected and click on **Next** :
-    - **Relative URL**: *Leave blank*
-    - **Request method**: GET
-    - **Additional headers**: *Leave blank*
-    - **Binary copy**: Unselected
-    - **Request timeout**: *Leave blank*
-    - **Max concurrent connections**: *Leave blank*
+    
+    - Relative URL: **Leave blank**
+    - Request method: **GET**
+    - Additional headers: **Leave blank**
+    - Binary copy: **Unselected**
+    - Request timeout: **Leave blank**
+    - Max concurrent connections: **Leave blank**
   
         ![05](./Images/fabric4.png)
    
 8. Wait for the data to be sampled and then ensure that the following settings are selected:
+    
     - File format: **DelimitedText (1)**
     - Column delimiter: **Comma (,) (2)**
     - Row delimiter: **Line feed (\n) (3)**
@@ -109,20 +112,22 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
      ![Account-manager-start](./Images/lab1-image14.png)
 
 11. Set the following data destination options, and then select **Next (4)**:
-    - **Root folder**: **Files (1)**
-    - **Folder path**: **new_data (2)**
-    - **File name**: **sales.csv  (3)**
+
+    - Root folder: **Files (1)**
+    - Folder path: **new_data (2)**
+    - File name: **sales.csv  (3)**
    
         ![08](./Images/fabric9.png)
 
-12. Set the following file format options and then select **Next (4)**:
-    - **File format**: **DelimitedText (1)**
-    - **Column delimiter**: **Comma (,) (2)**
-    - **Row delimiter**: **Line feed (\n) (3)**
+13. Set the following file format options and then select **Next (4)**:
+
+    - File format: **DelimitedText (1)**
+    - Column delimiter: **Comma (,) (2)**
+    - Row delimiter: **Line feed (\n) (3)**
    
       ![09](./Images/fabric10.png)
 
-13. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
+15. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
     ![09](./Images/fabric11.png)
 
@@ -130,13 +135,13 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
 
-14. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+16. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
 
-15. In the menu bar on the left, select your lakehouse i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
+17. In the menu bar on the left, select your lakehouse i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
 
-16. On the **Home** page, in the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
+18. On the **Home** page, in the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
 
     ![Account-manager-start](./Images/lab1-image16.png)
 
@@ -204,7 +209,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
     > **Note**: To run the above code, you need to replace the <abfs_path> with your abfs path
 
 
-7. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **...** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
+7. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **Ellipsis(...)** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
 
 8. Navigate to notebook menu bar, use the ⚙️ **Settings (1)** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
 
@@ -213,7 +218,6 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 9. In the hub menu bar on the left, select your lakehouse.
 
 10. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
-
 
 ### Task 5: Use SQL to query tables
 
@@ -246,7 +250,7 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
     ![Screenshot of a Visual query.](./Images/visual-query.png)
 
-3. In the **Manage columns** menu, select **Choose columns**. Then select only the **SalesOrderNumber** and **SalesOrderLineNumber** columns and click on **OK**.
+3. In the **Manage columns (1)** menu, select **Choose columns (2)**. Then select only the **SalesOrderNumber and SalesOrderLineNumber (4)** columns and click on **OK (4)**.
 
     ![Account-manager-start](./Images/lab1-image22.png)
 
@@ -258,10 +262,10 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
 5. Then group the data by using the following **Basic** settings and click on **OK**.
 
-    - **Group by**: SalesOrderNumber
-    - **New column name**: LineItems
-    - **Operation**: Count distinct values
-    - **Column**: SalesOrderLineNumber
+    - Group by: **SalesOrderNumber**
+    - New column name: **LineItems**
+    - Operation: **Count distinct values**
+    - Column: **SalesOrderLineNumber**
 
         ![Screenshot of a Visual query with results.](./Images/01/Pg3-VisQuery-S4.01.png)
 
@@ -307,4 +311,4 @@ The tables in your lakehouse are automatically added to a default dataset that d
 
 In this exercise, you have created a lakehouse and imported data into it. You've seen how a lakehouse consists of files and tables stored in a OneLake data store. The managed tables can be queried using SQL, and are included in a default dataset to support data visualizations.
 
-### You have successfully completed the lab. Click on Next >> to procced with next exercise.
+### You have successfully completed the lab
