@@ -189,6 +189,8 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
 
 2. Run the query to create the view. Then refresh the data warehouse schema and verify that the new view is listed in the **Explorer** pane.
 
+   ![](./Images/02/fab2.png)
+
 3. Create a new SQL query and run the following SELECT statement:
 
     ```SQL
