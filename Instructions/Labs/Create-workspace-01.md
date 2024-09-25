@@ -27,7 +27,7 @@ You will be able to complete the following tasks:
 
 1. A new prompt will appear asking you to **Activate your 60-day free Fabric trial capacity**, click on **Activate**.
 
-      ![Account-manager-start](./Images/fabric-1.png)
+      ![Account-manager-start](./Images/fabric-3.png)
 
 1. Click on S**tay in current page** when prompted.
 
