@@ -201,7 +201,7 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
 
 Instead of writing SQL code, you can use the graphical query designer to query the tables in your data warehouse. This experience is similar to Power Query online, where you can create data transformation steps with no code. For more complex tasks, you can use Power Query's M (Mashup) language.
 
-1. On the **Home** menu, select **New visual query**.
+1. On the **Home** menu, from the drop down select **New visual query**.
 
 1. Drag **FactSalesOrder** onto the **canvas**. Notice that a preview of the table is displayed in the **Preview** pane below.
 
