@@ -89,7 +89,7 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
 4. With the new **Dataflow1** activity selected, go to the **Settings** tab. In the **Dataflow** drop-down list, choose **Transform Orders Dataflow**
 
-   ![Empty data pipeline.](./Images/34.png)
+   ![Empty data pipeline.](./Images/transform.png)
    
 6. **Save** the pipeline.
 
