@@ -39,7 +39,7 @@ You will be able to complete the following tasks:
  
 1. Clicking on the **Model** view allows you to view the relationships between different tables within the data warehouse.
 
-    ![](./Images/11.png)
+    ![](./Images/pg-8.png)
 
 1. When you click on the relationship between **FactSalesOrder** and **DimCustomer** and access its properties, you're essentially examining how these two tables are linked together. This relationship defines how data from these tables can be combined or related when querying or visualizing in Power BI.
 
@@ -49,9 +49,9 @@ You will be able to complete the following tasks:
 
     - This linkage is crucial for defining the Semantic Model used by Power BI. The Semantic Model essentially acts as a blueprint that outlines how data elements are interconnected and how they should be interpreted within Power BI. By establishing and defining relationships between tables, we're instructing Power BI on how to navigate and analyze the data effectively.
  
-1. Clicking on **New Report** allows you to create a new report within Power BI. This report will utilize the Semantic Model defined by the relationships established in the data warehouse.
+1. Clicking on **New Report** from the **reporting tab** allows you to create a new report within Power BI. This report will utilize the Semantic Model defined by the relationships established in the data warehouse.
  
-   ![](./Images/12.png)
+   ![](./Images/pg-08-1.png)
 
 1. The Semantic Model, as defined in the data warehouse, is reflected in the Power BI interface. This includes the tables and their respective fields visible in the Data Pane of Power BI, which you can use to build your reports.
 
