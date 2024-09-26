@@ -17,7 +17,7 @@ You will be able to complete the following tasks:
   
 ### Task 1: Create a KQL database
 
-Kusto query language (KQL) is used to query static or streaming data in a table that is defined in a KQL database. To analyze the sales data, you must create a table in a KQL database and ingest the data from the file.
+In this task, you will create a KQL database to facilitate querying of static or streaming data. You will define a table within the KQL database and ingest sales data from a file to enable effective analysis using Kusto Query Language (KQL).
 
 1. In the **Microsoft Fabric** experience portal, select the **Real-Time Intelligence** experience image as shown here:
 
@@ -59,7 +59,7 @@ Kusto query language (KQL) is used to query static or streaming data in a table 
 
 ### Task 2: Use KQL to query the sales table
 
-Now that you have a table of data in your database, you can use KQL code to query it.
+In this task, you will use Kusto Query Language (KQL) to query the sales table in your KQL database. With the data now available, you can write KQL code to extract insights and perform analysis on the sales data.
 
 1. Make sure you have the **sales** table highlighted. From the menu bar, select the **Query table** drop-down, and from there select **Show any 100 records**.
 
@@ -99,7 +99,7 @@ Now that you have a table of data in your database, you can use KQL code to quer
 
 ### Task 3: Create a Power BI report from a KQL Queryset
 
-You can use your KQL Queryset as the basis for a Power BI report.
+In this task, you will create a Power BI report using your KQL Queryset as the foundation for the analysis. This allows you to visualize and present the insights derived from your KQL queries in an interactive and user-friendly format within Power BI.
 
 1. In the query workbench editor for your query set, run the query and wait for the results.
 
@@ -123,7 +123,7 @@ You can use your KQL Queryset as the basis for a Power BI report.
 
 ### Task 4: Use delta tables for streaming data
 
-Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* for data streams created using the Spark Structured Streaming API. In this example, you'll use a delta table as a sink for some streaming data in a simulated Internet of Things (IoT) scenario.
+In this task, you will use Delta tables to handle streaming data, leveraging their capabilities for real-time data processing. Specifically, you will implement a Delta table as a sink for streaming data in a simulated Internet of Things (IoT) scenario, utilizing the Spark Structured Streaming API.
 
 1. Navigate back to your workspace and open **Load Sales Notebook**. Add a new code cell in the notebook. Then, in the new cell, add the following code and run it:
 
