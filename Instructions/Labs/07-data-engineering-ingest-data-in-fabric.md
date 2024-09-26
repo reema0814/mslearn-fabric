@@ -1,7 +1,19 @@
 # Exercise 6: Data Engineering Ingest Data in Fabric with Fabric Copilot
 
+### Estimated Duration: 30 minutes
  In the labs, you'll create a simple data pipeline to bring in customer sales data. You are using the KiZAN Fabric Tenant - where we have Copilot enabled, demonstrate doing the same thing, but by using a new Data Flow Gen2 And leveraging the native integration of Copilot to use natural language to ingest and transform your data.
- 
+
+## Lab objectives
+
+You will be able to complete the following tasks:
+
+- Connect to Data Sources  
+- Configure Ingestion Settings  
+- Ingest Data into Fabric  
+- Monitor Ingestion Process  
+- Validate Ingested Data  
+- Document the Ingestion Process
+   
 # Create New - Dataflow Gen2
 
 1. Select the workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** (this is the workspace that mimics the lab environment)
@@ -128,5 +140,7 @@ Call out that the quantities for all items are 1.
    - **Enables advanced data manipulation**: M-Query/M-Code scripting provides a robust framework for performing intricate data transformations and analysis, empowering users to tailor processes to specific requirements beyond the capabilities of visual tools.
    - **Facilitates automation and customization**: Through M-Query/M-Code scripting, users can automate repetitive tasks, build custom functions, and create tailored solutions, increasing efficiency and flexibility in data workflows.
 
----
-Continue to page 10 ...
+## Summary
+In this exercise, you have created a notebook and trained a machine-learning model. You used Scikit-Learn to train the model and MLflow to track its performance.
+
+## You have successfully completed the lab. Click on Next >> to procced with next exercise.
