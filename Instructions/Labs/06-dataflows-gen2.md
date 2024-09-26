@@ -44,12 +44,14 @@ In this task, create a Dataflow (Gen2) to efficiently ingest and transform data 
 
    ![Query with a custom column step.](./Images/lak4.png)
 
+1. Go to the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** , Delete the **orders** files from the table.
 
 ### Task 2: Add data destination for Dataflow
 
 In this task, you’ll add a data destination for the Dataflow to determine where the ingested and transformed data will be stored for future use.
 
 1. Choose **Lakehouse** from the **Add data destination** drop-down menu.
+
    ![Empty data pipeline.](./Images/35.png)
 
 >**Note:** If this option is greyed out, you may already have a data destination set. Check the data destination at the bottom of the Query settings pane on the right side of the Power Query editor. If a destination is already set, you can change it using the gear.
@@ -79,13 +81,11 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
     ![Empty data pipeline.](./Images/lak3.png)
 
-    ![Empty data pipeline.](./Images/lak6.png)
-
-   > **Tip**: If the Copy Data wizard opens automatically, close it!
+   > **Note**: If the Copy Data wizard opens automatically, close it!
 
 3. Select **pipeline activity**, and add a **Dataflow** activity to the pipeline.
 
-   ![Empty data pipeline.](./Images/34.png)
+   ![Empty data pipeline.](./Images/dataflow_1.png)
 
 4. With the new **Dataflow1** activity selected, go to the **Settings** tab. In the **Dataflow** drop-down list, choose **Transform Orders Dataflow**
 
@@ -101,7 +101,7 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
 9. Expand the **Tables** section and select the **orders** table created by your dataflow.
 
-   ![Table loaded by a dataflow.](./Images/lak9.png)
+   ![Table loaded by a dataflow.](./Images/orders_1.png)
 
    >**Note:** You might have to refresh the browser to get the expected output.
 
