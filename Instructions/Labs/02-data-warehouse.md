@@ -22,8 +22,6 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
 1. At the bottom left of the Power BI portal, switch to the **Data Warehouse** experience.
 
-    The Data Warehouse home page includes a shortcut to create a new warehouse:
-
    ![01](./Images/lab2-image1.png)
 
 2. In the **Data Warehouse** home page, create a new **Warehouse**.
@@ -227,7 +225,9 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 You can easily visualize the data in either a single query or in your data warehouse. Before you visualize, hide columns and/or tables that aren't friendly to report designers.
 
-1. In the **Explorer** pane, select the **Model** view. 
+1. In the **Explorer** pane, select the **Model** view.
+
+   ![03](./Images/pg-8.png)
 
 1. Hide the following columns in your Fact and Dimension tables that are not necessary to create a report. Note that this does not remove the columns from the model, it simply hides them from view on the report canvas.
    1. FactSalesOrder
@@ -247,9 +247,9 @@ You can easily visualize the data in either a single query or in your data wareh
       - **ProductKey**
       - **ProductAltKey** 
 
-1. Now you're ready to build a report and make this dataset available to others. On the Home menu, select **New report**. This will open a new window, where you can create a Power BI report.
+1. On the Home menu, select **New report (1)** from the reporting tab. This will open a new window, where you can create a Power BI report.
 
-   ![03](./Images/02/Pg4-VisualizeData-S3.png)
+    ![03](./Images/pg-08-1.png)
 
 1. In the **Data** pane, expand **FactSalesOrder**. Note that the columns you hide are no longer visible. 
 
