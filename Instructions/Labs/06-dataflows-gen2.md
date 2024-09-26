@@ -16,7 +16,7 @@ You will be able to complete the following tasks:
 
 ### Task 1: Create a Dataflow (Gen2) to ingest data
 
-In this task, create a Dataflow (Gen2) to efficiently ingest and transform data from various sources for analysis and processing.
+In this task, you will create a Dataflow (Gen2) to efficiently ingest and transform data from multiple sources for analysis. This process streamlines data preparation, enabling you to prepare the data for further processing and insights.
 
 1. On **fabric-<inject key="DeploymentID" enableCopy="false"/>** home page, select **New Dataflow Gen2**. After a few moments, the Power Query editor for your new dataflow will open, as illustrated below.
 
