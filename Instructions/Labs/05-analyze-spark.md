@@ -402,7 +402,7 @@ A picture is proverbially worth a thousand words, and a chart is often better th
 
 5. Verify that the chart looks similar to this:
 
-    ![Screenshot of a bar chart of products by total order quantiies](./Images/fabric22.png)
+    ![Screenshot of a bar chart of products by total order quantiies](./Images/chart_final.png)
 
 #### Get started with **matplotlib**
 
