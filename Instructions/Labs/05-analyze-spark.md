@@ -30,9 +30,7 @@ Now that you have a workspace, it's time to switch to the *Data engineering* exp
 
    - Click on **Create**
 
-    After a minute or so, a new empty lakehouse will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise, you'll simply upload them to your lakehouse from the **LabVM**.
-
-3. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** folder in the **Explorer** pane, select **Upload** and **Upload folder**, and then upload the **orders** folder from **C:\LabFiles\Files\orders** to the lakehouse.
+3. Once you're in the lakehouse, navigate to the **Files** folder in the **Explorer** pane, click on the **...** menu, and select **Upload** followed by **Upload folder**. Then, upload the **orders** folder located at **C:\LabFiles\Files\orders** to the lakehouse.
 
 4. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
 
@@ -46,7 +44,7 @@ To work with data in Apache Spark, you can create a *notebook*. Notebooks provid
 
    ![](./Images/Pg7-Notebook-S1.png)
 
-    After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+>**Note**: After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
 2. Select the first cell (which is currently a *code* cell), and then in the dynamic toolbar at its top-right, use the **M&#8595;** button to convert the cell to a *markdown* cell.
 
