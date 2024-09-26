@@ -72,7 +72,7 @@ and subsequently click on **Save Settings**
 
 5. Select **Publish** to publish the dataflow. Then wait for the **Dataflow 4** dataflow to be created in your workspace.
 
-6. Once published, you can click on the elipsis **...** next to the published dataflow in your workspace, select **Properties**, and rename your dataflow as **Transform Orders Dataflow**.
+6. Once published, you can click on the elipsis **ellipse** next to the published dataflow in your workspace, select **Properties**, and rename your dataflow as **Transform Orders Dataflow**.
 
 ### Task 3: Add a dataflow to a pipeline
 
@@ -102,7 +102,7 @@ You can include a dataflow as an activity in a pipeline. Pipelines are used to o
 
 7. In the menu bar on the left edge, select your lakehouse.
 
-8. In the **...** menu for **Tables**, select **Refresh**. Then expand **Tables** and select the **orders** table, which has been created by your dataflow.
+8. In the **ellipse** menu for **Tables**, select **Refresh**. Then expand **Tables** and select the **orders** table, which has been created by your dataflow.
 
    ![Table loaded by a dataflow.](./Images/lak9.png)
 
