@@ -95,7 +95,7 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
    ![Pipeline with a dataflow that has completed successfully.](./Images/lak8.png)
 
-8. In the menu bar on the left edge, select **fabric<inject key="DeploymentID" enableCopy="false"/>**
+8. In the menu bar on the left edge, select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>**
 
 9. Expand the **Tables** section and select the **orders** table created by your dataflow.
 
