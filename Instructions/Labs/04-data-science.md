@@ -21,7 +21,7 @@ You will be able to complete the following tasks:
 
 Using the same workspace, it's time to switch to the *Data science* experience in the portal.
 
-1. Navigate back to your lakehouse, and in the **... (1)** menu for the **Files** node in the **Explorer** pane, select **Upload (2)** and **Upload files (3)**. 
+1. Navigate back to your lakehouse, and in the **Ellipses (1)** menu for the **Files** node in the **Explorer** pane, select **Upload (2)** and **Upload files (3)**. 
 
    ![](./Images/Pg6-S1.png)
 
@@ -59,6 +59,10 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
 Now you're ready to run code to prepare data and train a model. To work with data, you'll use *dataframes*. Dataframes in Spark are similar to Pandas dataframes in Python, and provide a common structure for working with data in rows and columns.
 
+1. Click on **lakehouses**
+
+   ![](./Images/lakehouse_1.png)
+
 1. In the **Add lakehouse** pane, select **Add** to add a lakehouse.
 
    ![](./Images/Pg6-Edit-S4.png)
@@ -71,7 +75,7 @@ Now you're ready to run code to prepare data and train a model. To work with dat
 
 1. Expand the **Files (1)** folder so that the CSV file is listed next to the notebook editor.
 
-1. In the **...** menu for **churn.csv (2)**, select **Load data (3)** > **Pandas (4)**.
+1. In the **Ellipses** menu for **churn.csv (2)**, select **Load data (3)** > **Pandas (4)**.
 
     ![](./Images/Pg6-LoadData-S5.png)
 
@@ -105,7 +109,7 @@ Now that you've loaded the data, you can use it to train a machine-learning mode
     ```python
    from sklearn.model_selection import train_test_split
 
-   print("Splitting data...")
+   print("Splitting dataEllipses")
    X, y = df[['years_with_company','total_day_calls','total_eve_calls','total_night_calls','total_intl_calls','average_call_minutes','total_customer_service_calls','age']].values, df['churn'].values
    
    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
