@@ -55,7 +55,7 @@ Kusto query language (KQL) is used to query static or streaming data in a table 
 
             ![01](./Images/fabric19.png)
 
-> **Note:** In this example, you imported a very small amount of static data from a file, which is fine for this exercise. In reality, you can use Kusto to analyze much larger volumes of data; including real-time data from a streaming source such as Azure Event Hubs.
+            > **Note:** In this example, you imported a very small amount of static data from a file, which is fine for this exercise. In reality, you can use Kusto to analyze much larger volumes of data; including real-time data from a streaming source such as Azure Event Hubs.
 
 ### Task 2: Use KQL to query the sales table
 
@@ -117,7 +117,7 @@ You can use your KQL Queryset as the basis for a Power BI report.
 
 6. Close the **Power BI** window, and in the bar on the left, select the icon for your workspace.
 
->**Note**:Refresh the Workspace page if necessary to view all of the items it contains.
+    >**Note**:Refresh the Workspace page if necessary to view all of the items it contains.
 
 7. In the list of items in your workspace, note that the **Revenue by Item** report is listed.
 
@@ -157,9 +157,9 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
    print("Source stream created...")
     ```
 
-    Ensure the message *Source stream created...* is printed. The code you just ran has created a streaming data source based on a folder to which some data has been saved, representing readings from hypothetical IoT devices.
+1. Ensure the message *Source stream created...* is printed. The code you just ran has created a streaming data source based on a folder to which some data has been saved, representing readings from hypothetical IoT devices.
 
-2. In a new code cell, add and run the following code:
+1. In a new code cell, add and run the following code:
 
     ```python
    # Write the stream to a delta table
@@ -169,9 +169,9 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
    print("Streaming to delta sink...")
     ```
 
-    This code writes the streaming device data in delta format to a folder named **iotdevicedata**. Because the path for the folder location is in the **Tables** folder, a table will automatically be created for it.
+1. This code writes the streaming device data in delta format to a folder named **iotdevicedata**. Because the path for the folder location is in the **Tables** folder, a table will automatically be created for it.
 
-3. In a new code cell, add and run the following code:
+1. In a new code cell, add and run the following code:
 
     ```SQL
    %%sql
@@ -179,9 +179,9 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
    SELECT * FROM IotDeviceData;
     ```
 
-    This code queries the **IotDeviceData** table, which contains the device data from the streaming source.
+1. This code queries the **IotDeviceData** table, which contains the device data from the streaming source.
 
-4. In a new code cell, add and run the following code:
+1. In a new code cell, add and run the following code:
 
     ```python
    # Add more data to the source stream
@@ -196,9 +196,9 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
    mssparkutils.fs.put(inputPath + "more-data.txt", more_data, True)
     ```
 
-    This code writes more hypothetical device data to the streaming source.
+1. This code writes more hypothetical device data to the streaming source.
 
-5. Re-run the cell containing the following code:
+1. Re-run the cell containing the following code:
 
     ```SQL
    %%sql
@@ -206,15 +206,15 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
    SELECT * FROM IotDeviceData;
     ```
 
-    This code queries the **IotDeviceData** table again, which should now include the additional data that was added to the streaming source.
+1. This code queries the **IotDeviceData** table again, which should now include the additional data that was added to the streaming source.
 
-6. In a new code cell, add and run the following code:
+1. In a new code cell, add and run the following code:
 
     ```python
    deltastream.stop()
     ```
 
->**Note**:This code stops the stream.
+    >**Note**:This code stops the stream.
 
 
 ### Summary
