@@ -226,7 +226,7 @@ Microsoft Fabric will keep track of all your experiments and allows you to visua
 1. Select **Run list (2)**. 
 
 1. Select the **two latest runs (3)** by checking each box.
-    As a result, your two last runs will be compared to each other in the **Metric comparison** pane. By default, the metrics are plotted by run name. 
+    As a result, your two last runs will be compared to each other in the **Performance** pane. By default, the metrics are plotted by run name. 
 
 1. Select the **&#128393;** **(Edit) (4)** button of the graph visualizing the accuracy for each run. 
 
