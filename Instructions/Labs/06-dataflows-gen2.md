@@ -16,7 +16,7 @@ You will be able to complete the following tasks:
 
 ### Task 1: Create a Dataflow (Gen2) to ingest data
 
-In this task, create a Dataflow (Gen2) to efficiently ingest and transform data from various sources for analysis and processing.
+In this task, you will create a Dataflow (Gen2) to efficiently ingest and transform data from multiple sources for analysis. This process streamlines data preparation, enabling you to prepare the data for further processing and insights.
 
 1. On **fabric-<inject key="DeploymentID" enableCopy="false"/>** home page, select **New Dataflow Gen2**. After a few moments, the Power Query editor for your new dataflow will open, as illustrated below.
 
@@ -52,7 +52,7 @@ In this task, you’ll add a data destination for the Dataflow to determine wher
 
    ![Empty data pipeline.](./Images/35.png)
 
->**Note:** If this option is greyed out, you may already have a data destination set. Check the data destination at the bottom of the Query settings pane on the right side of the Power Query editor. If a destination is already set, you can change it using the gear.
+   >**Note:** If this option is greyed out, you may already have a data destination set. Check the data destination at the bottom of the Query settings pane on the right side of the Power Query editor. If a destination is already set, you can change it using the gear.
 
 2. In the **Connect to data destination** dialog box, edit the connection by selecting **Create a new connection**. Then, sign in with your Power BI organizational account to establish the identity that the dataflow will use to access the lakehouse.
 

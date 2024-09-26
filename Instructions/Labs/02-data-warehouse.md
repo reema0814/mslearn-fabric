@@ -18,7 +18,7 @@ You will be able to complete the following tasks:
 
 ### Task 1: Create a data warehouse
 
-Now that you already have a workspace, it's time to switch to the *Data Warehouse* experience in the portal and create a data warehouse.
+In this task, you will design and implement a data warehouse by organizing data from multiple sources, creating ETL processes, and optimizing for performance. The goal is to enable efficient querying and reporting while ensuring security, compliance, and scalability.
 
 1. At the bottom left of the Power BI portal, switch to the **Data Warehouse** experience.
 
@@ -34,7 +34,7 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
 ### Task 2: Create tables and insert data
 
-A warehouse is a relational database in which you can define tables and other objects.
+In this task, you will create database tables by defining their structure with appropriate columns and constraints. Afterward, you'll insert data into the tables, ensuring it is ready for querying and further operations.
 
 1. In your new warehouse, select the **Create tables with T-SQL** tile.
 
@@ -89,11 +89,11 @@ A warehouse is a relational database in which you can define tables and other ob
 
       ![01](./Images/02/Pg4-T2-S9.png)  
 
-    > **Tip**: If the schema takes a while to load, just refresh the browser page.
+        > **Tip**: If the schema takes a while to load, just refresh the browser page.
 
 ### Task 3: Define a data model
 
-A relational data warehouse typically consists of *fact* and *dimension* tables. The fact tables contain numeric measures you can aggregate to analyze business performance (for example, sales revenue), and the dimension tables contain attributes of the entities by which you can aggregate the data (for example, product, customer, or time). In a Microsoft Fabric data warehouse, you can use these keys to define a data model that encapsulates the relationships between the tables.
+In this task, you will create a relational data warehouse consisting of fact and dimension tables, where fact tables hold numeric measures for analysis and dimension tables store entity attributes. You'll define relationships between tables in Microsoft Fabric to build a data model for efficient business performance analysis.
 
 1. In the data warehouse, from the top navigation pane, select the **Model Layouts** option.
 
@@ -127,7 +127,7 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
 ## Query fact and dimension tables
 
-Most queries in a relational data warehouse involve aggregating and grouping data (using aggregate functions and GROUP BY clauses) across related tables (using JOIN clauses).
+In this task, you will query data warehouse tables using SQL to retrieve and analyze data. Most queries will involve aggregating and grouping data with functions and GROUP BY clauses, as well as joining related fact and dimension tables using JOIN clauses.
 
 1. Create a new SQL Query, and run the following code:
 
@@ -142,9 +142,9 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
    ORDER BY CalendarYear, MonthOfYear;
     ```
 
-    Note that the attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
+2. Note that the attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
 
-2. Modify the query as follows to add a second dimension to the aggregation.
+3. Modify the query as follows to add a second dimension to the aggregation.
 
     ```SQL
    SELECT  d.[Year] AS CalendarYear,
@@ -161,11 +161,11 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
    ![](./Images/02/Pg4-T3QF-S2.png)
 
-3. Run the modified query and review the results, which now include sales revenue aggregated by year, month and sales region.
+4. Run the modified query and review the results, which now include sales revenue aggregated by year, month and sales region.
 
 ### Task 5: Create a view
 
-A data warehouse in Microsoft Fabric has many of the same capabilities you may be used to in relational databases. For example, you can create database objects like *views* and *stored procedures* to encapsulate SQL logic.
+In this task, you will create a view in the data warehouse to encapsulate SQL logic for easier querying and data abstraction. A Microsoft Fabric data warehouse offers similar capabilities to relational databases, allowing you to create views and stored procedures to streamline complex queries and improve data access efficiency.
 
 1. Modify the query you created previously as follows to create a view (note that you need to remove the ORDER BY clause to create a view).
 
@@ -197,7 +197,7 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
 
 ### Task 6: Create a visual query
 
-Instead of writing SQL code, you can use the graphical query designer to query the tables in your data warehouse. This experience is similar to Power Query online, where you can create data transformation steps with no code. For more complex tasks, you can use Power Query's M (Mashup) language.
+In this task, you will create a visual query using the graphical query designer to query data warehouse tables without writing SQL code. Similar to Power Query online, this no-code approach allows you to perform data transformations, and for more complex tasks, you can leverage Power Query's M language.
 
 1. On the **Home** menu, select **New visual query** from the drop-down.
 
@@ -223,7 +223,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 ### Task 7: Visualize your data
 
-You can easily visualize the data in either a single query or in your data warehouse. Before you visualize, hide columns and/or tables that aren't friendly to report designers.
+In this task, you will visualize your data from a single query or your data warehouse to gain insights and present findings effectively. Before creating visualizations, it's important to hide any columns or tables that may clutter the report and are not user-friendly for report designers.
 
 1. In the **Explorer** pane, select the **Model** view.
 
