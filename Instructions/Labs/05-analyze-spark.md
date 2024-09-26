@@ -46,9 +46,7 @@ To work with data in Apache Spark, you can create a *notebook*. Notebooks provid
 
 >**Note**: After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
-2. Select the first cell (which is currently a *code* cell), and then in the dynamic toolbar at its top-right, use the **M&#8595;** button to convert the cell to a *markdown* cell.
-
-    When the cell changes to a markdown cell, the text it contains is rendered.
+2. Select the first cell (currently a *code* cell), and then click the **M&#8595;** button in the dynamic toolbar at the top-right to convert it to a **markdown** cell.
 
 3. Use the **&#128393;** **(Edit)** button to switch the cell to editing mode, then modify the markdown as follows:
 
@@ -58,7 +56,7 @@ To work with data in Apache Spark, you can create a *notebook*. Notebooks provid
    Use the code in this notebook to explore sales order data.
     ```
 
-4. Click anywhere in the notebook outside of the cell to stop editing it and see the rendered markdown.
+4.Click anywhere in the notebook outside of the cell to exit editing mode and view the rendered markdown.
 
 ### Task 3: Load data into a dataframe
 
