@@ -262,7 +262,7 @@ After comparing machine learning models that you've trained across experiment ru
 
 1. Select **View ML model** in the notification that appears at the top right of your screen when the model is created. You can also refresh the window. The saved model is linked under **Registered version**. 
 
-Note that the model, the experiment, and the experiment run are linked, allowing you to review how the model is trained. 
+>**Note**: that the model, the experiment, and the experiment run are linked, allowing you to review how the model is trained. 
 
 ### Task 8: Save the notebook and end the Spark session
 
