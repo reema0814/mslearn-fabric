@@ -64,11 +64,11 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
 > **Note**: Spark supports multiple coding languages, including Scala, Java, and others. In this exercise, we'll use *PySpark*, which is a Spark-optimized variant of Python. PySpark is one of the most commonly used languages on Spark and is the default language in Fabric notebooks.
 
-1. With the notebook visible, expand the **Files** list and select the **orders** folder so that the CSV files are listed next to the notebook editor, like this:
+1. With the notebook open, expand the **Files** list and select the **orders** folder to display the CSV files alongside the notebook editor, as shown here:
 
     ![Screenshot of a notebook with a Files pane.](./Images/notebook-files.png)
 
-2. In the **orders (1)** folder, click on **... (2)** menu for **2019.csv**, select **Load data (3)** > **Spark (4)**.
+2.In the **orders (1)** folder, click the **... (2)** menu for **2019.csv**, then select **Load data (3)** > **Spark (4)**.
 
    ![](./Images/Pg7-LoadData-S2.png)
 
