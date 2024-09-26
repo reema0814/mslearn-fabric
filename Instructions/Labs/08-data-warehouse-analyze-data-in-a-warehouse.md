@@ -99,12 +99,11 @@ You will be able to complete the following tasks:
 
    - The report provides a comprehensive analysis of total sales across a spectrum of product categories, revealing a consistent pattern of total sales summing up to 19.59 million across all 39 categories. Similarly, the quantity sold uniformly stands at 25.98 thousand units for each category. With an average total sales figure of 4.55 thousand, it suggests an even distribution of sales performance across all categories. This uniformity underscores a balanced sales landscape across diverse product categories, thereby offering valuable insights for informed decision-making in subsequent business strategies.
    
-1. **Click the Copilot logo again** and select:
+1. Type the following command into Copilot
 
     ```
     Suggest Content for this Report
     ```
-    ![](./Images/20.png)
  
 1. **Expand each suggestion** to see the text of the prompt and what will be created. This helps illustrate the range of suggestions Copilot can provide.
  
