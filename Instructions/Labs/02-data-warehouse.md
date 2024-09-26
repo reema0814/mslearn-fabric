@@ -99,7 +99,7 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
 2. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
 
-    ![Screenshot of the data warehouse model page.](./Images/model-dw.png)
+    ![Screenshot of the data warehouse model page.](./Images/model-dw-1.png)
 
 3. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details and click on **Ok**.
     - **Table 1**: FactSalesOrder
@@ -121,11 +121,9 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
 5. When all of the relationships have been defined, the model should look like this:
 
-    ![Screenshot of the model with relationships.](./Images/dw-relationships.png)
+    ![Screenshot of the model with relationships.](./Images/dw-relationships-1.png)
 
 ### Task 4: Query data warehouse tables
-
-Since the data warehouse is a relational database, you can use SQL to query its tables.
 
 ## Query fact and dimension tables
 
