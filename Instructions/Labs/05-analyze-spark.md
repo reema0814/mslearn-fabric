@@ -20,7 +20,7 @@ You will be able to complete the following tasks:
 
 ### Task 1: Create a lakehouse and upload files
 
-Now that you have a workspace, it's time to switch to the *Data engineering* experience in the portal and create a data lakehouse for the data files you're going to analyze.
+In this task, you will create a lakehouse to organize and analyze your data files. After setting up your workspace, you'll switch to the *Data Engineering* experience in the portal to initiate the creation of the data lakehouse.
 
 1. At the bottom left of the Power BI portal, select the **Power BI** icon and switch to the **Data Engineering** experience.
 
@@ -38,7 +38,7 @@ Now that you have a workspace, it's time to switch to the *Data engineering* exp
 
 ### Task 2: Create a notebook
 
-To work with data in Apache Spark, you can create a *notebook*. Notebooks provide an interactive environment in which you can write and run code (in multiple languages), and add notes to document it.
+In this task, you will create a notebook to work with data in Apache Spark. Notebooks provide an interactive environment where you can write and run code in multiple languages, while also allowing you to add notes for documentation.
 
 1. On the **Home** page while viewing the contents of the **orders** folder in your datalake, in the **Open notebook (1)** menu, select **New notebook (2)**.
 
@@ -60,7 +60,7 @@ To work with data in Apache Spark, you can create a *notebook*. Notebooks provid
 
 ### Task 3: Load data into a dataframe
 
-Now you're ready to run code that loads the data into a *dataframe*. Dataframes in Spark are similar to Pandas dataframes in Python, and provide a common structure for working with data in rows and columns.
+In this task, you will load data into a dataframe to prepare it for analysis. Dataframes in Spark, similar to Pandas dataframes in Python, offer a structured way to manage and manipulate data organized in rows and columns.
 
 > **Note**: Spark supports multiple coding languages, including Scala, Java, and others. In this exercise, we'll use *PySpark*, which is a Spark-optimized variant of Python. PySpark is one of the most commonly used languages on Spark and is the default language in Fabric notebooks.
 
@@ -180,7 +180,7 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
 ### Task 4: Explore data in a dataframe
 
-The dataframe object includes a wide range of functions that you can use to filter, group, and otherwise manipulate the data it contains.
+In this task, you will explore data within a dataframe to gain insights and understand its structure. The dataframe object offers various functions for filtering, grouping, and manipulating the data it contains, facilitating effective analysis.
 
 ### Filter a dataframe
 
@@ -213,6 +213,8 @@ The dataframe object includes a wide range of functions that you can use to filt
 
 ### Task 5: Aggregate and group data in a dataframe
 
+In this task, you will aggregate and group data within a dataframe to summarize information and extract meaningful insights. This process involves applying functions to organize the data based on specific criteria, allowing for easier analysis and reporting.
+
 1. Add a new code cell to the notebook, and enter the following code in it:
 
     ```Python
@@ -235,7 +237,7 @@ The dataframe object includes a wide range of functions that you can use to filt
 
 ### Task 6: Use Spark to transform data files
 
-A common task for data engineers is to ingest data in a particular format or structure and transform it for further downstream processing or analysis.
+In this task, you will use Spark to transform data files into a desired format for analysis and processing. This involves ingesting data in specific structures and applying transformations, a common responsibility for data engineers, to prepare the data for downstream applications.
 
 #### Use dataframe methods and functions to transform data
 
@@ -375,7 +377,7 @@ While it's useful to be able to embed SQL statements into a cell containing PySp
 
 ### Task 8: Visualize data with Spark
 
-A picture is proverbially worth a thousand words, and a chart is often better than a thousand rows of data. While notebooks in Fabric include a built-in chart view for data that is displayed from a dataframe or Spark SQL query, it is not designed for comprehensive charting. However, you can use Python graphics libraries like **matplotlib** and **seaborn** to create charts from data in dataframes.
+In this task, you will visualize data using Spark to enhance understanding and insights through graphical representation. While Fabric notebooks offer a basic chart view for data from dataframes or Spark SQL queries, you can utilize Python graphics libraries like **matplotlib** and **seaborn** for more comprehensive and customized charting.
 
 #### View results as a chart
 
@@ -581,7 +583,7 @@ While **matplotlib** enables you to create complex charts of multiple types, it 
 
 ### Task 9: Save the notebook and end the Spark session
 
-Now that you've finished working with the data, you can save the notebook with a meaningful name and end the Spark session.
+In this task, you will save your notebook with a meaningful name to preserve your work after processing the data. Additionally, you will end the Spark session to free up resources and complete your data engineering tasks.
 
 1. In the top left corner, set the **Name** of the notebook from Notebook 1 to **Explore Sales Orders Notebook**.
 2. On the notebook menu, select **Stop session** to end the Spark session.
