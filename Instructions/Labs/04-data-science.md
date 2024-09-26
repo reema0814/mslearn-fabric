@@ -19,7 +19,7 @@ You will be able to complete the following tasks:
 
 ### Task 1: Create a lakehouse and upload files
 
-Using the same workspace, it's time to switch to the *Data science* experience in the portal.
+In this task, you will create a lakehouse and upload files to facilitate data storage and analysis. Using the same workspace, you'll switch to the *Data Science* experience in the portal to manage and utilize the data effectively.
 
 1. Navigate back to your lakehouse, and in the **Ellipses (1)** menu for the **Files** node in the **Explorer** pane, select **Upload (2)** and **Upload files (3)**. 
 
@@ -35,7 +35,7 @@ Using the same workspace, it's time to switch to the *Data science* experience i
 
 ### Task 2: Create a notebook
 
-To train a model, you can create a *notebook*. Notebooks provide an interactive environment in which you can write and run code (in multiple languages) as *experiments*.
+In this task, you will create a notebook to facilitate model training and experimentation. Notebooks offer an interactive environment where you can write and execute code in multiple languages, allowing you to conduct experiments effectively.
 
 1. At the bottom left of the Power BI portal, switch to the **Data science** experience.
 
@@ -57,7 +57,7 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
 ### Task 3: Load data into a dataframe
 
-Now you're ready to run code to prepare data and train a model. To work with data, you'll use *dataframes*. Dataframes in Spark are similar to Pandas dataframes in Python, and provide a common structure for working with data in rows and columns.
+In this task, you will load data into a dataframe to prepare for model training. Dataframes in Spark, akin to Pandas dataframes in Python, offer a structured way to work with data in rows and columns, enabling efficient data manipulation and analysis.
 
 1. Click on **lakehouses**
 
@@ -102,7 +102,7 @@ Now you're ready to run code to prepare data and train a model. To work with dat
 
 ### Task 4: Train a machine learning model
 
-Now that you've loaded the data, you can use it to train a machine-learning model and predict customer churn. You'll train a model using the Scikit-Learn library and track the model with MLflow. 
+In this task, you will train a machine learning model to predict customer churn using the prepared data. Utilizing the Scikit-Learn library, you'll train the model and track its performance with MLflow to ensure effective monitoring and evaluation.
 
 1. Use the **+ Code** icon below the cell output to add a new code cell to the notebook, and enter the following code in it:
 
@@ -160,7 +160,7 @@ Now that you've loaded the data, you can use it to train a machine-learning mode
 
 ### Task 5: Use MLflow to search and view your experiments
 
-When you've trained and tracked models with MLflow, you can use the MLflow library to retrieve your experiments and their details.
+In this task, you will use MLflow to search for and view your experiments related to model training. By leveraging the MLflow library, you can retrieve detailed information about your experiments, helping you assess model performance and make informed decisions.
 
 1. To list all experiments, use the following code:
 
@@ -214,7 +214,7 @@ When you've trained and tracked models with MLflow, you can use the MLflow libra
 
 ### Task 6: Explore your experiments
 
-Microsoft Fabric will keep track of all your experiments and allows you to visually explore them.
+In this task, you will explore your experiments in Microsoft Fabric, which tracks all your training activities. The platform allows for visual exploration of these experiments, enabling you to analyze and compare results effectively.
 
 1. Navigate to your **Workspace (1)**, select **Data Science (2)**  you will see the **experiment-churn (3)** Experiment created.
 
@@ -246,7 +246,7 @@ By plotting the accuracy per logged estimator, you can review which algorithm re
 
 ### Task 7: Save the model
 
-After comparing machine learning models that you've trained across experiment runs, you can choose the best-performing model. To use the best-performing model, save the model and use it to generate predictions.
+In this task, you will save the best-performing machine learning model after comparing the results from various experiment runs. This saved model can then be utilized to generate predictions for future data analysis.
 
 1. In the experiment overview, ensure the **View** tab is selected.
 
@@ -266,7 +266,7 @@ After comparing machine learning models that you've trained across experiment ru
 
 ### Task 8: Save the notebook and end the Spark session
 
-Now that you've finished training and evaluating the models, you can save the notebook with a meaningful name and end the Spark session.
+In this task, you will save your notebook with a meaningful name to preserve your work after training and evaluating the models. Additionally, you will end the Spark session to free up resources and finalize your data processing environment.
 
 1. Select the notebook that you created. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings.
 
