@@ -22,8 +22,6 @@ Now that you already have a workspace, it's time to switch to the *Data Warehous
 
 1. At the bottom left of the Power BI portal, switch to the **Data Warehouse** experience.
 
-    The Data Warehouse home page includes a shortcut to create a new warehouse:
-
    ![01](./Images/lab2-image1.png)
 
 2. In the **Data Warehouse** home page, create a new **Warehouse**.
@@ -101,7 +99,7 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
 2. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
 
-    ![Screenshot of the data warehouse model page.](./Images/model-dw.png)
+    ![Screenshot of the data warehouse model page.](./Images/model-dw-1.png)
 
 3. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. Then confirm the following relationship details and click on **Ok**.
     - **Table 1**: FactSalesOrder
@@ -123,11 +121,9 @@ A relational data warehouse typically consists of *fact* and *dimension* tables.
 
 5. When all of the relationships have been defined, the model should look like this:
 
-    ![Screenshot of the model with relationships.](./Images/dw-relationships.png)
+    ![Screenshot of the model with relationships.](./Images/dw-relationships-1.png)
 
 ### Task 4: Query data warehouse tables
-
-Since the data warehouse is a relational database, you can use SQL to query its tables.
 
 ## Query fact and dimension tables
 
@@ -201,7 +197,7 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
 
 Instead of writing SQL code, you can use the graphical query designer to query the tables in your data warehouse. This experience is similar to Power Query online, where you can create data transformation steps with no code. For more complex tasks, you can use Power Query's M (Mashup) language.
 
-1. On the **Home** menu, select **New visual query**.
+1. On the **Home** menu, select **New visual query** from the drop-down.
 
 1. Drag **FactSalesOrder** onto the **canvas**. Notice that a preview of the table is displayed in the **Preview** pane below.
 
@@ -227,7 +223,9 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 You can easily visualize the data in either a single query or in your data warehouse. Before you visualize, hide columns and/or tables that aren't friendly to report designers.
 
-1. In the **Explorer** pane, select the **Model** view. 
+1. In the **Explorer** pane, select the **Model** view.
+
+   ![03](./Images/pg-8.png)
 
 1. Hide the following columns in your Fact and Dimension tables that are not necessary to create a report. Note that this does not remove the columns from the model, it simply hides them from view on the report canvas.
    1. FactSalesOrder
@@ -247,9 +245,9 @@ You can easily visualize the data in either a single query or in your data wareh
       - **ProductKey**
       - **ProductAltKey** 
 
-1. Now you're ready to build a report and make this dataset available to others. On the Home menu, select **New report**. This will open a new window, where you can create a Power BI report.
+1. On the Home menu, select **New report (1)** from the reporting tab. This will open a new window, where you can create a Power BI report.
 
-   ![03](./Images/02/Pg4-VisualizeData-S3.png)
+    ![03](./Images/pg-08-1.png)
 
 1. In the **Data** pane, expand **FactSalesOrder**. Note that the columns you hide are no longer visible. 
 

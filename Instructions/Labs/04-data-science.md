@@ -21,7 +21,7 @@ You will be able to complete the following tasks:
 
 Using the same workspace, it's time to switch to the *Data science* experience in the portal.
 
-1. Navigate back to your lakehouse, and in the **... (1)** menu for the **Files** node in the **Explorer** pane, select **Upload (2)** and **Upload files (3)**. 
+1. Navigate back to your lakehouse, and in the **Ellipses (1)** menu for the **Files** node in the **Explorer** pane, select **Upload (2)** and **Upload files (3)**. 
 
    ![](./Images/Pg6-S1.png)
 
@@ -59,6 +59,10 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
 Now you're ready to run code to prepare data and train a model. To work with data, you'll use *dataframes*. Dataframes in Spark are similar to Pandas dataframes in Python, and provide a common structure for working with data in rows and columns.
 
+1. Click on **lakehouses**
+
+   ![](./Images/lakehouse_1.png)
+
 1. In the **Add lakehouse** pane, select **Add** to add a lakehouse.
 
    ![](./Images/Pg6-Edit-S4.png)
@@ -71,7 +75,7 @@ Now you're ready to run code to prepare data and train a model. To work with dat
 
 1. Expand the **Files (1)** folder so that the CSV file is listed next to the notebook editor.
 
-1. In the **...** menu for **churn.csv (2)**, select **Load data (3)** > **Pandas (4)**.
+1. In the **Ellipses** menu for **churn.csv (2)**, select **Load data (3)** > **Pandas (4)**.
 
     ![](./Images/Pg6-LoadData-S5.png)
 
@@ -105,7 +109,7 @@ Now that you've loaded the data, you can use it to train a machine-learning mode
     ```python
    from sklearn.model_selection import train_test_split
 
-   print("Splitting data...")
+   print("Splitting dataEllipses")
    X, y = df[['years_with_company','total_day_calls','total_eve_calls','total_night_calls','total_intl_calls','average_call_minutes','total_customer_service_calls','age']].values, df['churn'].values
    
    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
@@ -149,6 +153,8 @@ Now that you've loaded the data, you can use it to train a machine-learning mode
    
        mlflow.log_param("estimator", "DecisionTreeClassifier")
     ```
+
+>**Note**: If the node fails, attempt to re-run the previous node and then execute the existing node.
 
     The code trains a classification model using a Decision Tree Classifier. Parameters, metrics, and artifacts, are automatically logged with MLflow. Additionally, you're logging a parameter called `estimator`, with the value `DecisionTreeClassifier`.
 
@@ -224,7 +230,7 @@ Microsoft Fabric will keep track of all your experiments and allows you to visua
 1. Select **Run list (2)**. 
 
 1. Select the **two latest runs (3)** by checking each box.
-    As a result, your two last runs will be compared to each other in the **Metric comparison** pane. By default, the metrics are plotted by run name. 
+    As a result, your two last runs will be compared to each other in the **Performance** pane. By default, the metrics are plotted by run name. 
 
 1. Select the **&#128393;** **(Edit) (4)** button of the graph visualizing the accuracy for each run. 
 
@@ -256,7 +262,7 @@ After comparing machine learning models that you've trained across experiment ru
 
 1. Select **View ML model** in the notification that appears at the top right of your screen when the model is created. You can also refresh the window. The saved model is linked under **Registered version**. 
 
-Note that the model, the experiment, and the experiment run are linked, allowing you to review how the model is trained. 
+>**Note**: that the model, the experiment, and the experiment run are linked, allowing you to review how the model is trained. 
 
 ### Task 8: Save the notebook and end the Spark session
 
@@ -274,4 +280,4 @@ Now that you've finished training and evaluating the models, you can save the no
 
 In this exercise, you have created a notebook and trained a machine-learning model. You used Scikit-Learn to train the model and MLflow to track its performance.
 
-### You have successfully completed the lab
+### You have successfully completed the lab,. Click on Next >> to procced with next exercise.

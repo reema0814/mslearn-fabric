@@ -30,9 +30,7 @@ Now that you have a workspace, it's time to switch to the *Data engineering* exp
 
    - Click on **Create**
 
-    After a minute or so, a new empty lakehouse will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise, you'll simply upload them to your lakehouse from the **LabVM**.
-
-3. Return to the web browser tab containing your lakehouse, and in the **...** menu for the **Files** folder in the **Explorer** pane, select **Upload** and **Upload folder**, and then upload the **orders** folder from **C:\LabFiles\Files\orders** to the lakehouse.
+3. Once you're in the lakehouse, navigate to the **Files** folder in the **Explorer** pane, click on the **ellipses** menu, and select **Upload** followed by **Upload folder**. Then, upload the **orders** folder located at **C:\LabFiles\Files\orders** to the lakehouse.
 
 4. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
 
@@ -46,11 +44,9 @@ To work with data in Apache Spark, you can create a *notebook*. Notebooks provid
 
    ![](./Images/Pg7-Notebook-S1.png)
 
-    After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+>**Note**: After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
-2. Select the first cell (which is currently a *code* cell), and then in the dynamic toolbar at its top-right, use the **M&#8595;** button to convert the cell to a *markdown* cell.
-
-    When the cell changes to a markdown cell, the text it contains is rendered.
+2. Select the first cell (currently a *code* cell), and then click the **M&#8595;** button in the dynamic toolbar at the top-right to convert it to a **markdown** cell.
 
 3. Use the **&#128393;** **(Edit)** button to switch the cell to editing mode, then modify the markdown as follows:
 
@@ -60,7 +56,7 @@ To work with data in Apache Spark, you can create a *notebook*. Notebooks provid
    Use the code in this notebook to explore sales order data.
     ```
 
-4. Click anywhere in the notebook outside of the cell to stop editing it and see the rendered markdown.
+4.Click anywhere in the notebook outside of the cell to exit editing mode and view the rendered markdown.
 
 ### Task 3: Load data into a dataframe
 
@@ -68,11 +64,11 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
 > **Note**: Spark supports multiple coding languages, including Scala, Java, and others. In this exercise, we'll use *PySpark*, which is a Spark-optimized variant of Python. PySpark is one of the most commonly used languages on Spark and is the default language in Fabric notebooks.
 
-1. With the notebook visible, expand the **Files** list and select the **orders** folder so that the CSV files are listed next to the notebook editor, like this:
+1. With the notebook open, expand the **Files** list and select the **orders** folder to display the CSV files alongside the notebook editor, as shown here:
 
     ![Screenshot of a notebook with a Files pane.](./Images/notebook-files.png)
 
-2. In the **orders (1)** folder, click on **... (2)** menu for **2019.csv**, select **Load data (3)** > **Spark (4)**.
+2.In the **orders (1)** folder, click the **ellipses(2)** menu for **2019.csv**, then select **Load data (3)** > **Spark (4)**.
 
    ![](./Images/Pg7-LoadData-S2.png)
 
@@ -281,7 +277,7 @@ A common task for data engineers is to ingest data in a particular format or str
    print ("Transformed data saved!")
     ```
 
-    > **Note**: Commonly, the *Parquet* format is preferred for data files that you will use for further analysis or ingestion into an analytical store. Parquet is a very efficient format that is supported by most large-scale data analytics systems. In fact, sometimes your data transformation requirement may simply be to convert data from another format (such as CSV) to Parquet!
+    >**Note**: If the node fails, rerun it.
 
 2. Run the cell and wait for the message that the data has been saved. Then, in the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **Refresh**; and select the **transformed_data** folder to verify that it contains a new folder named **orders**, which in turn contains one or more Parquet files.
 
@@ -406,7 +402,7 @@ A picture is proverbially worth a thousand words, and a chart is often better th
 
 5. Verify that the chart looks similar to this:
 
-    ![Screenshot of a bar chart of products by total order quantiies](./Images/fabric22.png)
+    ![Screenshot of a bar chart of products by total order quantiies](./Images/chart_final.png)
 
 #### Get started with **matplotlib**
 
@@ -600,4 +596,4 @@ Now that you've finished working with the data, you can save the notebook with a
 
 In this exercise, you've learned how to use Spark to work with data in Microsoft Fabric.
 
-### You have successfully completed the lab
+### You have successfully completed the lab. Click on Next >> to procced with next exercise.

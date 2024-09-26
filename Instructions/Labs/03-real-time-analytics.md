@@ -117,7 +117,7 @@ You can use your KQL Queryset as the basis for a Power BI report.
 
 6. Close the **Power BI** window, and in the bar on the left, select the icon for your workspace.
 
-    Refresh the Workspace page if necessary to view all of the items it contains.
+>**Note**:Refresh the Workspace page if necessary to view all of the items it contains.
 
 7. In the list of items in your workspace, note that the **Revenue by Item** report is listed.
 
@@ -214,11 +214,11 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
    deltastream.stop()
     ```
 
-    This code stops the stream.
+>**Note**:This code stops the stream.
 
 
 ### Summary
 
 In this exercise, you have created a lakehouse, a KQL database to analyze the data uploaded into the lakehouse. You used KQL to query the data and create a query set, which was then used to create a Power BI report.
 
-### You have successfully completed the lab
+### You have successfully completed the lab. Click on Next >> to procced with next exercise.
