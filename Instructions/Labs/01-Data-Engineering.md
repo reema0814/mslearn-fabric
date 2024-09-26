@@ -38,9 +38,9 @@ Now that you have created a workspace in the previous step, it's time to switch 
 
       ![02](./Images/fabric20.png)
 
-    After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
+3. After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
-3. On the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** tab in the pane on the left, click the **Ellipsis(...)** menu for the **Files (1)** node, select **New subfolder (2)** and create a subfolder named **new_data**.
+4. On the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** tab in the pane on the left, click the **Ellipsis(...)** menu for the **Files (1)** node, select **New subfolder (2)** and create a subfolder named **new_data**.
 
    ![02](./Images/01/01.png)
 
@@ -50,7 +50,7 @@ In many scenarios, the data you need to work within your lakehouse may be stored
 
 1. In the **Ellipsis(...) (1)** menu for the **Files** folder, select **New shortcut (2)**.
 
-  ![02](./Images/fab10.png)
+   ![02](./Images/fab10.png)
 
 2. View the available data source types for shortcuts. Then close the **New shortcut** dialog box without creating a shortcut.
 
@@ -75,7 +75,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
    ![Screenshot of the Choose data source page.](./Images/data-source.png)
 
-6. In the **Connection settings** pane, enter the following settings for the connection to your data source:
+5. In the **Connection settings** pane, enter the following settings for the connection to your data source:
     
     - URL: **`https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`**  **(1)**
     - Connection: **Create new connection (2)**
@@ -85,7 +85,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
   
        ![Account-manager-start](./Images/lab1-image11.png)
     
-7. Make sure the following settings are selected and click on **Next** :
+6. Make sure the following settings are selected and click on **Next** :
     
     - Relative URL: **Leave blank**
     - Request method: **GET**
@@ -96,7 +96,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
   
         ![05](./Images/fabric4.png)
    
-8. Wait for the data to be sampled and then ensure that the following settings are selected:
+7. Wait for the data to be sampled and then ensure that the following settings are selected:
     
     - File format: **DelimitedText (1)**
     - Column delimiter: **Comma (,) (2)**
@@ -105,15 +105,15 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
       ![Account-manager-start](./Images/lab1-image12.png)
 
-9. Observe the sample of the data that will be ingested. Then close the data preview and click on **Next**.
+8. Observe the sample of the data that will be ingested. Then close the data preview and click on **Next**.
 
      ![Account-manager-start](./Images/lab1-image13.png)
 
-10. On the **Choose data destination** page, click on **OneLake data hub** and select the lakehouse which we created previously.
+9. On the **Choose data destination** page, click on **OneLake data hub** and select the lakehouse which we created previously.
 
      ![Account-manager-start](./Images/lab1-image14.png)
 
-11. Set the following data destination options, and then select **Next (4)**:
+10. Set the following data destination options, and then select **Next (4)**:
 
     - Root folder: **Files (1)**
     - Folder path: **new_data (2)**
@@ -121,7 +121,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
    
         ![08](./Images/fabric9.png)
 
-13. Set the following file format options and then select **Next (4)**:
+11. Set the following file format options and then select **Next (4)**:
 
     - File format: **DelimitedText (1)**
     - Column delimiter: **Comma (,) (2)**
@@ -129,21 +129,21 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
    
       ![09](./Images/fabric10.png)
 
-15. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
+12. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
     ![09](./Images/fabric11.png)
 
-    A new pipeline containing a **Copy data** activity is created, as shown here:
+13. A new pipeline containing a **Copy data** activity is created, as shown here:
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
 
-16. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+14. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
     ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
 
-17. In the menu bar on the left, select your lakehouse i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
+15. In the menu bar on the left, select your lakehouse i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
 
-18. On the **Home** page, in the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
+16. On the **Home** page, in the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
 
     ![Account-manager-start](./Images/lab1-image16.png)
 
@@ -153,9 +153,9 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
       ![11](./Images/01/11.png)
 
-    After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+2. After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
-2. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration and click on **&#9655; Run**.
+3. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration and click on **&#9655; Run**.
 
     ```python
    table_name = "sales"
@@ -163,11 +163,11 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
    ![11](./Images/01/Pg3-Notebook-S2.png) 
 
-3. In the **... (1)** menu for the cell (at its top-right) select **Toggle parameter cell (2)**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
+4. In the **... (1)** menu for the cell (at its top-right) select **Toggle parameter cell (2)**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
      ![Account-manager-start](./Images/lab1-image17.png)
 
-4. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
+5. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
 
     ```python
    from pyspark.sql.functions import *
@@ -191,13 +191,13 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
     This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a **managed table** - appending the data if the table already exists.
 
-5. Verify that your notebooks look similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
+6. Verify that your notebooks look similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
     ![Screenshot of a notebook with a parameters cell and code to transform data.](./Images/fab8.png)
 
     > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first cell can take a minute or so to complete.
 
-6. (Optional) You can also create **external tables** for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
+7. (Optional) You can also create **external tables** for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
 
     ```python
     df.write.format("delta").saveAsTable("external_sales", path="<abfs_path>/external_sales")
@@ -211,17 +211,17 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
     > **Note**: To run the above code, you need to replace the <abfs_path> with your abfs path
 
 
-7. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **Ellipsis(...)** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
+8. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **Ellipsis(...)** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
 
     ![.](./Images/fab-6.png)
 
-8. Navigate to notebook menu bar, use the ⚙️ **Settings (1)** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
+9. Navigate to notebook menu bar, use the ⚙️ **Settings (1)** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales Notebook (2)** and close the settings pane.
 
      ![.](./Images/fab-7.png)
  
-9. In the hub menu bar on the left, select your lakehouse.
+10. In the hub menu bar on the left, select your lakehouse.
 
-10. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
+11. In the **Explorer** pane, refresh the view. Then expand **Tables**, and select the **sales** table to see a preview of the data it contains.
 
 ### Task 5: Use SQL to query tables
 
@@ -295,16 +295,17 @@ The tables in your lakehouse are automatically added to a default dataset that d
     - **Item (1)**
     - **Quantity (2)**
 
-    A table visualization is added to the report:
+4. A table visualization is added to the report:
 
       ![Screenshot of a report containing a table.](./Images/fab-4.png)
 
-4. Hide the **Data** and **Filters** panes to create more space. Then ensure the table visualization is selected and in the **Visualizations** pane, change the visualization to a **Clustered bar chart** and resize it as shown here.
+5. Hide the **Data** and **Filters** panes to create more space. Then ensure the table visualization is selected and in the **Visualizations** pane, change the visualization to a **Clustered bar chart** and resize it as shown here.
 
       ![Screenshot of a report containing a clustered bar chart.](./Images/fab11.png)
 
-5. On the **File** menu, select **Save**. Then save the report as **Item Sales Report** in the workspace you created previously.
-6. Close the browser tab containing the report to return to the SQL endpoint for your lakehouse. Then, in the hub menu bar on the left, select your workspace to verify that it contains the following items:
+6. On the **File** menu, select **Save**. Then save the report as **Item Sales Report** in the workspace you created previously.
+
+7. Close the browser tab containing the report to return to the SQL endpoint for your lakehouse. Then, in the hub menu bar on the left, select your workspace to verify that it contains the following items:
     - Your lakehouse.
     - The SQL endpoint for your lakehouse.
     - A default dataset for the tables in your lakehouse.
