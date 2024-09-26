@@ -117,7 +117,7 @@ You can use your KQL Queryset as the basis for a Power BI report.
 
 6. Close the **Power BI** window, and in the bar on the left, select the icon for your workspace.
 
-    Refresh the Workspace page if necessary to view all of the items it contains.
+>**Note**:Refresh the Workspace page if necessary to view all of the items it contains.
 
 7. In the list of items in your workspace, note that the **Revenue by Item** report is listed.
 
