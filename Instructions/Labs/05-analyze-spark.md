@@ -596,4 +596,4 @@ Now that you've finished working with the data, you can save the notebook with a
 
 In this exercise, you've learned how to use Spark to work with data in Microsoft Fabric.
 
-### You have successfully completed the lab
+### You have successfully completed the lab. Click on Next >> to procced with next exercise.
