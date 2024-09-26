@@ -89,7 +89,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
       ![01](./Images/02/Pg4-T2-S9.png)  
 
-    > **Tip**: If the schema takes a while to load, just refresh the browser page.
+        > **Tip**: If the schema takes a while to load, just refresh the browser page.
 
 ### Task 3: Define a data model
 
@@ -142,9 +142,9 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
    ORDER BY CalendarYear, MonthOfYear;
     ```
 
-    Note that the attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
+2. Note that the attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
 
-2. Modify the query as follows to add a second dimension to the aggregation.
+3. Modify the query as follows to add a second dimension to the aggregation.
 
     ```SQL
    SELECT  d.[Year] AS CalendarYear,
@@ -161,7 +161,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
    ![](./Images/02/Pg4-T3QF-S2.png)
 
-3. Run the modified query and review the results, which now include sales revenue aggregated by year, month and sales region.
+4. Run the modified query and review the results, which now include sales revenue aggregated by year, month and sales region.
 
 ### Task 5: Create a view
 
