@@ -44,7 +44,7 @@ To work with data in Apache Spark, you can create a *notebook*. Notebooks provid
 
    ![](./Images/Pg7-Notebook-S1.png)
 
->**Note**: After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+    >**Note**: After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
 2. Select the first cell (currently a *code* cell), and then click the **M&#8595;** button in the dynamic toolbar at the top-right to convert it to a **markdown** cell.
 
@@ -56,7 +56,7 @@ To work with data in Apache Spark, you can create a *notebook*. Notebooks provid
    Use the code in this notebook to explore sales order data.
     ```
 
-4.Click anywhere in the notebook outside of the cell to exit editing mode and view the rendered markdown.
+4. Click anywhere in the notebook outside of the cell to exit editing mode and view the rendered markdown.
 
 ### Task 3: Load data into a dataframe
 
@@ -68,11 +68,11 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
     ![Screenshot of a notebook with a Files pane.](./Images/notebook-files.png)
 
-2.In the **orders (1)** folder, click the **ellipses(2)** menu for **2019.csv**, then select **Load data (3)** > **Spark (4)**.
+1. In the **orders (1)** folder, click the **ellipses(2)** menu for **2019.csv**, then select **Load data (3)** > **Spark (4)**.
 
    ![](./Images/Pg7-LoadData-S2.png)
 
-3. A new code cell containing the following code should be added to the notebook:
+1. A new code cell containing the following code should be added to the notebook:
 
     ```python
    df = spark.read.format("csv").option("header","true").load("Files/orders/2019.csv")
@@ -82,11 +82,11 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
     > **Tip**: You can hide the Lakehouse Explorer panes on the left by using their **<<** icons. Doing so will help you focus on the notebook.
 
-4. Use the **&#9655; Run cell** button on the left of the cell to run it.
+1. Use the **&#9655; Run cell** button on the left of the cell to run it.
 
     > **Note**: Since this is the first time you've run any Spark code, a Spark session must be started. This means that the first run in the session can take a minute or so to complete. Subsequent runs will be quicker.
 
-5. When the cell command has been completed, review the output below the cell, which should look similar to this:
+1. When the cell command has been completed, review the output below the cell, which should look similar to this:
 
     | Index | SO43701 | 11 | 2019-07-01 | Christy Zhu | christy12@adventure-works.com | Mountain-100 Silver, 44 | 16 | 3399.99 | 271.9992 |
     | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
@@ -94,9 +94,9 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
     | 2 | SO43705 | 1 | 2019-07-01 | Curtis Lu | curtis9@adventure-works.com | Mountain-100 Silver, 38 | 1 | 3399.99 | 271.9992 |
     | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
 
-    The output shows the rows and columns of data from the 2019.csv file. However, note that the column headers don't look right. The default code used to load the data into a dataframe assumes that the CSV file includes the column names in the first row, but in this case, the CSV file just includes the data with no header information.
+1. The output shows the rows and columns of data from the 2019.csv file. However, note that the column headers don't look right. The default code used to load the data into a dataframe assumes that the CSV file includes the column names in the first row, but in this case, the CSV file just includes the data with no header information.
 
-6. Modify the code to set the **header** option to **false** as follows:
+1. Modify the code to set the **header** option to **false** as follows:
 
     ```python
    df = spark.read.format("csv").option("header","false").load("Files/orders/2019.csv")
@@ -104,7 +104,7 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
    display(df)
     ```
 
-7. Re-run the cell and review the output, which should look similar to this:
+1. Re-run the cell and review the output, which should look similar to this:
 
    | Index | _c0 | _c1 | _c2 | _c3 | _c4 | _c5 | _c6 | _c7 | _c8 |
     | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
@@ -113,9 +113,9 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
     | 3 | SO43705 | 1 | 2019-07-01 | Curtis Lu | curtis9@adventure-works.com | Mountain-100 Silver, 38 | 1 | 3399.99 | 271.9992 |
     | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
 
-    Now the dataframe correctly includes the first row as data values, but the column names are auto-generated and not very helpful. To make sense of the data, you need to explicitly define the correct schema and data type for the data values in the file.
+1. Now the dataframe correctly includes the first row as data values, but the column names are auto-generated and not very helpful. To make sense of the data, you need to explicitly define the correct schema and data type for the data values in the file.
 
-8. Modify the code as follows to define a schema and apply it when loading the data:
+1. Modify the code as follows to define a schema and apply it when loading the data:
 
     ```python
    from pyspark.sql.types import *
@@ -136,7 +136,7 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
    display(df)
     ```
 
-9. Run the modified cell and review the output, which should look similar to this:
+1. Run the modified cell and review the output, which should look similar to this:
 
    | Index | SalesOrderNumber | SalesOrderLineNumber | OrderDate | CustomerName | Email | Item | Quantity | UnitPrice | Tax |
     | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
@@ -145,15 +145,15 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
     | 3 | SO43705 | 1 | 2019-07-01 | Curtis Lu | curtis9@adventure-works.com | Mountain-100 Silver, 38 | 1 | 3399.99 | 271.9992 |
     | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
 
-    Now the dataframe includes the correct column names (in addition to the **Index**, which is a built-in column in all dataframes based on the ordinal position of each row). The data types of the columns are specified using a standard set of types defined in the Spark SQL library, which were imported at the beginning of the cell.
+1. Now the dataframe includes the correct column names (in addition to the **Index**, which is a built-in column in all dataframes based on the ordinal position of each row). The data types of the columns are specified using a standard set of types defined in the Spark SQL library, which were imported at the beginning of the cell.
 
-10. Confirm that your changes have been applied to the data by viewing the dataframe. Run the following cell:
+1. Confirm that your changes have been applied to the data by viewing the dataframe. Run the following cell:
 
     ```python
       display(df)
     ```
 
-11. The dataframe includes only the data from the **2019.csv** file. Modify the code so that the file path uses a \* wildcard to read the sales order data from all of the files in the **orders** folder:
+1. The dataframe includes only the data from the **2019.csv** file. Modify the code so that the file path uses a \* wildcard to read the sales order data from all of the files in the **orders** folder:
 
     ```python
     from pyspark.sql.types import *
@@ -174,7 +174,7 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
     display(df)
     ```
 
-11. Run the modified code cell and review the output, which should now include sales for 2019, 2020, and 2021.
+1. Run the modified code cell and review the output, which should now include sales for 2019, 2020, and 2021.
 
     >**Note**: Only a subset of the rows is displayed, so you may not be able to see examples from all years.
 
@@ -257,14 +257,14 @@ A common task for data engineers is to ingest data in a particular format or str
    display(transformed_df.limit(5))
     ```
 
-2. Run the code to create a new dataframe from the original order data with the following transformations:
+1. Run the code to create a new dataframe from the original order data with the following transformations:
     - Add **Year** and **Month** columns based on the **OrderDate** column.
     - Add **FirstName** and **LastName** columns based on the **CustomerName** column.
     - Filter and reorder the columns, removing the **CustomerName** column.
 
-3. Review the output and verify that the transformations have been made to the data.
+1. Review the output and verify that the transformations have been made to the data.
 
-    You can use the full power of the Spark SQL library to transform the data by filtering rows, deriving, removing, renaming columns, and applying any other required data modifications.
+1. You can use the full power of the Spark SQL library to transform the data by filtering rows, deriving, removing, renaming columns, and applying any other required data modifications.
 
     > **Tip**: See the [Spark dataframe documentation](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/dataframe.html) to learn more about the methods of the Dataframe object.
 
@@ -301,20 +301,20 @@ A common task for data engineers is to ingest data in a particular format or str
    print ("Transformed data saved!")
     ```
 
-2. Run the cell and wait for the message that the data has been saved. Then, in the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **Refresh**; and expand the **partitioned_data** folder to verify that it contains a hierarchy of folders named **Year=*xxxx***, each containing folders named **Month=*xxxx***. Each month's folder contains a parquet file with the orders for that month.
+1. Run the cell and wait for the message that the data has been saved. Then, in the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **Refresh**; and expand the **partitioned_data** folder to verify that it contains a hierarchy of folders named **Year=*xxxx***, each containing folders named **Month=*xxxx***. Each month's folder contains a parquet file with the orders for that month.
 
     ![Screenshot of a hierarchy of partitioned data files.](./Images/partitioned-files.png)
 
-    Partitioning data files is a common way to optimize performance when dealing with large volumes of data. This technique can significantly improve performance and make it easier to filter data.
+1. Partitioning data files is a common way to optimize performance when dealing with large volumes of data. This technique can significantly improve performance and make it easier to filter data.
 
-3. Add a new cell with the following code to load a new dataframe from the **orders.parquet** file:
+1. Add a new cell with the following code to load a new dataframe from the **orders.parquet** file:
 
     ```python
    orders_2021_df = spark.read.format("parquet").load("Files/partitioned_data/Year=2021/Month=*")
    display(orders_2021_df)
     ```
 
-4. Run the cell and verify that the results show the order data for sales in 2021. Note that the partitioning columns specified in the path (**Year** and **Month**) are not included in the dataframe.
+1. Run the cell and verify that the results show the order data for sales in 2021. Note that the partitioning columns specified in the path (**Year** and **Month**) are not included in the dataframe.
 
 ### Task 7: Work with tables and SQL
 
@@ -342,9 +342,7 @@ Tables in a Spark metastore are relational abstractions over files in the data l
 
     ![Screenshot of the salesorder table in Explorer.](./Images/table-view.png)
 
-4. In the **...** menu for the **salesorders** table, select **Load data** > **Spark**.
-
-    A new code cell containing code similar to the following example is added to the notebook:
+4. In the **...** menu for the **salesorders** table, select **Load data** > **Spark**. A new code cell containing code similar to the following example is added to the notebook:
 
     ```Python
    df = spark.sql("SELECT * FROM [your_lakehouse].salesorders LIMIT 1000")
@@ -373,7 +371,7 @@ While it's useful to be able to embed SQL statements into a cell containing PySp
     - The SQL code references the **salesorders** table that you created previously.
     - The output from the SQL query is automatically displayed as the result under the cell.
 
-> **Note**: For more information about Spark SQL and dataframes, see the [Spark SQL documentation](https://spark.apache.org/docs/2.2.0/sql-programming-guide.html).
+        > **Note**: For more information about Spark SQL and dataframes, see the [Spark SQL documentation](https://spark.apache.org/docs/2.2.0/sql-programming-guide.html).
 
 ### Task 8: Visualize data with Spark
 
@@ -418,11 +416,11 @@ A picture is proverbially worth a thousand words, and a chart is often better th
    df_spark.show()
     ```
 
-2. Run the code and observe that it returns a Spark dataframe containing the yearly revenue.
+1. Run the code and observe that it returns a Spark dataframe containing the yearly revenue.
 
-    To visualize the data as a chart, we'll start by using the **matplotlib** Python library. This library is the core plotting library on which many others are based, and provides a great deal of flexibility in creating charts.
+1. To visualize the data as a chart, we'll start by using the **matplotlib** Python library. This library is the core plotting library on which many others are based, and provides a great deal of flexibility in creating charts.
 
-3. Add a new code cell to the notebook, and add the following code to it:
+1. Add a new code cell to the notebook, and add the following code to it:
 
     ```Python
    from matplotlib import pyplot as plt
@@ -437,12 +435,12 @@ A picture is proverbially worth a thousand words, and a chart is often better th
    plt.show()
     ```
 
-4. Run the cell and review the results, which consist of a column chart with the total gross revenue for each year. Note the following features of the code used to produce this chart:
+1. Run the cell and review the results, which consist of a column chart with the total gross revenue for each year. Note the following features of the code used to produce this chart:
     - The **matplotlib** library requires a *Pandas* dataframe, so you need to convert the *Spark* dataframe returned by the Spark SQL query to this format.
     - At the core of the **matplotlib** library is the **pyplot** object. This is the foundation for most plotting functionality.
     - The default settings result in a usable chart, but there's considerable scope to customize it
 
-5. Modify the code to plot the chart as follows:
+1. Modify the code to plot the chart as follows:
 
     ```Python
    from matplotlib import pyplot as plt
@@ -464,11 +462,11 @@ A picture is proverbially worth a thousand words, and a chart is often better th
    plt.show()
     ```
 
-6. Re-run the code cell and view the results. The chart now includes a little more information.
+1. Re-run the code cell and view the results. The chart now includes a little more information.
 
-    A plot is technically contained with a **Figure**. In the previous examples, the figure was created implicitly for you; but you can create it explicitly.
+1. A plot is technically contained with a **Figure**. In the previous examples, the figure was created implicitly for you; but you can create it explicitly.
 
-7. Modify the code to plot the chart as follows:
+1. Modify the code to plot the chart as follows:
 
     ```Python
    from matplotlib import pyplot as plt
@@ -493,11 +491,9 @@ A picture is proverbially worth a thousand words, and a chart is often better th
    plt.show()
     ```
 
-8. Re-run the code cell and view the results. The figure determines the shape and size of the plot.
+1. Re-run the code cell and view the results. The figure determines the shape and size of the plot. A figure can contain multiple subplots, each on its own *axis*.
 
-    A figure can contain multiple subplots, each on its own *axis*.
-
-9. Modify the code to plot the chart as follows:
+1. Modify the code to plot the chart as follows:
 
     ```Python
    from matplotlib import pyplot as plt
@@ -525,9 +521,9 @@ A picture is proverbially worth a thousand words, and a chart is often better th
    plt.show()
     ```
 
-10. Re-run the code cell and view the results. The figure contains the subplots specified in the code.
+1. Re-run the code cell and view the results. The figure contains the subplots specified in the code.
 
-> **Note:** To learn more about plotting with matplotlib, see the [matplotlib documentation](https://matplotlib.org/).
+    > **Note:** To learn more about plotting with matplotlib, see the [matplotlib documentation](https://matplotlib.org/).
 
 #### Use the **seaborn** library
 
@@ -581,7 +577,7 @@ While **matplotlib** enables you to create complex charts of multiple types, it 
 
 6. Run the modified code to view the yearly revenue as a line chart.
 
-> **Note**: To learn more about plotting with seaborn, see the [seaborn documentation](https://seaborn.pydata.org/index.html).
+    > **Note**: To learn more about plotting with seaborn, see the [seaborn documentation](https://seaborn.pydata.org/index.html).
 
 ### Task 9: Save the notebook and end the Spark session
 
@@ -590,7 +586,7 @@ Now that you've finished working with the data, you can save the notebook with a
 1. In the top left corner, set the **Name** of the notebook from Notebook 1 to **Explore Sales Orders Notebook**.
 2. On the notebook menu, select **Stop session** to end the Spark session.
 
- > **Note:** The stop session icon is present next to the **Start Session** option.
+    > **Note:** The stop session icon is present next to the **Start Session** option.
 
 ### Summary
 
