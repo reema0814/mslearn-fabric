@@ -22,8 +22,6 @@ In this task, create a Dataflow (Gen2) to efficiently ingest and transform data 
 
    ![New dataflow.](./Images/lak5.1.png)
 
-   ![New dataflow.](./Images/new-dataflow.png)
-
 1. Select **Import from a Text/CSV file**, and create a new data source with the following settings:
     - **Link to file**: *Selected*
     - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv`
