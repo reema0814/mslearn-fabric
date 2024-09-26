@@ -1,6 +1,19 @@
 # Exercise 7: Data Warehouse Analyze Data in a Warehouse with Fabric Copilot
 
-Now, you will analyze data within a data warehouse, leveraging Copilot to generate reports and gain insights into sales performance, customer details, and product information. By utilizing Copilot's AI capabilities, you will create custom pages, reports, and executive summaries based on the dataset, enabling deeper analysis and informed decision-making.
+### Estimated Duration: 60 minutes
+
+In this lab, you will analyze data in a warehouse using Fabric Copilot by connecting to your data source, running queries, and visualizing insights to drive informed decision-making.
+
+## Lab objectives
+
+You will be able to complete the following tasks:
+
+- Connect to the Data Warehouse  
+- Explore Data Sources  
+- Run Data Queries  
+- Visualize Data Insights  
+- Generate Reports  
+- Collaborate on Findings  
 
 1. Select the workspace **fabric-<inject key="DeploymentID" enableCopy="false"/>** (this is the workspace that mimics the lab environment)
 
@@ -112,5 +125,8 @@ Now, you will analyze data within a data warehouse, leveraging Copilot to genera
 
 1. The summary provides an overview of sales revenue data from 2021 to 2022, highlighting increases year-over-year and identifying key months and regions driving revenue growth, with 2022 contributing significantly to total revenue, led by strong performance in the United States.
 
+## Summary
 
-### You have successfully completed the lab.
+In this lab, you connected to a data warehouse using Fabric Copilot and explored the available datasets. You ran queries to extract insights and created visualizations for effective analysis. Finally, you compiled your findings into reports and collaborated with team members on the results.
+
+### You have successfully completed the lab. Click on Next >> to procced with next exercise.
