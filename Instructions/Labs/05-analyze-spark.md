@@ -30,7 +30,7 @@ Now that you have a workspace, it's time to switch to the *Data engineering* exp
 
    - Click on **Create**
 
-3. Once you're in the lakehouse, navigate to the **Files** folder in the **Explorer** pane, click on the **...** menu, and select **Upload** followed by **Upload folder**. Then, upload the **orders** folder located at **C:\LabFiles\Files\orders** to the lakehouse.
+3. Once you're in the lakehouse, navigate to the **Files** folder in the **Explorer** pane, click on the **ellipses** menu, and select **Upload** followed by **Upload folder**. Then, upload the **orders** folder located at **C:\LabFiles\Files\orders** to the lakehouse.
 
 4. After the files have been uploaded, expand **Files** and select the **orders** folder; and verify that the CSV files have been uploaded, as shown here:
 
@@ -68,7 +68,7 @@ Now you're ready to run code that loads the data into a *dataframe*. Dataframes 
 
     ![Screenshot of a notebook with a Files pane.](./Images/notebook-files.png)
 
-2.In the **orders (1)** folder, click the **... (2)** menu for **2019.csv**, then select **Load data (3)** > **Spark (4)**.
+2.In the **orders (1)** folder, click the **ellipses(2)** menu for **2019.csv**, then select **Load data (3)** > **Spark (4)**.
 
    ![](./Images/Pg7-LoadData-S2.png)
 
