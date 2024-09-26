@@ -41,11 +41,11 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
 1. In the **Data science** home page, create a new **Notebook**.
 
-    After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+1. After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
 1. Select the first cell (which is currently a *code* cell), and then in the dynamic toolbar at its top-right, use the **M&#8595;** button to convert the cell to a *markdown* cell.
 
-    When the cell changes to a markdown cell, the text it contains is rendered.
+1. When the cell changes to a markdown cell, the text it contains is rendered.
 
 1. Use the **&#128393;** (Edit) button to switch the cell to editing mode, then delete the content and enter the following text:
 
@@ -98,7 +98,7 @@ Now you're ready to run code to prepare data and train a model. To work with dat
 
     ![](./Images/output.png)
 
-    The output shows the rows and columns of customer data from the churn.csv file.
+1. The output shows the rows and columns of customer data from the churn.csv file.
 
 ### Task 4: Train a machine learning model
 
@@ -124,7 +124,7 @@ Now that you've loaded the data, you can use it to train a machine-learning mode
    mlflow.set_experiment(experiment_name)
     ```
     
-    The code creates an MLflow experiment named `experiment-churn`. Your models will be tracked in this experiment.
+1. The code creates an MLflow experiment named `experiment-churn`. Your models will be tracked in this experiment.
 
 1. Add another new code cell to the notebook, enter the following code in it, and run it:
 
@@ -139,7 +139,7 @@ Now that you've loaded the data, you can use it to train a machine-learning mode
        mlflow.log_param("estimator", "LogisticRegression")
     ```
     
-    The code trains a classification model using Logistic Regression. Parameters, metrics, and artifacts are automatically logged with MLflow. Additionally, you're logging a parameter called `estimator`, with the value `LogisticRegression`.
+1. The code trains a classification model using Logistic Regression. Parameters, metrics, and artifacts are automatically logged with MLflow. Additionally, you're logging a parameter called `estimator`, with the value `LogisticRegression`.
 
 1. Add another new code cell to the notebook, enter the following code in it, and run it:
 
@@ -154,9 +154,9 @@ Now that you've loaded the data, you can use it to train a machine-learning mode
        mlflow.log_param("estimator", "DecisionTreeClassifier")
     ```
 
->**Note**: If the node fails, attempt to re-run the previous node and then execute the existing node.
+    >**Note**: If the node fails, attempt to re-run the previous node and then execute the existing node.
 
-    The code trains a classification model using a Decision Tree Classifier. Parameters, metrics, and artifacts, are automatically logged with MLflow. Additionally, you're logging a parameter called `estimator`, with the value `DecisionTreeClassifier`.
+1. The code trains a classification model using a Decision Tree Classifier. Parameters, metrics, and artifacts, are automatically logged with MLflow. Additionally, you're logging a parameter called `estimator`, with the value `DecisionTreeClassifier`.
 
 ### Task 5: Use MLflow to search and view your experiments
 
@@ -208,7 +208,7 @@ When you've trained and tracked models with MLflow, you can use the MLflow libra
    plt.show()
     ```
 
-    The output should resemble the following image:
+1. The output should resemble the following image:
 
     ![Screenshot of the plotted evaluation metrics.](./Images/plotted-metrics.png)
 
