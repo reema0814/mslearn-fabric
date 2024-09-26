@@ -150,6 +150,8 @@ Now that you've loaded the data, you can use it to train a machine-learning mode
        mlflow.log_param("estimator", "DecisionTreeClassifier")
     ```
 
+>**Note**: If the node fails, attempt to re-run the previous node and then execute the existing node.
+
     The code trains a classification model using a Decision Tree Classifier. Parameters, metrics, and artifacts, are automatically logged with MLflow. Additionally, you're logging a parameter called `estimator`, with the value `DecisionTreeClassifier`.
 
 ### Task 5: Use MLflow to search and view your experiments
