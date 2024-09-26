@@ -214,7 +214,7 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
    deltastream.stop()
     ```
 
-    This code stops the stream.
+>**Note**:This code stops the stream.
 
 
 ### Summary
