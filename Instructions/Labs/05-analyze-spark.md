@@ -277,7 +277,7 @@ A common task for data engineers is to ingest data in a particular format or str
    print ("Transformed data saved!")
     ```
 
-    > **Note**: Commonly, the *Parquet* format is preferred for data files that you will use for further analysis or ingestion into an analytical store. Parquet is a very efficient format that is supported by most large-scale data analytics systems. In fact, sometimes your data transformation requirement may simply be to convert data from another format (such as CSV) to Parquet!
+    >**Note**: If the node fails, rerun it.
 
 2. Run the cell and wait for the message that the data has been saved. Then, in the **Explorer** pane on the left, in the **...** menu for the **Files** node, select **Refresh**; and select the **transformed_data** folder to verify that it contains a new folder named **orders**, which in turn contains one or more Parquet files.
 
