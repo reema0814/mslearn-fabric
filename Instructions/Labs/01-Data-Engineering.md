@@ -57,7 +57,7 @@ In many scenarios, the data you need to work within your lakehouse may be stored
 
 ### Task 3: Create a pipeline
 
-A simple way to ingest data is to use a **Copy data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
+In this task, you will create a pipeline to automate data processing workflows. You’ll define the sequence of data transformation steps, configure the necessary components, and set up triggers for execution. This will streamline your data integration processes and improve efficiency in handling data tasks. A simple way to ingest data is to use a **Copy data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
 1. Navigate back to the home page, on the **Home** page for your lakehouse, select **Data pipeline**.
 
@@ -149,6 +149,8 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 ### Task 4: Create a notebook
 
+In this task, you will create a notebook to document your data analysis process. You’ll set up the notebook environment, import necessary libraries, and structure your code to include data exploration, visualization, and insights. This will help you organize your workflow and enhance reproducibility in your analysis.
+
 1. On the **Home** page for your lakehouse, in the **Open notebook (1)** menu, select **New notebook (2)**.
 
       ![11](./Images/01/11.png)
@@ -163,7 +165,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
    ![11](./Images/01/Pg3-Notebook-S2.png) 
 
-4. In the **... (1)** menu for the cell (at its top-right) select **Toggle parameter cell (2)**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
+4. In the **Ellipsis(...) (1)** menu for the cell (at its top-right) select **Toggle parameter cell (2)**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
      ![Account-manager-start](./Images/lab1-image17.png)
 
@@ -225,7 +227,7 @@ A simple way to ingest data is to use a **Copy data** activity in a pipeline to 
 
 ### Task 5: Use SQL to query tables
 
-When you create a lakehouse and define tables in it, an SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
+In this task, you will use SQL to query tables in a database. You'll write SQL statements to retrieve, filter, and manipulate data from specified tables, allowing you to analyze and extract meaningful insights from the dataset. This will enhance your understanding of data retrieval and improve your SQL skills.
 
 1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL analytics endpoint**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
 
@@ -246,7 +248,7 @@ When you create a lakehouse and define tables in it, an SQL endpoint is automati
 
 ### Task 6: Create a visual query
 
-While many data professionals are familiar with SQL, data analysts with Power BI experience can apply their Power Query skills to create visual queries.
+In this task, you will create a visual query in Power BI using Power Query. You’ll begin by adding the **sales** table to the query editor, select relevant columns, and apply a **Group by** transformation to count distinct line items for each sales order. Finally, you'll review the results to see the summarized data.
 
 1. On the toolbar, select **New visual query**.
 
@@ -279,7 +281,7 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
 ### Task 7: Create a report
 
-The tables in your lakehouse are automatically added to a default dataset that defines a data model for reporting with Power BI.
+In this task, you will create a report to visualize and present your data findings. You'll gather relevant data, select appropriate visualizations, and structure the report for clarity and insight. This process will help you effectively communicate your analysis and support data-driven decision-making.
 
 1.  At the top of the SQL Endpoint page, select the **Model Layouts (1)** tab. Click on **sales (2)** and select the **insert into canvas (3)** , the data model schema for the dataset will be shown as **follows (4)**:
 
